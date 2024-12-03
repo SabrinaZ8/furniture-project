@@ -11,7 +11,7 @@ export const NavBar = () => {
         <span className="font-montserrat font-bold text-3xl">Furniro</span>
       </Link>
       <div className="w-1/3">
-        <ul className="flex font-medium justify-between">
+        <ul className="flex font-medium justify-between font-poppins">
           <li><Link to="/">Home</Link></li>
           <li><Link to="/shop">Shop</Link></li>
           <li><Link to="#">About</Link></li>
