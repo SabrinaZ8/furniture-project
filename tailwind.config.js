@@ -7,6 +7,11 @@ export default {
         montserrat: ['Montserrat', 'sans-serif'],
         poppins: ['Poppins', 'sans-serif'],
       },
+      colors: {
+        gray: {
+          350: '#9F9F9F'
+        }
+      }
     },
   },
   plugins: [],
