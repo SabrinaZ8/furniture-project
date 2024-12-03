@@ -5,7 +5,7 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 
 export const NavBar = () => {
   return (
-    <nav className="flex justify-between items-center h-24 mx-14">
+    <nav className="flex justify-between items-center h-[100px] mx-14">
       <Link to="/"  className="flex">
         <img src="../../../public/LogoFurniro/furniroLogo.png" alt="Logo Furniro" className="mr-2"/>
         <span className="font-montserrat font-bold text-3xl">Furniro</span>
