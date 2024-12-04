@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.img-rd-cover-center {
+    @apply w-[381px] h-[480px] object-cover rounded-md bg-center;
+}
+.text-gray-smb-24 {
+    @apply font-semibold my-8 text-2xl
+}

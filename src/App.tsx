@@ -2,7 +2,7 @@ import Routers from "./routers"
 function App() {
 
   return (
-    <div>
+    <div className="font-poppins">
       <Routers />
     </div>
   )
