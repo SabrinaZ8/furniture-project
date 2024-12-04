@@ -1,0 +1,76 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Luxury table",
+            "description": "Stylish cafe chair",
+            "price": "Rp 2.500.000",
+            "discountPercentage": "30",
+            "discountedPrice": "Rp 1.750.000",
+            "isNew": "false",
+            "Category": "table",
+            "image": "https://furniro.s3.us-east-1.amazonaws.com/products/luxury-table.png",
+            "tags": ["table", "dining", "mobile", "table"]
+        },
+        {
+            "id": 2,
+            "name": "Chair",
+            "description": "Stylish cafe chair",
+            "price": "Rp 2.500.000",
+            "discountPercentage": "0",
+            "discountedPrice": "0",
+            "isNew": "false",
+            "Category": "chair",
+            "image": "https://furniro.s3.us-east-1.amazonaws.com/products/chair.png",
+            "tags": ["home", "ergonomic", "adjustable", "chair"]
+        },
+        {
+            "id": 3,
+            "name": "Modular sofa",
+            "description": "Luxurious modular sofa",
+            "discountPercentage": "50",
+            "discountedPrice": "Rp 7.000.000",
+            "isNew": "false",
+            "price": "Rp 14.000.000",
+            "Category": "Sofa",
+            "image": "https://furniro.s3.us-east-1.amazonaws.com/products/modular-sofa.png",
+            "tags": ["home", "room", "mobile", "sofa"]
+        },
+        {
+            "id": 4,
+            "name": "Corner sofa",
+            "description": "Retractable corner sofa",
+            "price": "Rp 500.000",
+            "discountPercentage": "0",
+            "discountedPrice": "0",
+            "isNew": "true",
+            "Category": "sofa",
+            "image": "https://furniro.s3.us-east-1.amazonaws.com/products/corner-sofa.png",
+            "tags": ["home", "room", "Retractable", "sofa"]
+        },
+        {
+            "id": 5,
+            "name": "Lighting",
+            "description": "Night lamp",
+            "price": "Rp 1.500.000",
+            "discountPercentage": "0",
+            "discountedPrice": "0",
+            "isNew": "false",
+            "Category": "lighting",
+            "image": "https://furniro.s3.us-east-1.amazonaws.com/products/lighting.png",
+            "tags": ["home", "illumination", "lighting", "lampshade"]
+        },
+        {
+            "id": 6,
+            "name": "Medium sofa",
+            "description": "Medium sofa",
+            "price": "Rp 150.000",
+            "discountPercentage": "30",
+            "discountedPrice": "",
+            "isNew": "true",
+            "Category": "sofa",
+            "image": "https://furniro.s3.us-east-1.amazonaws.com/products/medium-sofa.png",
+            "tags": ["home", "ergonomic", "adjustable"]
+        }
+    ]
+}
