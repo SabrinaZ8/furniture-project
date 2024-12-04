@@ -31,7 +31,25 @@ export const HomePage = () => {
       </section>
       <BrowseRange />
       <section>
-        
+        <div>
+          <h2>50+ Beautiful rooms inspiration</h2>
+          <p>
+            Our designer already made a lot of beautiful prototipe of rooms that
+            inspire you
+          </p>
+          <Link
+            to="#"
+            className="flex justify-center items-center bg-yellow-550 text-white w-44 h-12"
+          >
+            Explore More
+          </Link>
+        </div>
+        <div className="flex overflow-hidden w-[1000px]">
+          <img src="../../../src/assets/images-carousel/image-carousel-1.png" alt="" className="w-[500px] h-[500px] min-w-[500px] min-h-[500px]"/>
+          <img src="../../../src/assets/images-carousel/images-carousel-2.png" alt="" className="w-[500px] h-[500px] min-w-[500px] min-h-[500px]"/>
+          <img src="../../../src/assets/images-carousel/images-carousel-3.png" alt="" className="w-[500px] h-[500px] min-w-[500px] min-h-[500px]"/>
+          <img src="../../../src/assets/images-carousel/images-carousel-4.png" alt="" className="w-[500px] h-[500px] min-w-[500px] min-h-[500px]"/>
+        </div>
       </section>
       <Footer />
     </div>
