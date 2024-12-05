@@ -16,6 +16,7 @@ const Routers = () => {
             <Route path="/contact" element={<ContactPage />} />
             <Route path="shop" element={<ShopPage />} />
             <Route path="single-product" element={<SingleProductPage />} />
+            <Route  path="/product/:id" element={<SingleProductPage/>}/>
           </Routes>
       </BrowserRouter>
     );
