@@ -5,6 +5,9 @@ type ProductProps = {
 };
 
 export const Product: React.FC<ProductProps> = ({ product }) => {
+
+
+
   return (
     <div className="max-w-[285px] max-h-[446px]">
       <div className="relative">
