@@ -23,6 +23,9 @@ export default {
         },
         red: {
           350:'#E97171'
+        },
+        green: {
+          450: "#2EC1AC"
         }
       },
       backgroundImage: {
