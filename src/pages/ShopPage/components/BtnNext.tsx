@@ -9,7 +9,7 @@ export const BtnNext:React.FC<BtnNextProps> = ({goToNextPage, page, totalPages})
     <button
       onClick={goToNextPage}
       disabled={page === totalPages}
-      className={`${totalPages === page ? "invisible" : "visible"} px-4 py-2 bg-gray-300 rounded disabled:opacity-50`}
+      className={`${totalPages === page ? "invisible" : "visible"} ml-5 btn-back-next`}
     >
       Next
     </button>

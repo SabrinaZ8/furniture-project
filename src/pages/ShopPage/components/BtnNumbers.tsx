@@ -14,10 +14,10 @@ export const BtnNumbers: React.FC<BtnNumbersProps> = ({
         <button
           key={index + 1}
           onClick={() => handlePageClick(index + 1)}
-          className={`px-4 py-2 rounded ${
+          className={` rounded-lg h-[60px] w-[60px] text-xl mx-5 ${
             page === index + 1
-              ? "bg-blue-500 text-white"
-              : "bg-gray-300 text-black"
+              ? "bg-yellow-550 text-white"
+              : "bg-yellow-70 text-black"
           }`}
         >
           {index + 1}
