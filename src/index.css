@@ -8,3 +8,7 @@
 .text-gray-smb-24 {
     @apply font-semibold my-8 text-2xl
 }
+
+.btn-back-next {
+    @apply h-[60px] w-24 bg-yellow-70 rounded-lg text-xl
+}
