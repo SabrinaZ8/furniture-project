@@ -2,16 +2,24 @@ export interface ProductType {
     id: number;
     name: string;
     description: string;
-    price: string; // Mantido como string devido ao formato "Rp 150.000"
-    discountPercentage: number; // Mantido como string devido ao formato textual
-    discountedPrice: string; // Caso vazio, mantém como string
-    isNew: boolean; // Mantido como string, mas idealmente seria boolean (true/false)
+    price: number;
+    discountPercentage: number;
+    discountedPrice: number;
+    isNew: boolean;
     Category: string;
     image: string;
-    tags: string[]; // Array de strings
+    tags: string[];
   };
   
   export interface BtnBackProps {
-    goToPreviousPage: () => void; // Função sem retorno
-    page: number; // Número da página atual
+    goToPreviousPage: () => void;
+    page: number; 
   }
+
+  export interface FilterProps {
+    setOption: React.Dispatch<React.SetStateAction<string>>;
+    allProducts: ProductType[];
+    setAllProducts: React.Dispatch<React.SetStateAction<ProductType[]>>;
+    itemsPerPage: number;
+  }
+  
