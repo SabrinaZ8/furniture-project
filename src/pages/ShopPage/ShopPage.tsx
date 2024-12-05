@@ -9,32 +9,38 @@ import { ProductType } from "../../../src/types/types";
 import { BtnBack } from "./components/BtnBack";
 import { BtnNext } from "./components/BtnNext";
 import { BtnNumbers } from "./components/BtnNumbers";
+import { Filter } from "./components/Filter"
 
 export const ShopPage = () => {
-  const [allProducts, setAllProducts] = useState<ProductType[]>([]); // Todos os produtos
-  const [visibleProducts, setVisibleProducts] = useState<ProductType[]>([]); // Produtos da página atual
+  const [allProducts, setAllProducts] = useState<ProductType[]>([]); 
+  const [visibleProducts, setVisibleProducts] = useState<ProductType[]>([]); 
   const [page, setPage] = useState(1);
+  const [option, setOption] = useState("")
 
   const itemsPerPage = 16;
 
-  // Buscar todos os produtos ao carregar a página
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/products");
+        const response = await axios.get(`http://localhost:5000/products?Category=${option}`);
+        console.log(response)
+        console.log(option)
         setAllProducts(response.data);
+        
+       // setAllProducts(response2)
       } catch (error) {
         console.log("Erro ao buscar produtos:", error);
       }
     };
 
     fetchProducts();
-  }, []);
+  }, [option]);
 
   useEffect(() => {
     const startIndex = (page - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
     setVisibleProducts(allProducts.slice(startIndex, endIndex));
+    console.log(visibleProducts)
   }, [page, allProducts]);
 
   const totalPages = Math.ceil(allProducts.length / itemsPerPage);
@@ -59,6 +65,7 @@ export const ShopPage = () => {
     <div>
       <NavBar />
       <section className="flex flex-col items-center">
+        <Filter setOption={setOption} allProducts={allProducts} setAllProducts={setAllProducts} itemsPerPage={itemsPerPage}/>
         <div className="grid grid-cols-4 gap-8 mx-24 max-w-[1250px]">
           {visibleProducts.map((product) => (
             <Product key={product.id} product={product} />
