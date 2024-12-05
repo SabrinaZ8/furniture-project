@@ -10,6 +10,7 @@ import { BtnBack } from "./components/BtnBack";
 import { BtnNext } from "./components/BtnNext";
 import { BtnNumbers } from "./components/BtnNumbers";
 import { Filter } from "./components/Filter"
+import { Link } from "react-router-dom";
 
 export const ShopPage = () => {
   const [allProducts, setAllProducts] = useState<ProductType[]>([]); 
@@ -40,8 +41,7 @@ export const ShopPage = () => {
     const startIndex = (page - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
     setVisibleProducts(allProducts.slice(startIndex, endIndex));
-    console.log(visibleProducts)
-  }, [page, allProducts, visibleProducts]);
+  }, [page, allProducts]);
 
   const totalPages = Math.ceil(allProducts.length / itemsPerPage);
 
@@ -68,7 +68,9 @@ export const ShopPage = () => {
         <Filter setOption={setOption} allProducts={allProducts} setAllProducts={setAllProducts} itemsPerPage={itemsPerPage}/>
         <div className="grid grid-cols-4 gap-8 mx-24 max-w-[1250px]">
           {visibleProducts.map((product) => (
-            <Product key={product.id} product={product} />
+            <Link to={`/product/${product.id}`}>
+              <Product key={product.id} product={product} />
+            </Link>
           ))}
         </div>
         
