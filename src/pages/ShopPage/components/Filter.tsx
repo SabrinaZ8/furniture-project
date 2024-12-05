@@ -5,9 +5,9 @@ import { HiMiniSquares2X2 } from "react-icons/hi2";
 import { BsViewList } from "react-icons/bs";
 
 
-import { ProductType } from "../../../src/types/types";
+import { ProductType, FilterProps } from "../../../types/types";
 
-export const Filter = ({setOption, allProducts, setAllProducts, itemsPerPage }) => {
+export const Filter: React.FC<FilterProps> = ({setOption, allProducts, setAllProducts, itemsPerPage }) => {
     const [optionSort, setOptionSort] = useState("")
 
 
@@ -23,8 +23,7 @@ export const Filter = ({setOption, allProducts, setAllProducts, itemsPerPage }) 
         "Sort by Name A-Z",
         "Sort by Name Z-A",
         "Highest price",
-        "Lowest price",
-        "Biggest discount",
+        "Lowest price"
     ]
 
     useEffect(() => {
@@ -45,7 +44,7 @@ export const Filter = ({setOption, allProducts, setAllProducts, itemsPerPage }) 
     
         const sorted = sortProducts(allProducts);
         setAllProducts(sorted);
-      }, [optionSort, allProducts]);
+      }, [optionSort, allProducts, setAllProducts]);
 
   return (
     <div className="flex bg-yellow-70 w-full h-[100px] items-center justify-between text-xl mb-[60px]">
@@ -69,7 +68,7 @@ export const Filter = ({setOption, allProducts, setAllProducts, itemsPerPage }) 
         <p>Show</p>
         <span className="h-14 w-14 bg-white flex items-center justify-center text-gray-350 ml-3 mr-6">{itemsPerPage}</span>
         <p>Sort By</p>
-        <select onChange={(e) => setOptionSort(e.target.value)} className="ml-3 text-gray-350">
+        <select onChange={(e) => setOptionSort(e.target.value)} className="ml-3 text-gray-350 h-14 px-1">
         {optionsSort.map((sort) => (
                 <option value={sort} key={sort}>{sort}</option>
             ))}

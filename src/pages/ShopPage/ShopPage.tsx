@@ -41,7 +41,7 @@ export const ShopPage = () => {
     const endIndex = startIndex + itemsPerPage;
     setVisibleProducts(allProducts.slice(startIndex, endIndex));
     console.log(visibleProducts)
-  }, [page, allProducts]);
+  }, [page, allProducts, visibleProducts]);
 
   const totalPages = Math.ceil(allProducts.length / itemsPerPage);
 
@@ -72,7 +72,7 @@ export const ShopPage = () => {
           ))}
         </div>
         
-        <div className="mt-4 flex gap-2">
+        <div className=" flex gap-2 my-20">
           
           <BtnBack goToPreviousPage={goToPreviousPage} page={page}/>
 
