@@ -10,6 +10,10 @@ export interface ProductType {
     image: string;
     tags: string[];
   };
+
+  export interface CartProductType extends ProductType {
+    quantity: number;
+  }
   
   export interface BtnBackProps {
     goToPreviousPage: () => void;
@@ -22,4 +26,6 @@ export interface ProductType {
     setAllProducts: React.Dispatch<React.SetStateAction<ProductType[]>>;
     itemsPerPage: number;
   }
+
+
   
