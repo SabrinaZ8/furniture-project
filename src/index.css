@@ -12,3 +12,9 @@
 .btn-back-next {
     @apply h-[60px] w-24 bg-yellow-70 rounded-lg text-xl
 }
+.btn-size-cart {
+    @apply flex justify-center items-center text-sm cursor-pointer w-[30px] h-[30px] rounded-md mr-4
+}
+.input-radio-color {
+    @apply appearance-none w-[30px] h-[30px] rounded-full mr-4
+}
