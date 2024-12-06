@@ -18,3 +18,6 @@
 .input-radio-color {
     @apply appearance-none w-[30px] h-[30px] rounded-full mr-4
 }
+.imgs-side-left {
+    @apply min-w-[76px] h-20 mb-7 mr-7 rounded-md object-cover
+}
