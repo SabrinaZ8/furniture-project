@@ -12,6 +12,7 @@ import { BtnNumbers } from "./components/BtnNumbers";
 import { Filter } from "./components/Filter"
 import { Link } from "react-router-dom";
 import { MoreInfos } from "../../components/MoreInfos/MoreInfos";
+import { Banner } from "../../components/Banner/Banner";
 
 export const ShopPage = () => {
   const [allProducts, setAllProducts] = useState<ProductType[]>([]); 
@@ -65,6 +66,7 @@ export const ShopPage = () => {
   return (
     <div>
       <NavBar />
+      <Banner path={"Shop"}/>
       <section className="flex flex-col items-center">
         <Filter setOption={setOption} allProducts={allProducts} setAllProducts={setAllProducts} itemsPerPage={itemsPerPage}/>
         <div className="grid grid-cols-4 gap-8 mx-24 max-w-[1250px]">

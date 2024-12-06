@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { NavBar } from "../../components/NavBar/NavBar";
 import { Footer } from "../../components/Footer/Footer";
 import { MoreInfos } from "../../components/MoreInfos/MoreInfos";
+import { Banner } from "../../components/Banner/Banner";
 
 export const CartPage = () => {
   const items = useSelector((state: RootState) => state.cart.items);
@@ -20,6 +21,7 @@ export const CartPage = () => {
   return (
     <div>
       <NavBar />
+      <Banner path={'Cart'}/>
       <section className="my-[90px] mx-[100px]">
         <div className="flex">
           <div className="w-3/4 mr-8">
