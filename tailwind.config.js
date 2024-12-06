@@ -26,6 +26,9 @@ export default {
         },
         green: {
           450: "#2EC1AC"
+        },
+        indigo: {
+          450: "#816DFA"
         }
       },
       backgroundImage: {
