@@ -11,6 +11,7 @@ import { BtnNext } from "./components/BtnNext";
 import { BtnNumbers } from "./components/BtnNumbers";
 import { Filter } from "./components/Filter"
 import { Link } from "react-router-dom";
+import { MoreInfos } from "../../components/MoreInfos/MoreInfos";
 
 export const ShopPage = () => {
   const [allProducts, setAllProducts] = useState<ProductType[]>([]); 
@@ -82,6 +83,7 @@ export const ShopPage = () => {
           <BtnNext goToNextPage={goToNextPage} page={page}  totalPages={ totalPages}/>
         </div>
       </section>
+      <MoreInfos />
       <Footer />
     </div>
   );

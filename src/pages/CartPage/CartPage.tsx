@@ -5,6 +5,7 @@ import { removeFromCart } from "../../redux/cart/cartSlice";
 import { Link } from "react-router-dom";
 import { NavBar } from "../../components/NavBar/NavBar";
 import { Footer } from "../../components/Footer/Footer";
+import { MoreInfos } from "../../components/MoreInfos/MoreInfos";
 
 export const CartPage = () => {
   const items = useSelector((state: RootState) => state.cart.items);
@@ -64,6 +65,7 @@ export const CartPage = () => {
           </div>
         </div>
       </section>
+      <MoreInfos />
       <Footer />
     </div>
   );
