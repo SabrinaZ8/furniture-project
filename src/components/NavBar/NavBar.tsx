@@ -20,7 +20,9 @@ export const NavBar = () => {
       </div>
       <div className="flex">
         <TbUserExclamation className="w-7 h-6 mr-3.5" />
-        <AiOutlineShoppingCart className="w-7 h-6"/>
+        <Link to="/cart">
+          <AiOutlineShoppingCart className="w-7 h-6"/>
+        </Link>
       </div>
     </nav>
   )
