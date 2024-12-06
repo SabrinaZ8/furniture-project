@@ -32,7 +32,7 @@ export default {
         }
       },
       backgroundImage: {
-        'bg-intro': "url('./src/assets/images/bg-intro-furniro.png')",
+        'bg-intro': "url('./src/assets/images/banners/bg-intro-furniro.png')",
       }
     },
   },
