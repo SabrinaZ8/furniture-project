@@ -1,15 +1,24 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import { Provider } from 'react-redux'; // Importando o Provider
-import { store } from '../src/store.ts'; // Importando a store do Redux
+import { Provider } from 'react-redux';
+import { store } from '../src/store.ts';
+import { ClerkProvider } from '@clerk/clerk-react'
 import './index.css';
 import App from './App.tsx';
 
+const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
+
+if (!PUBLISHABLE_KEY) {
+  throw new Error("Missing Publishable Key")
+}
+
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <Provider store={store}> {/* Envolvendo App com o Provider */}
-      <App />
-    </Provider>
+    <ClerkProvider publishableKey={PUBLISHABLE_KEY} afterSignOutUrl="/">
+      <Provider store={store}> {/* Envolvendo App com o Provider */}
+        <App />
+      </Provider>
+    </ClerkProvider>
   </StrictMode>
 );
 
