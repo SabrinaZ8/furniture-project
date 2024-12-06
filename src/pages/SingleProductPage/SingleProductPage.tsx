@@ -51,34 +51,34 @@ export const SingleProductPage = () => {
               <img
                 src={product.image}
                 alt={product.description}
-                className="min-w-[76px] h-20 mb-7 mr-7"
+                className="imgs-side-left"
               />
               <img
                 src={product.image}
                 alt={product.description}
-                className="min-w-[76px] h-20 mb-7 mr-7"
+                className="imgs-side-left"
               />
               <img
                 src={product.image}
                 alt={product.description}
-                className="min-w-[76px] h-20 mb-7 mr-7"
+                className="imgs-side-left"
               />
               <img
                 src={product.image}
                 alt={product.description}
-                className="min-w-[76px] h-20 mb-7 mr-7"
+                className="imgs-side-left"
               />
             </div>
             <div>
               <img
                 src={product.image}
                 alt={product.description}
-                className="min-w-[423px] h-[500px]"
+                className="min-w-[423px] h-[500px] rounded-md object-cover"
               />
             </div>
           </div>
           <div className="w-1/2">
-            <div>
+            <div className="mb-[30px]"> {/*Ajustar*/}
               <h2 className="text-[42px]">{product.name}</h2>
               <p className="text-2xl text-gray-350">{product.price}</p>
               <div className="flex py-4">
@@ -172,23 +172,24 @@ export const SingleProductPage = () => {
                 </div>
               </div>
 
-              <div>
-                <div>
+              <div className="flex items-center my-8">
+                <div className="border-2 border-gray-350 w-[123px] h-16 p-3 rounded-[10px] flex items-center justify-center mr-5">
                   <button onClick={() => setQuantity(quantity === 1 ? 1 : quantity - 1)}>
                     -
                   </button>
-                  <span>{quantity}</span>
+                  <span className="mx-8 font-medium">{quantity}</span>
                   <button onClick={() => setQuantity(quantity + 1)}>
                     +
                   </button>
                 </div>
                 <div>
-                  <button onClick={handleAddToCart}>Add to cart</button>
+                  <button onClick={handleAddToCart} className="h-16 w-[215px] border-2 border-black rounded-[15px] text-xl">Add to cart</button>
                 </div>
               </div>
+              <hr />
             </div>
             <div>
-              <table className="table-auto border-separate border-spacing-4">
+              <table className="table-auto border-separate border-spacing-4 text-gray-350">
                 <tr>
                   <td>SKU</td>
                   <td>:</td>
@@ -213,7 +214,10 @@ export const SingleProductPage = () => {
             </div>
           </div>
         </div>
+        
       )}
+      
+      <hr />
       <Footer />
     </section>
   );
