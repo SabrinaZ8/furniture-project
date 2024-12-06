@@ -5,6 +5,7 @@ import { ContactPage } from '../pages/ContactPage/ContactPage';
 import { HomePage } from '../pages/HomePage/HomePage';
 import { ShopPage } from '../pages/ShopPage/ShopPage';
 import { SingleProductPage } from '../pages/SingleProductPage/SingleProductPage';
+import { ProtectedRoute } from './ProtectedRoute';
 
 const Routers = () => {
     return (
@@ -12,11 +13,14 @@ const Routers = () => {
         <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/cart" element={<CartPage />} />
-            <Route path="/checkout" element={<CheckoutPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="shop" element={<ShopPage />} />
             <Route path="single-product" element={<SingleProductPage />} />
             <Route  path="/product/:id" element={<SingleProductPage/>}/>
+            
+            <Route element={<ProtectedRoute />}>
+              <Route path="/checkout" element={<CheckoutPage />} />
+            </Route>
           </Routes>
       </BrowserRouter>
     );
