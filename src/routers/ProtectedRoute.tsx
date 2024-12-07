@@ -6,7 +6,7 @@ export const ProtectedRoute = () => {
 
   // Verifica se o estado de autenticação foi carregado
   if (!isLoaded) {
-    return <div>Carregando...</div>;  // Pode exibir um loading enquanto o estado não é definido
+    return <div>...</div>;  // Pode exibir um loading enquanto o estado não é definido
   }
 
   console.log('isSignedIn:', isSignedIn);

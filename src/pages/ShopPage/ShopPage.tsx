@@ -13,17 +13,21 @@ import { Filter } from "./components/Filter"
 import { Link } from "react-router-dom";
 import { MoreInfos } from "../../components/MoreInfos/MoreInfos";
 import { Banner } from "../../components/Banner/Banner";
+import { Loading } from "../../components/Loading/Loading";
+
 
 export const ShopPage = () => {
   const [allProducts, setAllProducts] = useState<ProductType[]>([]); 
   const [visibleProducts, setVisibleProducts] = useState<ProductType[]>([]); 
   const [page, setPage] = useState(1);
   const [option, setOption] = useState("")
+  const [loading, setLoading] = useState(false)
 
   const itemsPerPage = 16;
 
   useEffect(() => {
     const fetchProducts = async () => {
+      setLoading(true)
       try {
         const response = await axios.get(`http://localhost:5000/products?Category=${option}`);
         console.log(response)
@@ -33,6 +37,8 @@ export const ShopPage = () => {
        // setAllProducts(response2)
       } catch (error) {
         console.log("Erro ao buscar produtos:", error);
+      } finally {
+        setLoading(false)
       }
     };
 
@@ -62,6 +68,10 @@ export const ShopPage = () => {
       setPage(page - 1);
     }
   };
+
+  if(loading) {
+    return <Loading />
+  }
 
   return (
     <div>
