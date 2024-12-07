@@ -27,5 +27,26 @@ export interface ProductType {
     itemsPerPage: number;
   }
 
+  export interface AddressType {
+    cep: string;
+    logradouro: string;
+    complemento: string;
+    bairro: string;
+    localidade: string;
+    uf: string;
+    ibge: string;
+    gia: string;
+    ddd: string;
+    siafi: string;
+    pais: string | null;
+  }
+
+  export interface UserInfos extends AddressType {
+    firstName: string;
+    lastName: string;
+    company: string | null;
+    email: string;
+  }
+
 
   
