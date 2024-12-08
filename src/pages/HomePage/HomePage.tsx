@@ -2,6 +2,7 @@ import { Footer } from "../../components/Footer/Footer";
 import { NavBar } from "../../components/NavBar/NavBar";
 import { Link } from "react-router-dom";
 import { BrowseRange } from "./components/BrowseRange";
+import { ShowProducts } from "../../components/ShowProducts/ShowProducts";
 
 export const HomePage = () => {
   return (
@@ -30,6 +31,10 @@ export const HomePage = () => {
         </div>
       </section>
       <BrowseRange />
+      <div className="my-[60px] flex justify-center flex-col items-center">
+        <h2 className="font-bold text-gray-750 text-[40px] text-center">Our Products</h2>
+        <ShowProducts limit={8} category={""} />
+      </div>
       <section>
         <div>
           <h2>50+ Beautiful rooms inspiration</h2>
@@ -45,10 +50,26 @@ export const HomePage = () => {
           </Link>
         </div>
         <div className="flex overflow-hidden w-[1000px]">
-          <img src="../../../src/assets/images-carousel/image-carousel-1.png" alt="" className="w-[500px] h-[500px] min-w-[500px] min-h-[500px]"/>
-          <img src="../../../src/assets/images-carousel/images-carousel-2.png" alt="" className="w-[500px] h-[500px] min-w-[500px] min-h-[500px]"/>
-          <img src="../../../src/assets/images-carousel/images-carousel-3.png" alt="" className="w-[500px] h-[500px] min-w-[500px] min-h-[500px]"/>
-          <img src="../../../src/assets/images-carousel/images-carousel-4.png" alt="" className="w-[500px] h-[500px] min-w-[500px] min-h-[500px]"/>
+          <img
+            src="../../../src/assets/images-carousel/image-carousel-1.png"
+            alt=""
+            className="w-[500px] h-[500px] min-w-[500px] min-h-[500px]"
+          />
+          <img
+            src="../../../src/assets/images-carousel/images-carousel-2.png"
+            alt=""
+            className="w-[500px] h-[500px] min-w-[500px] min-h-[500px]"
+          />
+          <img
+            src="../../../src/assets/images-carousel/images-carousel-3.png"
+            alt=""
+            className="w-[500px] h-[500px] min-w-[500px] min-h-[500px]"
+          />
+          <img
+            src="../../../src/assets/images-carousel/images-carousel-4.png"
+            alt=""
+            className="w-[500px] h-[500px] min-w-[500px] min-h-[500px]"
+          />
         </div>
       </section>
       <Footer />
