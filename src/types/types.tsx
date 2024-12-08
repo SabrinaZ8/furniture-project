@@ -55,5 +55,12 @@ export interface ProductType {
     email: string;
   }
 
-
+export interface DetailsProductProps {
+  product: ProductType; 
+  selectedOption: string;
+  setSelectedOption: React.Dispatch<React.SetStateAction<string>>;
+  quantity: number;
+  setQuantity: React.Dispatch<React.SetStateAction<number>>;
+  handleAddToCart: () => void;
+}
   
