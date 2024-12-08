@@ -59,6 +59,7 @@ export const NavBar = () => {
           </SignedOut>
         </div>
 
+        {/*Show CartAside*/}
         <AiOutlineShoppingCart
           className={`w-7 h-6 4`}
           onClick={() => setCartSide(false)}

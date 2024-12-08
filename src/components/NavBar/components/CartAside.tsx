@@ -2,8 +2,10 @@ import { formatMoney } from "../../../utils/formatMoney";
 import { BsBagX } from "react-icons/bs";
 import { IoMdCloseCircle } from "react-icons/io";
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../../store";
+import { removeFromCart } from "../../../redux/cart/cartSlice";
+
 
 type SetCartSideProps = {
   setCartSide: React.Dispatch<React.SetStateAction<boolean>>;
@@ -12,8 +14,13 @@ export const CartAside: React.FC<SetCartSideProps> = ({ setCartSide }) => {
   const totalAmount = useSelector((state: RootState) => state.cart.totalAmount);
   const itemsCart = useSelector((state: RootState) => state.cart.items);
 
+  const dispatch = useDispatch();
+  const handleRemoveFromCart = (id: number) => {
+    dispatch(removeFromCart(id));
+  };
+
   return (
-    <div className="w-[417px] h-[746px] absolute z-50 top-0 right-0 p-7 bg-white flex flex-col justify-between">
+    <div className="w-[417px] h-[746px] absolute z-50 top-0 right-0 p-7 bg-white flex flex-col justify-between overflow-y-auto">
       <div className="">
         <div>
           <div className="flex justify-between items-center mb-7">
@@ -54,6 +61,7 @@ export const CartAside: React.FC<SetCartSideProps> = ({ setCartSide }) => {
                 <div>
                   <IoMdCloseCircle
                     className="text-gray-350 w-5 h-5"
+                    onClick={() => handleRemoveFromCart(item.id)}
                   />
                 </div>
               </div>
