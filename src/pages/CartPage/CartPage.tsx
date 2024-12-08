@@ -1,5 +1,4 @@
-import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../../store";
 import { removeFromCart } from "../../redux/cart/cartSlice";
 import { Link } from "react-router-dom";
@@ -7,6 +6,8 @@ import { NavBar } from "../../components/NavBar/NavBar";
 import { Footer } from "../../components/Footer/Footer";
 import { MoreInfos } from "../../components/MoreInfos/MoreInfos";
 import { Banner } from "../../components/Banner/Banner";
+import { RiDeleteBin7Fill } from "react-icons/ri";
+import { formatMoney } from "../../utils/formatMoney";
 
 export const CartPage = () => {
   const items = useSelector((state: RootState) => state.cart.items);
@@ -38,12 +39,12 @@ export const CartPage = () => {
                   alt={item.description}
                   className="h-[105px] w-[105px] rounded-md"
                 />
-                <p>{item.name}</p>
-                <p>{item.price}</p>
+                <p className="text-gray-350">{item.name}</p>
+                <p className="text-gray-350">{formatMoney( item.discountedPrice ? item.discountedPrice : item.price)}</p>
                 <p>{item.quantity}</p>
-                <p>{totalAmount}</p>
+                <p>{formatMoney(totalAmount)}</p>
                 <button onClick={() => handleRemoveFromCart(item.id)}>
-                  Remove
+                  <RiDeleteBin7Fill className="text-yellow-550 w-6 h-6" />
                 </button>
               </div>
             ))}
@@ -52,11 +53,11 @@ export const CartPage = () => {
             <h2 className="text-[42px] font-semibold mb-16">Cart Totals</h2>
             <div className="flex justify-between w-4/5">
               <p className="font-semibold">Subtotal</p>
-              <p className="text-gray-350">{totalAmount}</p>
+              <p className="text-gray-350">{formatMoney(totalAmount)}</p>
             </div>
             <div className="flex justify-between my-8  w-4/5">
               <p className="font-semibold">Total</p>
-              <p className="text-yellow-550 ">{totalAmount}</p>
+              <p className="text-yellow-550 ">{formatMoney(totalAmount)}</p>
             </div>
             <Link
               to="/checkout"
