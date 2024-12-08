@@ -8,6 +8,7 @@ import { NavBar } from "../../components/NavBar/NavBar";
 import { Footer } from "../../components/Footer/Footer";
 import { PathBar } from "./components/PathBar";
 import { DetailsProduct } from "./components/DetailsProduct";
+import { AdditionalInformation } from "./components/AdditionalInformation";
 
 export const SingleProductPage = () => {
   const { id } = useParams<{ id: string }>();
@@ -59,6 +60,7 @@ export const SingleProductPage = () => {
           />
 
           <hr />
+          <AdditionalInformation />
           <Footer />
         </div>
       )}
