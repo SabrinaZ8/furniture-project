@@ -4,6 +4,7 @@ import { GoArrowSwitch } from "react-icons/go";
 import { FaRegHeart } from "react-icons/fa";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../../redux/cart/cartSlice";
+import { formatMoney } from "../../../utils/formatMoney";
 
 type ProductProps = {
   product: ProductType;
@@ -31,7 +32,7 @@ export const Product: React.FC<ProductProps> = ({ product }) => {
               onClick={(e) => {
                 handleAddToCart(product);
                 e.stopPropagation();
-                e.preventDefault()
+                e.preventDefault();
               }}
               className="w-[202px] h-12 bg-white text-yellow-550"
             >
@@ -76,23 +77,16 @@ export const Product: React.FC<ProductProps> = ({ product }) => {
         <p className="text-gray-898 my-2">{product.description}</p>
         <div className="flex justify-between">
           <h3 className="text-xl font-semibold text-gray-750">
-            {product.discountedPrice === 0
-              ? product.price.toLocaleString("pt-BR", {
-                  style: "currency",
-                  currency: "BRL",
-                })
-              : product.discountedPrice.toLocaleString("pt-BR", {
-                  style: "currency",
-                  currency: "BRL",
-                })}
+            {formatMoney(
+              product.discountedPrice === 0
+                ? product.price
+                : product.discountedPrice
+            )}
           </h3>
           <span className="text-gray-110 line-through">
             {product.discountedPrice === 0
               ? null
-              : product.price.toLocaleString("pt-BR", {
-                  style: "currency",
-                  currency: "BRL",
-                })}
+              : formatMoney(product.price)}
           </span>
         </div>
       </div>
