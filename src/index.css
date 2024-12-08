@@ -8,6 +8,7 @@
 .text-gray-smb-24 {
     @apply font-semibold my-8 text-2xl
 }
+/*SingleProduct*/
 
 .btn-back-next {
     @apply h-[60px] w-24 bg-yellow-70 rounded-lg text-xl
@@ -63,4 +64,9 @@
 }
 .infos-address-phone-input {
     @apply w-[528px] h-[75px] p-5 text-gray-350 border-[1px] border-gray-350 rounded-[10px]
+}
+
+/*btn show more - home and singleproduct page*/
+.btn-show-more {
+    @apply border-[1px] border-yellow-550 w-[245px] h-12 text-yellow-550 font-semibold
 }
