@@ -2,8 +2,12 @@ import { Link } from "react-router-dom";
 import { TbUserExclamation } from "react-icons/tb";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { UserButton, useClerk, SignedIn, SignedOut } from "@clerk/clerk-react";
+import { useState } from "react";
+import { CartAside } from "./components/CartAside";
 
 export const NavBar = () => {
+  const [cartSide, setCartSide] = useState(true);
+
   const { redirectToSignIn } = useClerk();
   const { signOut } = useClerk();
 
@@ -15,7 +19,7 @@ export const NavBar = () => {
   };
 
   return (
-    <nav className="flex justify-between items-center h-[100px] mx-14">
+    <nav className="flex justify-between items-center h-[100px] p-14 relative">
       <Link to="/" className="flex">
         <img
           src="/LogoFurniro/furniroLogo.png"
@@ -43,7 +47,6 @@ export const NavBar = () => {
       <div className="flex">
         <div className=" mr-3.5 flex items-center justify-center">
           <div onClick={handleLogout}>
-
             {/* If the user is online, he can log out*/}
             <SignedIn>
               <UserButton />
@@ -54,11 +57,13 @@ export const NavBar = () => {
           <SignedOut>
             <TbUserExclamation onClick={handleLogin} className="w-7 h-6" />
           </SignedOut>
-          
         </div>
-        <Link to="/cart">
-          <AiOutlineShoppingCart className="w-7 h-6" />
-        </Link>
+
+        <AiOutlineShoppingCart
+          className={`w-7 h-6 4`}
+          onClick={() => setCartSide(false)}
+        />
+        {cartSide ? null : <CartAside setCartSide={setCartSide} />}
       </div>
     </nav>
   );
