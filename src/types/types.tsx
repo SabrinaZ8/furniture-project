@@ -20,11 +20,18 @@ export interface ProductType {
     page: number; 
   }
 
+  interface StartEndIndexType {
+    startIndex: number;
+    endIndex: number;
+  }
+
   export interface FilterProps {
     setOption: React.Dispatch<React.SetStateAction<string>>;
     allProducts: ProductType[];
     setAllProducts: React.Dispatch<React.SetStateAction<ProductType[]>>;
     itemsPerPage: number;
+    startEndIndex: StartEndIndexType
+
   }
 
   export interface AddressType {
