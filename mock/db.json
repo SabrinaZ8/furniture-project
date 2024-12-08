@@ -29,9 +29,9 @@
             "name": "Modular sofa",
             "description": "Luxurious modular sofa",
             "discountPercentage": 50,
-            "discountedPrice": 2000,
+            "discountedPrice": 1000,
             "isNew": false,
-            "price": 1000,
+            "price": 2000,
             "Category": "sofa",
             "image": "https://furniro.s3.us-east-1.amazonaws.com/products/modular-sofa.png",
             "tags": ["home", "room", "mobile", "sofa"]
@@ -256,9 +256,9 @@
             "name": "Modular sofa",
             "description": "Luxurious modular sofa",
             "discountPercentage": 50,
-            "discountedPrice": 2000,
+            "discountedPrice": 1000,
             "isNew": false,
-            "price": 1000,
+            "price": 2000,
             "Category": "sofa",
             "image": "https://furniro.s3.us-east-1.amazonaws.com/products/modular-sofa.png",
             "tags": ["home", "room", "mobile", "sofa"]
