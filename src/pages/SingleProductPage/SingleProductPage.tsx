@@ -9,6 +9,7 @@ import { Footer } from "../../components/Footer/Footer";
 import { PathBar } from "./components/PathBar";
 import { DetailsProduct } from "./components/DetailsProduct";
 import { AdditionalInformation } from "./components/AdditionalInformation";
+import { ShowProducts } from "../../components/ShowProducts/ShowProducts";
 
 export const SingleProductPage = () => {
   const { id } = useParams<{ id: string }>();
@@ -61,6 +62,10 @@ export const SingleProductPage = () => {
 
           <hr />
           <AdditionalInformation />
+          <div className="my-[60px] flex justify-center flex-col items-center">
+            <h2 className="font-medium text-4xl text-center">Related Products</h2>
+            <ShowProducts limit={4} category={product.Category} />
+          </div>
           <Footer />
         </div>
       )}
