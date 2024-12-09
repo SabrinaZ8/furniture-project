@@ -74,4 +74,20 @@ A sessão do usuário é gerida automaticamente pelo Clerk, com a persistência 
 - **Armazenamento de Imagens:**
 As imagens dos produtos são armazenadas utilizando o AWS S3, garantindo uma solução de armazenamento escalável e segura. O S3 permite que as imagens sejam facilmente acessadas e exibidas na interface do ecommerce, melhorando o desempenho do site ao carregar imagens diretamente da nuvem.
 
+## Autora
+
+<table>
+  <tr>
+    <td>
+      <img width="80px" align="center" src="https://avatars.githubusercontent.com/SabrinaZ8"/>
+    </td>
+    <td align="left">
+      <a href="https://github.com/SabrinaZ8">
+         <span><b>Sabrina Souza</b></span>
+      </a>
+      <br>
+    </td>
+  </tr>
+</table>
+
 
