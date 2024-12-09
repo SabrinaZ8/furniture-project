@@ -24,7 +24,7 @@ export const HomePage = () => {
           </p>
           <Link
             to="shop"
-            className="flex justify-center items-center uppercase h-[74px] w-[222px] bg-yellow-550 font-bold text-white"
+            className="flex justify-center items-center uppercase h-[74px] w-[222px] bg-yellow-550 font-bold text-white btn-transparent "
           >
             Buy Now
           </Link>

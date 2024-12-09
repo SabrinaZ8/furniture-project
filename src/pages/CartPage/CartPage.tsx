@@ -64,7 +64,7 @@ export const CartPage = () => {
             </div>
             <Link
               to="/checkout"
-              className="flex items-center justify-center border border-1 border-black h-[60px] w-56 rounded-[15px]"
+              className="flex items-center justify-center border border-1 border-black h-[60px] w-56 rounded-[15px] btn-yellow "
             >
               <p className="text-xl">Check Out</p>
             </Link>

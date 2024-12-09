@@ -22,28 +22,28 @@ export const Footer = () => {
             <a
               href="https://pt-br.facebook.com/login/device-based/regular/login/"
               target="_blank"
-              className=" flex w-9 h-9 rounded-full shadow-lg items-center justify-center mx-2"
+              className=" flex w-9 h-9 rounded-full shadow-lg items-center justify-center mx-2 hover-text"
             >
               <TiSocialFacebook className="w-4 h-4" />
             </a>
             <a
               href="https://www.instagram.com/"
               target="_blank"
-              className="flex w-9 h-9 rounded-full shadow-lg items-center justify-center mx-2"
+              className="flex w-9 h-9 rounded-full shadow-lg items-center justify-center mx-2 hover-text"
             >
               <SlSocialInstagram className="w-4 h-4" />
             </a>
             <a
               href="https://x.com/i/flow/login"
               target="_blank"
-              className="flex w-9 h-9 rounded-full shadow-lg items-center justify-center mx-2"
+              className="flex w-9 h-9 rounded-full shadow-lg items-center justify-center mx-2 hover-text"
             >
               <TiSocialTwitter className="w-4 h-4" />
             </a>
             <a
               href="https://www.linkedin.com/in/sabrina-souza-dev/"
               target="_blank"
-              className="flex w-9 h-9 rounded-full shadow-lg items-center justify-center mx-2"
+              className="flex w-9 h-9 rounded-full shadow-lg items-center justify-center mx-2  hover-text"
             >
               <TiSocialLinkedin className="w-4 h-4" />
             </a>
@@ -52,17 +52,17 @@ export const Footer = () => {
         <div className="flex flex-col gap-y-12 font-medium">
           <h3 className="text-gray-350">Links</h3>
           <ul className="flex flex-col gap-y-10">
-            <li>
-              <Link to="/">Home</Link>
+            <li >
+              <Link to="/" className="hover-text">Home</Link>
             </li>
             <li>
-              <Link to="/shop">Shop</Link>
+              <Link to="/shop" className="hover-text">Shop</Link>
             </li>
             <li>
-              <Link to="#">About</Link>
+              <Link to="#" className="hover-text">About</Link>
             </li>
             <li>
-              <Link to="/contact">Contact</Link>
+              <Link to="/contact" className="hover-text">Contact</Link>
             </li>
           </ul>
         </div>
@@ -70,13 +70,13 @@ export const Footer = () => {
           <h3 className="text-gray-350">Help</h3>
           <ul className="flex flex-col gap-y-10">
             <li>
-              <Link to='#'>Payment Options</Link>
+              <Link to='#' className="hover-text">Payment Options</Link>
             </li>
             <li>
-              <Link to='#'>Returns</Link>
+              <Link to='#' className="hover-text">Returns</Link>
             </li>
             <li>
-              <Link to='#'>Privacy Policies</Link>
+              <Link to='#' className="hover-text">Privacy Policies</Link>
             </li>
           </ul>
         </div>

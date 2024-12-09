@@ -155,7 +155,7 @@ export const ContactPage = () => {
             <div className="my-[50px]">
               <button
                 type="submit"
-                className="w-[237px] h-14 bg-yellow-550 rounded  text-white"
+                className="w-[237px] h-14 bg-yellow-550 rounded  text-white btn-transparent "
               >
                 Submit
               </button>

@@ -153,7 +153,7 @@ export const DetailsProduct: React.FC<DetailsProductProps> = ({
             <div>
               <button
                 onClick={handleAddToCart}
-                className="h-16 w-[215px] border-2 border-black rounded-[15px] text-xl"
+                className="h-16 w-[215px] border-2 border-black rounded-[15px] text-xl btn-gray"
               >
                 Add to cart
               </button>

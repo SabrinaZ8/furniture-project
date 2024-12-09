@@ -31,16 +31,16 @@ export const NavBar = () => {
       <div className="w-1/3">
         <ul className="flex font-medium justify-between">
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/" className="hover-text">Home</Link>
           </li>
           <li>
-            <Link to="/shop">Shop</Link>
+            <Link to="/shop" className="hover-text">Shop</Link>
           </li>
           <li>
-            <Link to="#">About</Link>
+            <Link to="#" className="hover-text">About</Link>
           </li>
           <li>
-            <Link to="/contact">Contact</Link>
+            <Link to="/contact" className="hover-text">Contact</Link>
           </li>
         </ul>
       </div>
@@ -55,13 +55,13 @@ export const NavBar = () => {
 
           {/*If the user is offline, he can click and log in*/}
           <SignedOut>
-            <TbUserExclamation onClick={handleLogin} className="w-7 h-6" />
+            <TbUserExclamation onClick={handleLogin} className="w-7 h-6 hover:text-yellow-550 cursor-pointer" />
           </SignedOut>
         </div>
 
         {/*Show CartAside*/}
         <AiOutlineShoppingCart
-          className={`w-7 h-6 4 cursor-pointer`}
+          className={`w-7 h-6 4 cursor-pointer hover:text-yellow-550`}
           onClick={() => setCartSide(false)}
         />
         {cartSide ? null : <CartAside setCartSide={setCartSide} />}

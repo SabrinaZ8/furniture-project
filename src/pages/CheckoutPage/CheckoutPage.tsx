@@ -162,7 +162,7 @@ export const CheckoutPage = () => {
             <div className="flex justify-center mx-3">
               <button
                 type="submit"
-                className="w-80 h-16 rounded-[15px] text-xl border-[1px] border-black"
+                className="w-80 h-16 rounded-[15px] text-xl border-[1px] border-black btn-gray"
               >
                 Place order
               </button>

@@ -27,7 +27,7 @@ export const CartAside: React.FC<SetCartSideProps> = ({ setCartSide }) => {
         <div>
           <div className="flex justify-between items-center mb-7">
             <p className="text-2xl font-semibold">Shopping Cart</p>
-            <BsBagX className="text-gray-350 w-5 h-5 cursor-pointer" 
+            <BsBagX className="text-gray-350 w-5 h-5 cursor-pointer hover-text" 
                     onClick={() => setCartSide(true)} />
           </div>
           <hr className="w-4/5" />
@@ -82,13 +82,13 @@ export const CartAside: React.FC<SetCartSideProps> = ({ setCartSide }) => {
         </div>
         <hr />
         <div className="text-xs mt-6">
-          <Link to="/cart" className="btns-shop-side">
+          <Link to="/cart" className="btns-shop-side btn-gray ">
             Cart
           </Link>
-          <Link to="/checkout" className="btns-shop-side">
+          <Link to="/checkout" className="btns-shop-side btn-gray ">
             Checkout
           </Link>
-          <Link to="/" className="btns-shop-side">
+          <Link to="/" className="btns-shop-side btn-gray ">
             Comparison
           </Link>
         </div>

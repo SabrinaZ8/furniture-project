@@ -8,6 +8,22 @@
 .text-gray-smb-24 {
     @apply font-semibold my-8 text-2xl
 }
+
+/*hover*/
+
+.hover-text {
+    @apply hover:text-yellow-550
+}
+.btn-transparent {
+    @apply hover:border-[2px] hover:border-yellow-550 hover:text-yellow-550 hover:bg-transparent
+}
+.btn-yellow {
+    @apply   hover:text-white hover:bg-yellow-550 hover:border-none
+}
+.btn-gray {
+   @apply  hover:bg-gray-200 
+}
+
 /*SingleProduct*/
 
 .btn-back-next {
