@@ -63,4 +63,13 @@ export interface DetailsProductProps {
   setQuantity: React.Dispatch<React.SetStateAction<number>>;
   handleAddToCart: () => void;
 }
+
+export interface InputsAddressProps {
+  errors: { [key in keyof UserInfos]?: string };
+  handleInputChange: <K extends keyof UserInfos>(field: K, value: UserInfos[K]) => void;
+  address: UserInfos;
+  cepUser: string;
+  setCepUser: React.Dispatch<React.SetStateAction<string>>;
+  cepSearch: AddressType | null
+}
   
