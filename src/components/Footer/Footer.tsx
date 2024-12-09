@@ -8,8 +8,9 @@ import { FormSubscribe } from "./components/FormSubscribe";
 
 export const Footer = () => {
   return (
-    <footer className="min-h-[505px] h-[505px] mx-24">
-      <div className="my-12 flex justify-between h-9/12">
+    <footer className="min-h-[505px] h-[505px] ">
+      <hr />
+      <div className="my-12 flex justify-between h-9/12 px-24">
         <div className="flex flex-col gap-y-14">
           <span className="font-poppins text-2xl font-bold">Funiro.</span>
           <address className="not-italic text-gray-350">
@@ -87,7 +88,7 @@ export const Footer = () => {
           <FormSubscribe />
         </div>
       </div>
-      <div>
+      <div className="px-24">
         <hr />
         <p  className="my-9">2023 furino. All rights reverved</p>
       </div>
