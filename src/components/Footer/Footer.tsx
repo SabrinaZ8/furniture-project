@@ -4,6 +4,7 @@ import { TiSocialTwitter } from "react-icons/ti";
 import { TiSocialLinkedin } from "react-icons/ti";
 
 import { Link } from "react-router-dom";
+import { FormSubscribe } from "./components/FormSubscribe";
 
 export const Footer = () => {
   return (
@@ -82,10 +83,8 @@ export const Footer = () => {
         </div>
         <div className="flex flex-col gap-y-12 font-medium">
           <h3 className="text-gray-350">Newsletter</h3>
-          <form action="" className="text-sm/7 ">
-            <input type="text" placeholder="Enter Your Email Address" className="font-normal border-b border-black pr-5"/>
-            <button type="submit" className="uppercase border-b border-black ml-2.5">Subscribe</button>
-          </form>
+          
+          <FormSubscribe />
         </div>
       </div>
       <div>
