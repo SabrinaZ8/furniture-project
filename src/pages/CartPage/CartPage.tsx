@@ -8,14 +8,17 @@ import { MoreInfos } from "../../components/MoreInfos/MoreInfos";
 import { Banner } from "../../components/Banner/Banner";
 import { RiDeleteBin7Fill } from "react-icons/ri";
 import { formatMoney } from "../../utils/formatMoney";
+import { toast } from "react-toastify";
 
 export const CartPage = () => {
   const items = useSelector((state: RootState) => state.cart.items);
   const totalAmount = useSelector((state: RootState) => state.cart.totalAmount);
 
   const dispatch = useDispatch();
-  const handleRemoveFromCart = (id: number) => {
+  const handleRemoveFromCart = (id: number, itemName: string) => {
     dispatch(removeFromCart(id));
+    toast.warning(`${itemName} removed from cart`)
+
   };
 
   console.log(items);
@@ -43,7 +46,7 @@ export const CartPage = () => {
                 <p className="text-gray-350">{formatMoney( item.discountedPrice ? item.discountedPrice : item.price)}</p>
                 <p>{item.quantity}</p>
                 <p>{formatMoney(totalAmount)}</p>
-                <button onClick={() => handleRemoveFromCart(item.id)}>
+                <button onClick={() => handleRemoveFromCart(item.id, item.name)}>
                   <RiDeleteBin7Fill className="text-yellow-550 w-6 h-6" />
                 </button>
               </div>

@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../../store";
 import { removeFromCart } from "../../../redux/cart/cartSlice";
+import { toast } from "react-toastify";
 
 
 type SetCartSideProps = {
@@ -15,8 +16,9 @@ export const CartAside: React.FC<SetCartSideProps> = ({ setCartSide }) => {
   const itemsCart = useSelector((state: RootState) => state.cart.items);
 
   const dispatch = useDispatch();
-  const handleRemoveFromCart = (id: number) => {
+  const handleRemoveFromCart = (id: number, itemName: string) => {
     dispatch(removeFromCart(id));
+    toast.warning(`${itemName} removed`)
   };
 
   return (
@@ -61,7 +63,7 @@ export const CartAside: React.FC<SetCartSideProps> = ({ setCartSide }) => {
                 <div>
                   <IoMdCloseCircle
                     className="text-gray-350 w-5 h-5 cursor-pointer"
-                    onClick={() => handleRemoveFromCart(item.id)}
+                    onClick={() => handleRemoveFromCart(item.id, item.name)}
                   />
                 </div>
               </div>
