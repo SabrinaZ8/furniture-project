@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Banner } from "../../components/Banner/Banner";
 import { Footer } from "../../components/Footer/Footer";
 import { MoreInfos } from "../../components/MoreInfos/MoreInfos";
@@ -5,8 +6,40 @@ import { NavBar } from "../../components/NavBar/NavBar";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdAccessTimeFilled } from "react-icons/md";
+import { useValidateFormContact } from "../../hooks/useValidateFormContact";
 
 export const ContactPage = () => {
+  const [formContact, setFormContact] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { id, value } = e.target;
+    setFormContact((prev) => ({
+      ...prev,
+      [id]: value,
+    }));
+  };
+
+  const { validateForm, errors } = useValidateFormContact();
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    const isValid = validateForm(formContact);
+
+    if (isValid) {
+      localStorage.setItem("contactFormData", JSON.stringify(formContact));
+    } else {
+      console.log("Erro na validação:", errors);
+    }
+  };
+
   return (
     <div>
       <NavBar />
@@ -22,7 +55,7 @@ export const ContactPage = () => {
           </p>
         </div>
         <div className="flex mx-[237px]">
-          <div className="w-[30%] mt-9">
+          <div className="w-1/2 mt-9">
             <div className="infos-address-phone">
               <div className="mr-6">
                 <FaMapMarkerAlt className="infos-address-phone-icons" />
@@ -46,7 +79,7 @@ export const ContactPage = () => {
                 </div>
               </div>
             </div>
-            <div  className="infos-address-phone">
+            <div className="infos-address-phone">
               <div className="mr-6">
                 <MdAccessTimeFilled className="infos-address-phone-icons" />
               </div>
@@ -56,24 +89,78 @@ export const ContactPage = () => {
               </div>
             </div>
           </div>
-          <div className="w-[70%] flex flex-col items-center">
+          <form
+            className="w-1/2 flex flex-col items-start"
+            onSubmit={(e) => handleSubmit(e)}
+          >
             <div className="infos-address-phone-input-div">
-              <label htmlFor="name" className="infos-address-phone-label">Your Name</label>
-              <input id="name" type="text" className="infos-address-phone-input" placeholder="Ex: Sabrina"/>
+              <label htmlFor="name" className="infos-address-phone-label">
+                Your Name
+              </label>
+              <p className="message-error">{errors.name ? errors.name : ""}</p>
+              <input
+                id="name"
+                type="text"
+                className="infos-address-phone-input"
+                placeholder="Ex: Sabrina"
+                value={formContact.name}
+                onChange={handleChange}
+              />
             </div>
             <div className="infos-address-phone-input-div">
-              <label htmlFor="email" className="infos-address-phone-label">Email address</label>
-              <input type="email" id="email"  className="infos-address-phone-input" placeholder="ex: Your_email@gmail.com"/>
+              <label htmlFor="email" className="infos-address-phone-label">
+                Email address
+              </label>
+              <p className="message-error">
+                {errors.email ? errors.email : ""}
+              </p>
+              <input
+                type="email"
+                id="email"
+                className="infos-address-phone-input"
+                placeholder="ex: Your_email@gmail.com"
+                value={formContact.email}
+                onChange={handleChange}
+              />
             </div>
             <div className="infos-address-phone-input-div">
-              <label htmlFor="subject" className="infos-address-phone-label">Subject</label>
-              <input type="text" id="subject"  className="infos-address-phone-input" placeholder="This is an optional"/>
+              <label htmlFor="subject" className="infos-address-phone-label">
+                Subject
+              </label>
+              <input
+                type="text"
+                id="subject"
+                className="infos-address-phone-input"
+                placeholder="This is an optional"
+                value={formContact.subject}
+                onChange={handleChange}
+              />
             </div>
             <div className="infos-address-phone-input-div">
-              <label htmlFor="message" className="infos-address-phone-label">Message</label>
-              <input type="text" id="message"  className="infos-address-phone-input h-[120px]" placeholder="Hi! i’d like to ask about"/>
+              <label htmlFor="message" className="infos-address-phone-label">
+                Message
+              </label>
+              <p className="message-error">
+                {errors.message ? errors.message : ""}
+              </p>
+              <input
+                type="text"
+                id="message"
+                className="infos-address-phone-input h-[120px]"
+                placeholder="Hi! i’d like to ask about"
+                value={formContact.message}
+                onChange={handleChange}
+              />
             </div>
-          </div>
+            <div className="my-[50px]">
+              <button
+                type="submit"
+                className="w-[237px] h-14 bg-yellow-550 rounded  text-white"
+              >
+                Submit
+              </button>
+            </div>
+          </form>
         </div>
       </section>
 
