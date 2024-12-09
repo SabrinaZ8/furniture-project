@@ -61,7 +61,7 @@ export const NavBar = () => {
 
         {/*Show CartAside*/}
         <AiOutlineShoppingCart
-          className={`w-7 h-6 4`}
+          className={`w-7 h-6 4 cursor-pointer`}
           onClick={() => setCartSide(false)}
         />
         {cartSide ? null : <CartAside setCartSide={setCartSide} />}

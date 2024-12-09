@@ -9,19 +9,19 @@ export const PaymentInput: React.FC<PaymentInputProp> = ({
   return (
     <div className="text-gray-350 my-5">
       <div>
-        <div className="my-3">
+        <div className="my-3r">
           <input
             type="radio"
             name="input-payment"
             id="input-payment-1"
-            className={`input-radio-payment ${
+            className={`input-radio-payment  cursor-pointer ${
               selectedOption === "payment-1" ? "bg-black" : "bg-transparent"
             }`}
             onChange={() => setSelectedOption("payment-1")}
           />
           <label
             htmlFor="input-payment-1"
-            className={`${
+            className={` cursor-pointer ${
               selectedOption === "payment-1" ? "text-black" : "text-gray-350"
             }`}
           >
@@ -45,14 +45,14 @@ export const PaymentInput: React.FC<PaymentInputProp> = ({
             type="radio"
             name="input-payment"
             id="input-payment-2"
-            className={`input-radio-payment ${
+            className={` cursor-pointer input-radio-payment ${
               selectedOption === "payment-2" ? "bg-black" : "bg-transparent"
             }`}
             onChange={() => setSelectedOption("payment-2")}
           />
           <label
             htmlFor="input-payment-2"
-            className={`${
+            className={`cursor-pointer ${
               selectedOption === "payment-2" ? "text-black" : "text-gray-350"
             }`}
           >
@@ -75,14 +75,14 @@ export const PaymentInput: React.FC<PaymentInputProp> = ({
             type="radio"
             name="input-payment"
             id="input-payment-3"
-            className={`input-radio-payment ${
+            className={`cursor-pointer input-radio-payment ${
               selectedOption === "payment-3" ? "bg-black" : "bg-transparent"
             }`}
             onChange={() => setSelectedOption("payment-3")}
           />
           <label
             htmlFor="input-payment-3"
-            className={`${
+            className={`cursor-pointer ${
               selectedOption === "payment-3" ? "text-black" : "text-gray-350"
             }`}
           >

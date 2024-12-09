@@ -25,7 +25,7 @@ export const CartAside: React.FC<SetCartSideProps> = ({ setCartSide }) => {
         <div>
           <div className="flex justify-between items-center mb-7">
             <p className="text-2xl font-semibold">Shopping Cart</p>
-            <BsBagX className="text-gray-350 w-5 h-5" 
+            <BsBagX className="text-gray-350 w-5 h-5 cursor-pointer" 
                     onClick={() => setCartSide(true)} />
           </div>
           <hr className="w-4/5" />
@@ -60,7 +60,7 @@ export const CartAside: React.FC<SetCartSideProps> = ({ setCartSide }) => {
                 </div>
                 <div>
                   <IoMdCloseCircle
-                    className="text-gray-350 w-5 h-5"
+                    className="text-gray-350 w-5 h-5 cursor-pointer"
                     onClick={() => handleRemoveFromCart(item.id)}
                   />
                 </div>
