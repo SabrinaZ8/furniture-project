@@ -13,6 +13,7 @@
   "dependencies": {
     "@clerk/clerk-react": "^5.19.0",
     "@reduxjs/toolkit": "^2.4.0",
+    "@splidejs/splide": "^4.1.4",
     "axios": "^1.7.8",
     "json-server": "^1.0.0-beta.3",
     "react": "^18.3.1",
