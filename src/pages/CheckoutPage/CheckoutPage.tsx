@@ -11,12 +11,12 @@ import { RootState } from "../../store";
 import { formatMoney } from "../../utils/formatMoney";
 import { PaymentInput } from "./components/PaymentInput/PaymentInput";
 import { InputsAddress } from "./components/PaymentInput/InputsAddress";
+import { formatCep } from "../../utils/formatCepUser";
 
 export const CheckoutPage = () => {
   const [selectedOption, setSelectedOption] = useState("payment-1");
   const [cepUser, setCepUser] = useState("");
   const [cepSearch, setCepSearch] = useState<AddressType | null>(null);
-
   const [address, setAddress] = useState<UserInfos>({
     firstName: "",
     lastName: "",
@@ -33,6 +33,7 @@ export const CheckoutPage = () => {
     gia: "",
     ddd: "",
     siafi: "",
+    infoAdd: ""
   });
 
   const items = useSelector((state: RootState) => state.cart.items);
@@ -52,7 +53,9 @@ export const CheckoutPage = () => {
 
   useEffect(() => {
     const searchCep = async () => {
-      if (cepUser.length === 8 && /^\d+$/.test(cepUser)) {
+      const cepFormatUser = formatCep(cepUser)
+      console.log(cepFormatUser)
+      if (cepFormatUser.length === 8 && /^\d+$/.test(cepUser)) {
         try {
           const response = await axios.get(
             `https://viacep.com.br/ws/${cepUser}/json/`
@@ -80,22 +83,28 @@ export const CheckoutPage = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    const cepFormatUser = formatCep(cepUser)
 
-    if (validateForm(address, cepUser)) {
-      console.log("Formulário enviado com sucesso");
+    if (validateForm(address, cepFormatUser)) {
+      const placeOrder = {
+        ...address,
+        cep: cepFormatUser,
+        payment: selectedOption,
+        totalAmount: totalAmount
+      }
+      localStorage.setItem("placeOrder", JSON.stringify(placeOrder))
+      
     } else {
       console.log("Formulário contém erros:", errors);
     }
   };
-
-  console.log(address.localidade);
 
   return (
     <section>
       <NavBar />
       <Banner path="Checkout" />
       <form
-        className="flex ml-[174px] mr-[125px] mt-[125px] justify-center"
+        className="flex ml-[174px] mr-[125px] mt-[125px] mb-28 justify-center"
         onSubmit={handleSubmit}
       >
         <div className="w-1/2 flex flex-col items-center">
