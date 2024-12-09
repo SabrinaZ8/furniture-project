@@ -20,28 +20,28 @@ export const Footer = () => {
           </address>
           <div className="flex">
             <a
-              href=""
+              href="https://pt-br.facebook.com/login/device-based/regular/login/"
               target="_blank"
               className=" flex w-9 h-9 rounded-full shadow-lg items-center justify-center mx-2"
             >
               <TiSocialFacebook className="w-4 h-4" />
             </a>
             <a
-              href=""
+              href="https://www.instagram.com/"
               target="_blank"
               className="flex w-9 h-9 rounded-full shadow-lg items-center justify-center mx-2"
             >
               <SlSocialInstagram className="w-4 h-4" />
             </a>
             <a
-              href=""
+              href="https://x.com/i/flow/login"
               target="_blank"
               className="flex w-9 h-9 rounded-full shadow-lg items-center justify-center mx-2"
             >
               <TiSocialTwitter className="w-4 h-4" />
             </a>
             <a
-              href=""
+              href="https://www.linkedin.com/in/sabrina-souza-dev/"
               target="_blank"
               className="flex w-9 h-9 rounded-full shadow-lg items-center justify-center mx-2"
             >
