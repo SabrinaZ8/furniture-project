@@ -73,4 +73,11 @@ export interface InputsAddressProps {
   setCepUser: React.Dispatch<React.SetStateAction<string>>;
   cepSearch: AddressType | null
 }
+
+export interface FormContact {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+}
   
