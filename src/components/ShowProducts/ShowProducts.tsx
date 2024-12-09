@@ -5,6 +5,7 @@ import axios from "axios";
 import { ProductType } from "../../types/types";
 import { Product } from "../../pages/ShopPage/components/Product";
 import { BtnShowMore } from "./BtnShowMore/BtnShowMore";
+import { baseUrl } from "../../constants/baseUrl";
 
 type ShowProductsProps = {
   limit: number; // 'title' é opcional
@@ -25,7 +26,7 @@ export const ShowProducts: React.FC<ShowProductsProps> = ({
 
       try {
         const response = await axios.get(
-          `http://localhost:5000/products?Category=${category}&`,
+          `${baseUrl}products?Category=${category}&`,
           {
             params: {
               _page: 1,

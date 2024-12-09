@@ -11,6 +11,7 @@ import { DetailsProduct } from "./components/DetailsProduct";
 import { AdditionalInformation } from "./components/AdditionalInformation";
 import { ShowProducts } from "../../components/ShowProducts/ShowProducts";
 import { toast } from 'react-toastify'
+import { baseUrl } from "../../constants/baseUrl";
 
 export const SingleProductPage = () => {
   const { id } = useParams<{ id: string }>();
@@ -36,7 +37,7 @@ export const SingleProductPage = () => {
     const fetchProduct = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5000/products/?id=${id}`
+          `${baseUrl}?id=${id}`
         );
         setProduct(response.data[0]);
       } catch (error) {
