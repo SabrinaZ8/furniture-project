@@ -5,6 +5,7 @@ import { FaRegHeart } from "react-icons/fa";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../../redux/cart/cartSlice";
 import { formatMoney } from "../../../utils/formatMoney";
+import { toast } from 'react-toastify'
 
 type ProductProps = {
   product: ProductType;
@@ -19,6 +20,8 @@ export const Product: React.FC<ProductProps> = ({ product }) => {
         quantity: 1,
       };
       dispatch(addToCart(productWithQuantity));
+      toast.success("Product added to cart successfully!")
+
     }
   };
 

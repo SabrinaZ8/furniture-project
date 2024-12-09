@@ -10,6 +10,7 @@ import { PathBar } from "./components/PathBar";
 import { DetailsProduct } from "./components/DetailsProduct";
 import { AdditionalInformation } from "./components/AdditionalInformation";
 import { ShowProducts } from "../../components/ShowProducts/ShowProducts";
+import { toast } from 'react-toastify'
 
 export const SingleProductPage = () => {
   const { id } = useParams<{ id: string }>();
@@ -27,6 +28,7 @@ export const SingleProductPage = () => {
       };
       console.log("Produto adicionado ao carrinho", productWithQuantity);
       dispatch(addToCart(productWithQuantity));
+      toast.success("Product added to cart successfully!")
     }
   };
 
