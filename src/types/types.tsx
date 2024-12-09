@@ -53,6 +53,7 @@ export interface ProductType {
     lastName: string;
     company: string | null;
     email: string;
+    infoAdd: string
   }
 
 export interface DetailsProductProps {
