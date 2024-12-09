@@ -170,6 +170,15 @@ export const InputsAddress: React.FC<InputsAddressProps> = ({
                 onChange={(e) => handleInputChange("email", e.target.value)}
               />
             </div>
+            <div className="flex flex-col  my-7">
+              <input
+                type="text"
+                id="company-name"
+                className="input-address-checkout input-address-checkout-hw"
+                placeholder='Additional information'
+                onChange={(e) => handleInputChange("infoAdd", e.target.value)}
+              />
+            </div>
           </div>
   )
 }
