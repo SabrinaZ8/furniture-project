@@ -79,7 +79,7 @@ export const CartPage = () => {
                     +
                   </button>
                 </div>
-                <p>{formatMoney(totalAmount)}</p>
+                <p>{formatMoney(item.discountedPrice? item.discountedPrice * item.quantity : item.price * item.quantity)}</p>
                 <button
                   onClick={() => handleRemoveFromCart(item.id, item.name)}
                 >
