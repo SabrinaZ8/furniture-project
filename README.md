@@ -48,7 +48,7 @@ Para rodar o projeto localmente, siga os passos abaixo:
 - **Separação de Componentes:**
 O projeto é estruturado com componentes React modulares e reutilizáveis.
 - **Gerenciamento de Estado:**
-O gerenciamento de estado do carrinho é feito utilizando o Redux, garantindo que os produtos no carrinho sejam gerenciados de maneira eficiente. A comunicação entre componentes é facilitada por meio de actions e reducers.
+O gerenciamento de estado do carrinho é feito utilizando o Redux, garantindo que os produtos no carrinho sejam gerenciados de maneira eficiente. A comunicação entre componentes é por meio de actions e reducers.
 
 ### 2. TypeScript para Segurança de Tipos
 - **Segurança do Código:**
@@ -74,6 +74,20 @@ A sessão do usuário é gerida automaticamente pelo Clerk, com a persistência 
 - **Armazenamento de Imagens:**
 As imagens dos produtos são armazenadas utilizando o AWS S3, garantindo uma solução de armazenamento escalável e segura. O S3 permite que as imagens sejam facilmente acessadas e exibidas na interface do ecommerce, melhorando o desempenho do site ao carregar imagens diretamente da nuvem.
 
+
+## Instância EC2
+
+Para hospedar a aplicação de React do meu E-commerce, utilizei uma instância EC2 da AWS. A aplicação foi configurada e implantada com sucesso no servidor, acessível diretamente via IP público. Usei o PuTTY para acessar o terminal da instância EC2, que está rodando uma distribuição Linux.
+
+### Tecnologias Utilizadas:
+- **AWS EC2**: para hospedar e rodar a aplicação.
+- **PuTTY**: para acessar o terminal da instância EC2 via SSH.
+- **Linux**: sistema operacional da instância EC2.
+
+### Links
+- [Link para o projeto](http://3.141.200.237:5173/) - Acesse o e-commerce em funcionamento.
+- [Link para o Google Drive - Vídeo](https://drive.google.com/your_video_link) - Vídeo demonstrativo da implantação no EC2.
+
 ## Autora
 
 <table>
@@ -89,5 +103,6 @@ As imagens dos produtos são armazenadas utilizando o AWS S3, garantindo uma sol
     </td>
   </tr>
 </table>
+
 
 
