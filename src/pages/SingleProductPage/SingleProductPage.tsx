@@ -37,7 +37,7 @@ export const SingleProductPage = () => {
     const fetchProduct = async () => {
       try {
         const response = await axios.get(
-          `${baseUrl}?id=${id}`
+          `${baseUrl}/products?id=${id}`
         );
         setProduct(response.data[0]);
       } catch (error) {

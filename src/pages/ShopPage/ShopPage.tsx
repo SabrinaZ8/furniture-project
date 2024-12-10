@@ -41,7 +41,7 @@ export const ShopPage = () => {
           setAllProducts(response.data);
         } else {
           const response = await axios.get(
-            `${baseUrl}products?Category=${option}`
+            `${baseUrl}/products?Category=${option}`
           );
           console.log(response.data.length);
           setAllProducts(response.data);

@@ -26,7 +26,7 @@ export const ShowProducts: React.FC<ShowProductsProps> = ({
 
       try {
         const response = await axios.get(
-          `${baseUrl}products?Category=${category}&`,
+          `${baseUrl}/products?Category=${category}&`,
           {
             params: {
               _page: 1,
