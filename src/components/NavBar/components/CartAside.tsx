@@ -72,9 +72,9 @@ export const CartAside: React.FC<SetCartSideProps> = ({ setCartSide }) => {
         </div>
       </div>
 
-      <div className="empty-cart">
-        {itemsCart.length === 0 ? "Empty cart" : ""}
-      </div>
+          {/*EMPTY CART */}
+        {itemsCart.length === 0 ? <div className="empty-cart">Empty cart</div> : ""}
+      
       <div>
         <div>
           <div className="flex justify-between my-6">

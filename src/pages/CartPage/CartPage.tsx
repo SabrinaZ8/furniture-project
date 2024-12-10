@@ -34,7 +34,10 @@ export const CartPage = () => {
               <p>Quantity</p>
               <p>Subtotal</p>
             </div>
-            <div className="empty-cart h-full flex items-center justify-center">{items.length === 0 ? "Empty cart" : ""}</div>
+
+            {/*Empty cart */}
+            {items.length === 0 ? <div className="empty-cart h-full flex items-center justify-center">Empty cart</div>: ""}
+
             {items.map((item) => (
               <div className="flex items-center justify-between my-14">
                 <img
