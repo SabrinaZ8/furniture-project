@@ -21,8 +21,8 @@ export const CartAside: React.FC<SetCartSideProps> = ({ setCartSide }) => {
   };
 
   return (
-    <div className="w-[417px] h-[746px] absolute z-50 top-0 right-0 p-7 bg-white flex flex-col justify-between overflow-y-auto">
-      <div className="">
+    <div className="w-[417px] h-[746px] absolute z-50 top-0 right-0 p-7 bg-white flex flex-col justify-between ">
+      <div className="overflow-y-auto">
         <div>
           <div className="flex justify-between items-center mb-7">
             <p className="text-2xl font-semibold">Shopping Cart</p>
