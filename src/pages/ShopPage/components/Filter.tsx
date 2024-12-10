@@ -49,7 +49,6 @@ export const Filter: React.FC<FilterProps> = ({
 
   const handleShowFilter = () => {
     setShowFilter(!showFilter)
-    console.log('chgou aq')
   }
 
   useEffect(() => {
@@ -63,9 +62,9 @@ export const Filter: React.FC<FilterProps> = ({
       <div className="flex">
         <div className="flex items-center border-r-2 border-gray-350 p-1 relative">
           <HiAdjustmentsHorizontal className="w-6 h-6" onClick={handleShowFilter} />
-          {showFilter ? <select onChange={(e) => setOption(e.target.value)} className="show-filter">
+          {showFilter ? <select size={optionsCategory.length} onChange={(e) => setOption(e.target.value)} className="show-filter">
             {optionsCategory.map((category) => (
-              <option value={category} key={category}>
+              <option value={category} key={category} className="hover:bg-gray-200">
                 {category}
               </option>
             ))}

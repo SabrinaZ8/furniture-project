@@ -51,7 +51,7 @@
     @apply mr-1.5 w-4 h-4
 }
 .show-filter {
-    @apply absolute focus:outline-none mt-28 p-3 rounded-md border-[1px] border-yellow-550 text-yellow-550
+    @apply absolute focus:outline-none mt-72 p-3 rounded-md border-[1px] border-yellow-550 text-yellow-550
 }
 
 /*Shop side*/
