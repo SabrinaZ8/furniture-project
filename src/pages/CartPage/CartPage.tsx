@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../../store";
-import { removeFromCart } from "../../redux/cart/cartSlice";
+import { removeFromCart, updateQuantity } from "../../redux/cart/cartSlice";
 import { Link } from "react-router-dom";
 import { NavBar } from "../../components/NavBar/NavBar";
 import { Footer } from "../../components/Footer/Footer";
@@ -15,16 +15,21 @@ export const CartPage = () => {
   const totalAmount = useSelector((state: RootState) => state.cart.totalAmount);
 
   const dispatch = useDispatch();
+
   const handleRemoveFromCart = (id: number, itemName: string) => {
     dispatch(removeFromCart(id));
-    toast.warning(`${itemName} removed from cart`)
+    toast.warning(`${itemName} removed from cart`);
+  };
 
+  const handleUpdateQuantity = (id: number, quantity: number) => {
+    console.log(quantity)
+    dispatch(updateQuantity({ id: id, quantity: quantity }));
   };
 
   return (
     <div>
       <NavBar />
-      <Banner path={'Cart'}/>
+      <Banner path={"Cart"} />
       <section className="my-[90px] mx-[100px]">
         <div className="flex">
           <div className="w-3/4 mr-8">
@@ -36,7 +41,13 @@ export const CartPage = () => {
             </div>
 
             {/*Empty cart */}
-            {items.length === 0 ? <div className="empty-cart h-full flex items-center justify-center">Empty cart</div>: ""}
+            {items.length === 0 ? (
+              <div className="empty-cart h-full flex items-center justify-center">
+                Empty cart
+              </div>
+            ) : (
+              ""
+            )}
 
             {items.map((item) => (
               <div className="flex items-center justify-between my-14">
@@ -46,10 +57,32 @@ export const CartPage = () => {
                   className="h-[105px] w-[105px] rounded-md"
                 />
                 <p className="text-gray-350">{item.name}</p>
-                <p className="text-gray-350">{formatMoney( item.discountedPrice ? item.discountedPrice : item.price)}</p>
-                <p>{item.quantity}</p>
+                <p className="text-gray-350">
+                  {formatMoney(
+                    item.discountedPrice ? item.discountedPrice : item.price
+                  )}
+                </p>
+                <div className="border-2 border-gray-350 w-[107px] h-12 p-3 rounded-[10px] flex items-center justify-center mr-5">
+                  <button
+                    onClick={() =>
+                      handleUpdateQuantity(item.id, item.quantity -1)
+                    }
+                  >
+                    -
+                  </button>
+                  <span className="mx-8 font-medium">{item.quantity}</span>
+                  <button
+                    onClick={() =>
+                      handleUpdateQuantity(item.id, item.quantity + 1)
+                    }
+                  >
+                    +
+                  </button>
+                </div>
                 <p>{formatMoney(totalAmount)}</p>
-                <button onClick={() => handleRemoveFromCart(item.id, item.name)}>
+                <button
+                  onClick={() => handleRemoveFromCart(item.id, item.name)}
+                >
                   <RiDeleteBin7Fill className="text-yellow-550 w-6 h-6" />
                 </button>
               </div>
