@@ -13,6 +13,7 @@ export const Filter: React.FC<FilterProps> = ({
 }) => {
   const [optionSort, setOptionSort] = useState("Default");
   const [initialProducts] = useState([...allProducts]);
+  const [showFilter, setShowFilter] = useState(false)
 
   const optionsCategory = ["Default", "table", "chair", "sofa", "lighting", "bed"];
   const optionsSort = [
@@ -46,6 +47,11 @@ export const Filter: React.FC<FilterProps> = ({
     });
   };
 
+  const handleShowFilter = () => {
+    setShowFilter(!showFilter)
+    console.log('chgou aq')
+  }
+
   useEffect(() => {
     const sortedProducts = sortProducts(allProducts, optionSort);
     setAllProducts(sortedProducts);
@@ -55,15 +61,16 @@ export const Filter: React.FC<FilterProps> = ({
   return (
     <div className="flex bg-yellow-70 w-full h-[100px] items-center justify-between text-xl  px-24 mb-[60px]">
       <div className="flex">
-        <div className="flex items-center border-r-2 border-gray-350 p-1">
-          <HiAdjustmentsHorizontal className="w-6 h-6" />
-          <select onChange={(e) => setOption(e.target.value)}>
+        <div className="flex items-center border-r-2 border-gray-350 p-1 relative">
+          <HiAdjustmentsHorizontal className="w-6 h-6" onClick={handleShowFilter} />
+          {showFilter ? <select onChange={(e) => setOption(e.target.value)} className="show-filter">
             {optionsCategory.map((category) => (
               <option value={category} key={category}>
                 {category}
               </option>
             ))}
-          </select>
+          </select> : null }
+          
           <p className="ml-5 mr-8">Filter</p>
           <HiMiniSquares2X2 className="w-6 h-6" />
           <BsViewList className="w-6 h-6 mx-8" />
