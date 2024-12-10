@@ -7,7 +7,6 @@ import { RootState } from "../../../store";
 import { removeFromCart } from "../../../redux/cart/cartSlice";
 import { toast } from "react-toastify";
 
-
 type SetCartSideProps = {
   setCartSide: React.Dispatch<React.SetStateAction<boolean>>;
 };
@@ -18,7 +17,7 @@ export const CartAside: React.FC<SetCartSideProps> = ({ setCartSide }) => {
   const dispatch = useDispatch();
   const handleRemoveFromCart = (id: number, itemName: string) => {
     dispatch(removeFromCart(id));
-    toast.warning(`${itemName} removed`)
+    toast.warning(`${itemName} removed`);
   };
 
   return (
@@ -27,12 +26,13 @@ export const CartAside: React.FC<SetCartSideProps> = ({ setCartSide }) => {
         <div>
           <div className="flex justify-between items-center mb-7">
             <p className="text-2xl font-semibold">Shopping Cart</p>
-            <BsBagX className="text-gray-350 w-5 h-5 cursor-pointer hover-text" 
-                    onClick={() => setCartSide(true)} />
+            <BsBagX
+              className="text-gray-350 w-5 h-5 cursor-pointer hover-text"
+              onClick={() => setCartSide(true)}
+            />
           </div>
           <hr className="w-4/5" />
         </div>
-
         <div className="flex flex-col">
           {itemsCart.map((item) => (
             <div className="flex items-center ">
@@ -43,7 +43,7 @@ export const CartAside: React.FC<SetCartSideProps> = ({ setCartSide }) => {
                   className="w-[105px] [h-105] rounded-md object-cover"
                 />
               </div>
-              <div className="flex items-center justify-between  w-1/2">
+              <div className="flex items-center justify-between w-1/2">
                 <div>
                   <div>{item.name}</div>
                   <div>
@@ -70,6 +70,10 @@ export const CartAside: React.FC<SetCartSideProps> = ({ setCartSide }) => {
             </div>
           ))}
         </div>
+      </div>
+
+      <div className="empty-cart">
+        {itemsCart.length === 0 ? "Empty cart" : ""}
       </div>
       <div>
         <div>

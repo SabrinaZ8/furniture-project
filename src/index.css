@@ -59,6 +59,9 @@
 .btns-shop-side {
     @apply h-[30px] rounded-[50px] border-[1px] border-black px-6 py-1 mx-2
 }
+.empty-cart {
+    @apply text-center text-xl text-gray-350 font-semibold
+}
 
 /*Contact*/
 
