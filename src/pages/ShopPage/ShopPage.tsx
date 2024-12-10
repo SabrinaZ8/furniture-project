@@ -14,6 +14,7 @@ import { Link } from "react-router-dom";
 import { MoreInfos } from "../../components/MoreInfos/MoreInfos";
 import { Banner } from "../../components/Banner/Banner";
 import { Loading } from "../../components/Loading/Loading";
+import { baseUrl } from "../../constants/baseUrl";
 
 export const ShopPage = () => {
   const [allProducts, setAllProducts] = useState<ProductType[]>([]);
@@ -35,12 +36,12 @@ export const ShopPage = () => {
       try {
         //if for category or no category filtering
         if (option === "Default") {
-          const response = await axios.get(`http://localhost:5000/products`);
+          const response = await axios.get(`${baseUrl}products`);
 
           setAllProducts(response.data);
         } else {
           const response = await axios.get(
-            `http://localhost:5000/products?Category=${option}`
+            `${baseUrl}products?Category=${option}`
           );
           console.log(response.data.length);
           setAllProducts(response.data);

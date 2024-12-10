@@ -4,7 +4,11 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+<<<<<<< HEAD
     "dev": "vite --host",
+=======
+    "dev": "concurrently \"vite --host\" \"npm run db\"",
+>>>>>>> 6b7534f12c3ca4524f7964149b0baeba6d10d09e
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
