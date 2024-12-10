@@ -43,11 +43,11 @@ export const ShopPage = () => {
           const response = await axios.get(
             `${baseUrl}/products?Category=${option}`
           );
-          console.log(response.data.length);
+
           setAllProducts(response.data);
         }
       } catch (error) {
-        console.log("Erro ao buscar produtos:", error);
+        console.log("Erro search products:", error);
       } finally {
         setLoading(false);
       }

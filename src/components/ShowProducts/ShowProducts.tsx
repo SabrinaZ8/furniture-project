@@ -37,7 +37,7 @@ export const ShowProducts: React.FC<ShowProductsProps> = ({
 
         setAllProducts(response.data);
       } catch (error) {
-        console.log("Erro ao buscar produtos:", error);
+        console.log("Erro search products:", error);
       } finally {
         setLoading(false);
       }

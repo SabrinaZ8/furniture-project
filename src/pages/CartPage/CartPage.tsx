@@ -21,7 +21,6 @@ export const CartPage = () => {
 
   };
 
-  console.log(items);
   return (
     <div>
       <NavBar />

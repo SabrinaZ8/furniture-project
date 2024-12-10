@@ -36,7 +36,7 @@ export const ContactPage = () => {
     if (isValid) {
       localStorage.setItem("contactFormData", JSON.stringify(formContact));
     } else {
-      console.log("Erro na validação:", errors);
+      console.log("Erro in validation:", errors);
     }
   };
 

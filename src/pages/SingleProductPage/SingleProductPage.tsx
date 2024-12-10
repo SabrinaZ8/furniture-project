@@ -27,7 +27,6 @@ export const SingleProductPage = () => {
         ...product,
         quantity: quantity,
       };
-      console.log("Produto adicionado ao carrinho", productWithQuantity);
       dispatch(addToCart(productWithQuantity));
       toast.success("Product added to cart successfully!")
     }

@@ -54,7 +54,7 @@ export const CheckoutPage = () => {
   useEffect(() => {
     const searchCep = async () => {
       const cepFormatUser = formatCep(cepUser)
-      console.log(cepFormatUser)
+      
       if (cepFormatUser.length === 8 && /^\d+$/.test(cepUser)) {
         try {
           const response = await axios.get(
@@ -95,7 +95,7 @@ export const CheckoutPage = () => {
       localStorage.setItem("placeOrder", JSON.stringify(placeOrder))
       
     } else {
-      console.log("Formulário contém erros:", errors);
+      console.log(errors);
     }
   };
 
