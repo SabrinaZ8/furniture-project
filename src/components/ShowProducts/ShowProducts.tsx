@@ -30,7 +30,7 @@ export const ShowProducts: React.FC<ShowProductsProps> = ({
           {
             params: {
               _page: 1,
-              _limit: itemsMore > maxItems ? maxItems : itemsMore,
+              _limit: itemsMore > maxItems ? maxItems : itemsMore, //if you don't reach the limit, load more items
             },
           }
         );
