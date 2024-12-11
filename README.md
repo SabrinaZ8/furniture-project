@@ -77,7 +77,7 @@ As imagens dos produtos são armazenadas utilizando o AWS S3, garantindo uma sol
 
 ## Instância EC2
 
-Para hospedar a aplicação de React do meu E-commerce, utilizei uma instância EC2 da AWS. A aplicação foi configurada e implantada com sucesso no servidor, acessível diretamente via IP público. Usei o PuTTY para acessar o terminal da instância EC2, que está rodando uma distribuição Linux.
+Para hospedar a aplicação de React do meu E-commerce, utilizei uma instância EC2 da AWS. A aplicação foi configurada e implantada com sucesso no servidor, acessível diretamente via IP público.
 
 ### Tecnologias Utilizadas:
 - **AWS EC2**: para hospedar e rodar a aplicação.
