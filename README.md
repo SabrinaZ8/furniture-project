@@ -31,7 +31,7 @@ This is a furniture ecommerce project where users can browse, filter, and sort p
 ![Amazon S3](https://img.shields.io/badge/Amazon%20S3-FF9900?style=for-the-badge&logo=amazons3&logoColor=white)
 ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
 
-## Instalação
+## Installation
 
 To run the project locally, follow the steps below:
 
