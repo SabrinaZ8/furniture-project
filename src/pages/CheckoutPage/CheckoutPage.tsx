@@ -12,6 +12,7 @@ import { formatMoney } from "../../utils/formatMoney";
 import { PaymentInput } from "./components/PaymentInput/PaymentInput";
 import { InputsAddress } from "./components/PaymentInput/InputsAddress";
 import { formatCep } from "../../utils/formatCepUser";
+import { toast } from "react-toastify";
 
 export const CheckoutPage = () => {
   const [selectedOption, setSelectedOption] = useState("payment-1");
@@ -93,6 +94,7 @@ export const CheckoutPage = () => {
         totalAmount: totalAmount
       }
       localStorage.setItem("placeOrder", JSON.stringify(placeOrder))
+      toast.success("Request sent successfully")
       
     } else {
       console.log(errors);

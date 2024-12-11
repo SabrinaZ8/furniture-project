@@ -7,6 +7,7 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdAccessTimeFilled } from "react-icons/md";
 import { useValidateFormContact } from "../../hooks/useValidateFormContact";
+import { toast } from "react-toastify";
 
 export const ContactPage = () => {
   const [formContact, setFormContact] = useState({
@@ -35,8 +36,11 @@ export const ContactPage = () => {
 
     if (isValid) {
       localStorage.setItem("contactFormData", JSON.stringify(formContact));
+      toast.success("Sent successfully")
+
     } else {
       console.log("Erro in validation:", errors);
+      toast.error("Something went wrong!")
     }
   };
 
