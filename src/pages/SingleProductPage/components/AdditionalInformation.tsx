@@ -24,8 +24,8 @@ export const AdditionalInformation = () => {
         </p>
       </div>
       <div className="flex mt-16">
-        <img src="../../../../src/assets/images/imagesVisual/image-visual.png" alt="" className="mr-8" />
-        <img src="../../../../src/assets/images/imagesVisual/image-visual.png" alt=""/>
+        <img src="https://furniro.s3.us-east-1.amazonaws.com/images-visual/image-visual.png" alt="" className="mr-8" />
+        <img src="https://furniro.s3.us-east-1.amazonaws.com/images-visual/image-visual.png" alt=""/>
       </div>
     </div>
   );

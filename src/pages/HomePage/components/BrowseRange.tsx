@@ -11,7 +11,7 @@ export const BrowseRange = () => {
     <div className="flex">
       <div className="mx-5">
         <img
-          src="../../../../src/assets/images/productCategory/image-106.png"
+          src="https://furniro.s3.us-east-1.amazonaws.com/home-imgs/image-106.png"
           alt="image-106"
           className="img-rd-cover-center"
         />
@@ -19,7 +19,7 @@ export const BrowseRange = () => {
       </div>
       <div className="mx-5">
         <img
-          src="../../../../src/assets/images/productCategory/image-100.png"
+          src="https://furniro.s3.us-east-1.amazonaws.com/home-imgs/image-100.png"
           alt="image-100"
           className="img-rd-cover-center"
         />
@@ -27,7 +27,7 @@ export const BrowseRange = () => {
       </div>
       <div className="mx-5">
         <img
-          src="../../../../src/assets/images/productCategory/image-101.png"
+          src="https://furniro.s3.us-east-1.amazonaws.com/home-imgs/image-101.png"
           alt="image-101"
           className="img-rd-cover-center"
         />

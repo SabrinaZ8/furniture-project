@@ -6,7 +6,7 @@ export const Banner = ({ path }: Path) => {
   return (
     <div className="h-[330px] relative flex justify-center items-center " >
       <img
-        src="../../../src/assets/images/banners/banner.avif"
+        src="https://furniro.s3.us-east-1.amazonaws.com/banners/banner.avif"
         alt=""
         className=" h-full w-full object-cover opacity-60 blur-[3px]"
       />

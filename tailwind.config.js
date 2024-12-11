@@ -34,7 +34,7 @@ export default {
         }
       },
       backgroundImage: {
-        'bg-intro': "url('./src/assets/images/banners/bg-intro-furniro.png')",
+        'bg-intro': "url('https://furniro.s3.us-east-1.amazonaws.com/banners/bg-intro-furniro.png')",
       }
     },
   },

@@ -55,7 +55,7 @@ export const HomePage = () => {
       <section className="py-10 flex justify-cente flex-col text-center">
         <span className="font-semibold text-xl text-gray-250">Share your setup with</span>
         <h2 className="font-bold text-[40px] text-gray-750">#FuniroFurniture</h2>
-        <img src="../../../src/assets/images/furniture/Images.png" alt="group images" className="w-full object-contain" />
+        <img src="https://furniro.s3.us-east-1.amazonaws.com/home-imgs/furniture.png" alt="group images" className="w-full object-contain" />
       </section>
       <Footer />
     </div>

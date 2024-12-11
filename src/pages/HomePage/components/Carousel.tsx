@@ -29,28 +29,28 @@ export const Carousel = () => {
         <ul className="splide__list relative">
           <li className="splide__slide">
             <img
-              src="../../../src/assets/images-carousel/image-carousel-1.png"
+              src="https://furniro.s3.us-east-1.amazonaws.com/images-carousel/image-carousel-1.png"
               alt="Room 1"
               className="w-[372px] h-[486px] object-cover"
             />
           </li>
           <li className="splide__slide">
             <img
-              src="../../../src/assets/images-carousel/images-carousel-2.png"
+              src="https://furniro.s3.us-east-1.amazonaws.com/images-carousel/images-carousel-2.png"
               alt="Room 2"
               className="h-[486px] object-cover"
             />
           </li>
           <li className="splide__slide">
             <img
-              src="../../../src/assets/images-carousel/images-carousel-3.png"
+              src="https://furniro.s3.us-east-1.amazonaws.com/images-carousel/images-carousel-3.png"
               alt="Room 3"
               className="h-[486px] object-cover"
             />
           </li>
           <li className="splide__slide">
             <img
-              src="../../../src/assets/images-carousel/images-carousel-4.png"
+              src="https://furniro.s3.us-east-1.amazonaws.com/images-carousel/images-carousel-4.png"
               alt="Room 4"
               className="h-[486px] object-cover"
             />
