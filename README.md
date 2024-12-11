@@ -1,8 +1,25 @@
 # Ecommerce Furniro
 
-Este é um projeto de ecommerce de móveis, onde os usuários podem visualizar, filtrar e ordenar os produtos, adicionar itens ao carrinho e realizar o checkout. O projeto é construído com **React**, **TypeScript**, **Tailwind CSS**. Também utiliza **AWS S3** para armazenar as imagens dos produtos.
+Este é um projeto de ecommerce de móveis, onde os usuários podem visualizar, filtrar e ordenar os produtos, adicionar itens ao carrinho e realizar o checkout. O projeto é construído com **React**, **TypeScript**, **Tailwind CSS**. Também utiliza **AWS S3** para armazenar as imagens dos produtos. Além disso, utiliza [**ViaCep**](https://viacep.com.br/) para busca de endereço.
 
-## Technologies
+## Sumário
+
+- [Tecnologias](#tecnologias)
+- [Instalação](#instalação)
+- [Funcionalidades](#funcionalidades)
+- [Considerações Técnicas](#considerações-técnicas)
+  - [Arquitetura do Projeto](#1-arquitetura-do-projeto)
+  - [TypeScript para Segurança de Tipos](#2-typescript-para-segurança-de-tipos)
+  - [Estilização com Tailwind CSS](#3-estilização-com-tailwind-css)
+  - [Servidor JSON como Back-End Simulado](#4-servidor-json-como-back-end-simulado)
+  - [Autenticação do Usuário com Clerk](#5-autenticação-do-usuário-com-clerk)
+  - [Integração com AWS S3](#6-integração-com-aws-s3)
+- [Instância EC2](#instância-ec2)
+  - [Tecnologias Utilizadas](#tecnologias-utilizadas)
+  - [Links](#links)
+- [Autora](#autora)
+
+## Tecnologias
 
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
@@ -18,7 +35,7 @@ Para rodar o projeto localmente, siga os passos abaixo:
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/SabrinaZ8/e-commerce-challenger3.gi
+   git clone https://github.com/SabrinaZ8/e-commerce-challenger3.git
 2. Navegue até o diretório do projeto:
    ```bash
    cd e-commerce-challenger3
@@ -32,7 +49,7 @@ Para rodar o projeto localmente, siga os passos abaixo:
    ```bash
    npm run dev
 
-## Características
+## Funcionalidades
 
 - **Exibição de produtos**: Os produtos são exibidos com suas informações, incluindo imagens armazenadas na AWS S3.
 - **Filtros**: O usuário pode filtrar os produtos por categorias.
@@ -40,6 +57,7 @@ Para rodar o projeto localmente, siga os passos abaixo:
 - **Carrinho de compras**: Os usuários podem adicionar itens ao carrinho e visualizar os produtos selecionados.
 - **Checkout**: O processo de checkout permitindo a finalização da compra.
 - **Autenticação**: Utiliza o **Cleck** para gerenciamento de login e autenticação de usuários.
+- **Busca de endereço**: Utiliza o ViaCep para buscar endereços.
 
 ## Considerações Técnicas
 
