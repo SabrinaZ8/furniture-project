@@ -83,6 +83,7 @@ Para hospedar a aplicação de React do meu E-commerce, utilizei uma instância 
 - **AWS EC2**: para hospedar e rodar a aplicação.
 - **PuTTY**: para acessar o terminal da instância EC2 via SSH.
 - **Linux**: sistema operacional da instância EC2.
+- **Nginx**: como servidor web para gerenciar o tráfego e redirecionar as requisições.
 
 ### Links
 - [Link para o projeto](http://3.141.200.237) - Acesse o e-commerce em funcionamento.
