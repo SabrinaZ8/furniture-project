@@ -2,6 +2,8 @@
 
 This is a furniture ecommerce project where users can browse, filter, and sort products, add items to the cart, and complete the checkout process. The project is built with **React**, **TypeScript**, and **Tailwind CSS**. It also uses **AWS S3** to store product images. Additionally, it integrates [**ViaCep**](https://viacep.com.br/) for address lookup.
 
+[Leia em português](README-ptBR.md)
+
 ## Table of Contents
 
 - [Technologies](#technologies)
