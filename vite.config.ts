@@ -8,11 +8,11 @@ export default defineConfig({
     port: 5173,
   },
   build: {
-    outDir: './dist',        // Pasta onde os arquivos de produção serão gerados
-    assetsDir: 'assets',     // Pasta dentro de dist para armazenar assets (imagens, etc.)
+    outDir: './dist',
+    assetsDir: 'assets',    
     rollupOptions: {
       output: {
-        // Personalize o nome e estrutura dos arquivos, se necessário
+       
       }
     }
   }
