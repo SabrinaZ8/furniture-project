@@ -85,8 +85,8 @@ Para hospedar a aplicação de React do meu E-commerce, utilizei uma instância 
 - **Linux**: sistema operacional da instância EC2.
 
 ### Links
-- [Link para o projeto](http://3.141.200.237:5173/) - Acesse o e-commerce em funcionamento.
-- [Link para o Google Drive - Vídeo](https://drive.google.com/your_video_link) - Vídeo demonstrativo da implantação no EC2.
+- [Link para o projeto](http://3.141.200.237) - Acesse o e-commerce em funcionamento.
+- [Link para o Google Drive - Vídeo](https://drive.google.com/file/d/1HaURkHu1SRDFZgHQK_IrjQAW-mRVvVy_/view?usp=sharing) - Vídeo demonstrativo da implantação no EC2.
 
 ## Autora
 
