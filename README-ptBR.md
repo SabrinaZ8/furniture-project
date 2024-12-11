@@ -2,6 +2,8 @@
 
 Este é um projeto de ecommerce de móveis, onde os usuários podem visualizar, filtrar e ordenar os produtos, adicionar itens ao carrinho e realizar o checkout. O projeto é construído com **React**, **TypeScript**, **Tailwind CSS**. Também utiliza **AWS S3** para armazenar as imagens dos produtos. Além disso, utiliza [**ViaCep**](https://viacep.com.br/) para busca de endereço.
 
+[Read in English](README.md)
+
 ## Sumário
 
 - [Tecnologias](#tecnologias)
