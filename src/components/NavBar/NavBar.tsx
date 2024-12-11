@@ -22,7 +22,7 @@ export const NavBar = () => {
     <nav className="flex justify-between items-center h-[100px] p-14 relative">
       <Link to="/" className="flex">
         <img
-          src="/LogoFurniro/furniroLogo.png"
+          src="../../../src/assets/images/LogoFurniro/furniroLogo.png"
           alt="Logo Furniro"
           className="mr-2"
         />
