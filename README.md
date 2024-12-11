@@ -112,7 +112,6 @@ To host the React application for this E-commerce, an AWS EC2 instance was used.
 
 ### Links
 
-- [Project Link](http://3.141.200.237) - Access the live e-commerce application.
 - [Google Drive Link - Video](https://drive.google.com/file/d/1HaURkHu1SRDFZgHQK_IrjQAW-mRVvVy_/view?usp=sharing) - Deployment demonstration video on EC2.
 
 ## Author
