@@ -4,7 +4,7 @@ interface Path {
 }
 export const Banner = ({ path }: Path) => {
   return (
-    <div className="h-[330px] relative flex justify-center items-center" >
+    <div className="h-[330px] relative flex justify-center items-center " >
       <img
         src="../../../src/assets/images/banners/banner.avif"
         alt=""
