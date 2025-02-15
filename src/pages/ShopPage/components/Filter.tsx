@@ -8,8 +8,7 @@ export const Filter: React.FC<FilterProps> = ({
   setOption,
   allProducts,
   setAllProducts,
-  itemsPerPage,
-  startEndIndex
+  itemsPerPage
 }) => {
   const [optionSort, setOptionSort] = useState("Default");
   const [initialProducts] = useState([...allProducts]);
@@ -75,7 +74,7 @@ export const Filter: React.FC<FilterProps> = ({
           <BsViewList className="w-6 h-6 mx-8" />
         </div>
         <div className="flex items-center p-1">
-          <p className="ml-8 text-base">Showing {startEndIndex.startIndex}-{startEndIndex.endIndex} of {allProducts.length} results</p>
+          <p className="ml-8 text-base">Showing 10 - 20 of {allProducts.length} results</p>
         </div>
       </div>
       <div className="flex items-center">

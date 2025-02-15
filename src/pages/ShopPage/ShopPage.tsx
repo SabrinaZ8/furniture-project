@@ -18,16 +18,11 @@ import { baseUrl } from "../../constants/baseUrl";
 
 export const ShopPage = () => {
   const [allProducts, setAllProducts] = useState<ProductType[]>([]);
-  const [visibleProducts, setVisibleProducts] = useState<ProductType[]>([]);
   const [page, setPage] = useState(1);
-  const [option, setOption] = useState("");
+  const [option, setOption] = useState("Default");
   const [loading, setLoading] = useState(false);
+  const [totalPages, setTotalPages] = useState(0)
   const itemsPerPage = 16;
-
-  const [startEndIndex, setStartEndIndex] = useState({
-    startIndex: 1,
-    endIndex: itemsPerPage,
-  });
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -36,9 +31,9 @@ export const ShopPage = () => {
       try {
         //if for category or no category filtering
         if (option === "Default") {
-          const response = await axios.get(`${baseUrl}products`);
-
-          setAllProducts(response.data);
+          const response = await axios.get(`${baseUrl}/products?_page=${page}&_per_page=${itemsPerPage}`);
+          setAllProducts(response.data.data);
+          setTotalPages(response.data.pages)
         } else {
           const response = await axios.get(
             `${baseUrl}/products?Category=${option}`
@@ -54,21 +49,11 @@ export const ShopPage = () => {
     };
 
     fetchProducts();
-  }, [option]);
-
-  useEffect(() => {
-    const startIndex = (page - 1) * itemsPerPage;
-    const endIndex = Math.min(startIndex + itemsPerPage, allProducts.length);
-
-    setStartEndIndex({ startIndex: startIndex, endIndex: endIndex });
-    setVisibleProducts(allProducts.slice(startIndex, endIndex));
-  }, [page, allProducts]);
+  }, [option, page]);
 
   const handlePageClick = (pageNumber: number): void => {
     setPage(pageNumber);
   };
-
-  const totalPages = Math.ceil(allProducts.length / itemsPerPage);
 
   const goToNextPage = (): void => {
     if (page < totalPages) {
@@ -85,7 +70,6 @@ export const ShopPage = () => {
   if (loading) {
     return <Loading />;
   }
-
   return (
     <div>
       <NavBar />
@@ -96,10 +80,9 @@ export const ShopPage = () => {
           allProducts={allProducts}
           setAllProducts={setAllProducts}
           itemsPerPage={itemsPerPage}
-          startEndIndex={startEndIndex}
         />
         <div className="grid grid-cols-4 gap-8 mx-24 max-w-[1250px]">
-          {visibleProducts.map((product) => (
+          {allProducts?.map((product) => (
             <Link to={`/product/${product.id}`}>
               <Product key={product.id} product={product} />
             </Link>
