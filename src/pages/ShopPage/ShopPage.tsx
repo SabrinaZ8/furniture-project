@@ -36,10 +36,10 @@ export const ShopPage = () => {
           setTotalPages(response.data.pages)
         } else {
           const response = await axios.get(
-            `${baseUrl}/products?Category=${option}`
+            `${baseUrl}/products?Category=${option}&_page=${page}&_per_page=${itemsPerPage}`
           );
-
-          setAllProducts(response.data);
+          setTotalPages(response.data.pages)
+          setAllProducts(response.data.data);
         }
       } catch (error) {
         console.log("Erro search products:", error);
