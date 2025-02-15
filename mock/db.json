@@ -9,7 +9,7 @@
             "discountedPrice": 1400,
             "isNew": false,
             "Category": "table",
-            "image": "https://furniro.s3.us-east-1.amazonaws.com/products/luxury-table.png",
+            "image": "https://res.cloudinary.com/ducw84byb/image/upload/v1739625823/43eebd52ea72d60650f31030ec4bf7e6_r1qfdd.png",
             "tags": ["table", "dining", "mobile", "table"]
         },
         {
@@ -21,7 +21,7 @@
             "discountedPrice": 0,
             "isNew": false,
             "Category": "chair",
-            "image": "https://furniro.s3.us-east-1.amazonaws.com/products/chair.png",
+            "image": "https://res.cloudinary.com/ducw84byb/image/upload/v1739625931/bdb0310fb379a6b1828809d2c0652533_zeaw1z.png",
             "tags": ["home", "ergonomic", "adjustable", "chair"]
         },
         {
@@ -33,7 +33,7 @@
             "isNew": false,
             "price": 2000,
             "Category": "sofa",
-            "image": "https://furniro.s3.us-east-1.amazonaws.com/products/modular-sofa.png",
+            "image": "https://res.cloudinary.com/ducw84byb/image/upload/v1739625993/sofa_mjz5oq.png",
             "tags": ["home", "room", "mobile", "sofa"]
         },
         {
@@ -45,7 +45,7 @@
             "discountedPrice": 0,
             "isNew": true,
             "Category": "sofa",
-            "image": "https://furniro.s3.us-east-1.amazonaws.com/products/corner-sofa.png",
+            "image": "https://res.cloudinary.com/ducw84byb/image/upload/v1739626028/4a5dbc0c29efbae1beca6ab40dd9b598_yrcbdc.jpg",
             "tags": ["home", "room", "Retractable", "sofa"]
         },
         {
@@ -57,7 +57,7 @@
             "discountedPrice": 0,
             "isNew": false,
             "Category": "lighting",
-            "image": "https://furniro.s3.us-east-1.amazonaws.com/products/lighting.png",
+            "image": "https://res.cloudinary.com/ducw84byb/image/upload/v1739626059/a7c05024ab4e27374edb12195b6559e2_ztmhxq.png",
             "tags": ["home", "illumination", "lighting", "lampshade"]
         },
         {
@@ -69,7 +69,7 @@
             "discountedPrice": 1085,
             "isNew": true,
             "Category": "sofa",
-            "image": "https://furniro.s3.us-east-1.amazonaws.com/products/medium-sofa.png",
+            "image": "https://res.cloudinary.com/ducw84byb/image/upload/v1739626091/ea43a4c55f9e28aa3592f17ff47a4303_hleyxx.png",
             "tags": ["home", "ergonomic", "adjustable"]
         },
         {
@@ -81,7 +81,7 @@
             "isNew": false,
             "price": 650,
             "Category": "sofa",
-            "image": "https://furniro.s3.us-east-1.amazonaws.com/products/sofa-classic.png",
+            "image": "https://res.cloudinary.com/ducw84byb/image/upload/v1739626366/e77ede2f478b2f26210bd264978981f6_bynoaq.jpg",
             "tags": ["home", "room", "mobile", "sofa"]
         },
         {
@@ -93,7 +93,7 @@
             "isNew": false,
             "price": 650,
             "Category": "sofa",
-            "image": "https://furniro.s3.us-east-1.amazonaws.com/products/leather-sofa.png",
+            "image": "https://res.cloudinary.com/ducw84byb/image/upload/v1739626389/3d98b27fb98ee49958d7089f10d39dfe_ejqmee.jpg",
             "tags": ["home", "room", "leather", "sofa"]
         },
         {
@@ -105,7 +105,7 @@
             "isNew": false,
             "price": 400,
             "Category": "bed",
-            "image": "https://furniro.s3.us-east-1.amazonaws.com/products/bed-headboard.avif",
+            "image": "https://res.cloudinary.com/ducw84byb/image/upload/v1739628686/photo-1505693416388-ac5ce068fe85_mabinm.avif",
             "tags": ["home", "room", "mobile", "bed"]
         },
         {
@@ -117,7 +117,7 @@
             "isNew": true,
             "price": 800,
             "Category": "bed",
-            "image": "https://furniro.s3.us-east-1.amazonaws.com/products/blue-bed.avif",
+            "image": "https://res.cloudinary.com/ducw84byb/image/upload/v1739628766/photo-1521783988139-89397d761dce_f4mkzt.avif",
             "tags": ["home", "room", "mobile", "bed"]
         },
         {
@@ -129,7 +129,7 @@
             "isNew": false,
             "price": 200,
             "Category": "chair",
-            "image": "https://furniro.s3.us-east-1.amazonaws.com/products/brown-armchair.png",
+            "image": "https://res.cloudinary.com/ducw84byb/image/upload/v1739628917/photo-1589135003135-2a30f21cd08c_kjvxkb.avif",
             "tags": ["home", "room", "mobile", "chair"]
         },
         {
@@ -141,7 +141,7 @@
             "isNew": false,
             "price": 200,
             "Category": "chair",
-            "image": "https://furniro.s3.us-east-1.amazonaws.com/products/chair-wood.png",
+            "image": "https://res.cloudinary.com/ducw84byb/image/upload/v1739629157/photo-1622880355742-af182a61b362_cgxg9n.avif",
             "tags": ["home", "room", "mobile", "chair"]
         },
         {
@@ -153,7 +153,7 @@
             "isNew": true,
             "price": 1200,
             "Category": "bed",
-            "image": "https://furniro.s3.us-east-1.amazonaws.com/products/comfortable-bed.avif",
+            "image": "https://res.cloudinary.com/ducw84byb/image/upload/v1739629257/photo-1588046130717-0eb0c9a3ba15_phpwg8.avif",
             "tags": ["home", "room", "mobile", "bed"]
         },
         {
@@ -165,7 +165,7 @@
             "isNew": false,
             "price": 1000,
             "Category": "table",
-            "image": "https://furniro.s3.us-east-1.amazonaws.com/products/dining-table.png",
+            "image": "https://res.cloudinary.com/ducw84byb/image/upload/v1739629388/photo-1604578762246-41134e37f9cc_xagav0.avif",
             "tags": ["home", "room", "mobile", "table"]
         },
         {
@@ -177,7 +177,7 @@
             "isNew": false,
             "price": 1500,
             "Category": "bed",
-            "image": "https://furniro.s3.us-east-1.amazonaws.com/products/double-bed.png",
+            "image": "https://res.cloudinary.com/ducw84byb/image/upload/v1739629466/photo-1618773928121-c32242e63f39_v8fes6.avif",
             "tags": ["home", "room", "mobile", "bed"]
         },
         {
@@ -189,7 +189,7 @@
             "isNew": true,
             "price": 350,
             "Category": "vase",
-            "image": "https://furniro.s3.us-east-1.amazonaws.com/products/porcelain-vase.png",
+            "image": "https://res.cloudinary.com/ducw84byb/image/upload/v1739629538/photo-1723107624989-7890909df138_ophb9w.avif",
             "tags": ["home", "room", "mobile", "vase"]
         },
         {
@@ -201,7 +201,7 @@
             "isNew": false,
             "price": 1600,
             "Category": "sofa",
-            "image": "https://furniro.s3.us-east-1.amazonaws.com/products/velvet-sofa.avif",
+            "image": "https://res.cloudinary.com/ducw84byb/image/upload/v1739629803/photo-1555041469-a586c61ea9bc_frdeou.avif",
             "tags": ["home", "room", "mobile", "sofa"]
         },
         {
@@ -213,7 +213,7 @@
             "isNew": false,
             "price": 300,
             "Category": "lighting",
-            "image": "https://furniro.s3.us-east-1.amazonaws.com/products/white-lamp.avif",
+            "image": "https://res.cloudinary.com/ducw84byb/image/upload/v1739629962/photo-1502471735958-b502f65c9f2d_yujk86.avif",
             "tags": ["home", "room", "mobile", "lighting"]
         },
         {
@@ -225,7 +225,7 @@
             "isNew": false,
             "price": 800,
             "Category": "chair",
-            "image": "https://furniro.s3.us-east-1.amazonaws.com/products/yellow-chair.avif",
+            "image": "https://res.cloudinary.com/ducw84byb/image/upload/v1739630034/photo-1563418536419-3a3ad6ef5efd_jzs7zl.avif",
             "tags": ["home", "room", "mobile", "chair"]
         },{
             "id": 21,
@@ -236,7 +236,7 @@
             "discountedPrice": 1400,
             "isNew": false,
             "Category": "table",
-            "image": "https://furniro.s3.us-east-1.amazonaws.com/products/luxury-table.png",
+            "image": "https://res.cloudinary.com/ducw84byb/image/upload/v1739625823/43eebd52ea72d60650f31030ec4bf7e6_r1qfdd.png",
             "tags": ["table", "dining", "mobile", "table"]
         },
         {
@@ -248,7 +248,7 @@
             "discountedPrice": 0,
             "isNew": false,
             "Category": "chair",
-            "image": "https://furniro.s3.us-east-1.amazonaws.com/products/chair.png",
+            "image": "https://res.cloudinary.com/ducw84byb/image/upload/v1739625931/bdb0310fb379a6b1828809d2c0652533_zeaw1z.png",
             "tags": ["home", "ergonomic", "adjustable", "chair"]
         },
         {
@@ -260,7 +260,7 @@
             "isNew": false,
             "price": 2000,
             "Category": "sofa",
-            "image": "https://furniro.s3.us-east-1.amazonaws.com/products/modular-sofa.png",
+            "image": "https://res.cloudinary.com/ducw84byb/image/upload/v1739625993/sofa_mjz5oq.png",
             "tags": ["home", "room", "mobile", "sofa"]
         },
         {
@@ -272,7 +272,7 @@
             "discountedPrice": 0,
             "isNew": true,
             "Category": "sofa",
-            "image": "https://furniro.s3.us-east-1.amazonaws.com/products/corner-sofa.png",
+            "image": "https://res.cloudinary.com/ducw84byb/image/upload/v1739626028/4a5dbc0c29efbae1beca6ab40dd9b598_yrcbdc.jpg",
             "tags": ["home", "room", "Retractable", "sofa"]
         },
         {
@@ -284,7 +284,7 @@
             "discountedPrice": 0,
             "isNew": false,
             "Category": "lighting",
-            "image": "https://furniro.s3.us-east-1.amazonaws.com/products/lighting.png",
+            "image": "https://res.cloudinary.com/ducw84byb/image/upload/v1739626059/a7c05024ab4e27374edb12195b6559e2_ztmhxq.png",
             "tags": ["home", "illumination", "lighting", "lampshade"]
         },
         {
@@ -296,7 +296,7 @@
             "discountedPrice": 1085,
             "isNew": true,
             "Category": "sofa",
-            "image": "https://furniro.s3.us-east-1.amazonaws.com/products/medium-sofa.png",
+            "image": "https://res.cloudinary.com/ducw84byb/image/upload/v1739626091/ea43a4c55f9e28aa3592f17ff47a4303_hleyxx.png",
             "tags": ["home", "ergonomic", "adjustable"]
         },
         {
@@ -308,7 +308,7 @@
             "isNew": false,
             "price": 650,
             "Category": "sofa",
-            "image": "https://furniro.s3.us-east-1.amazonaws.com/products/sofa-classic.png",
+            "image": "https://res.cloudinary.com/ducw84byb/image/upload/v1739626366/e77ede2f478b2f26210bd264978981f6_bynoaq.jpg",
             "tags": ["home", "room", "mobile", "sofa"]
         },
         {
@@ -320,7 +320,7 @@
             "isNew": false,
             "price": 650,
             "Category": "sofa",
-            "image": "https://furniro.s3.us-east-1.amazonaws.com/products/leather-sofa.png",
+            "image": "https://res.cloudinary.com/ducw84byb/image/upload/v1739626389/3d98b27fb98ee49958d7089f10d39dfe_ejqmee.jpg",
             "tags": ["home", "room", "leather", "sofa"]
         },
         {
@@ -332,7 +332,7 @@
             "isNew": false,
             "price": 400,
             "Category": "bed",
-            "image": "https://furniro.s3.us-east-1.amazonaws.com/products/bed-headboard.avif",
+            "image": "https://res.cloudinary.com/ducw84byb/image/upload/v1739628686/photo-1505693416388-ac5ce068fe85_mabinm.avif",
             "tags": ["home", "room", "mobile", "bed"]
         },
         {
@@ -344,7 +344,7 @@
             "isNew": true,
             "price": 800,
             "Category": "bed",
-            "image": "https://furniro.s3.us-east-1.amazonaws.com/products/blue-bed.avif",
+            "image": "https://res.cloudinary.com/ducw84byb/image/upload/v1739628766/photo-1521783988139-89397d761dce_f4mkzt.avif",
             "tags": ["home", "room", "mobile", "bed"]
         },
         {
@@ -356,7 +356,7 @@
             "isNew": false,
             "price": 200,
             "Category": "chair",
-            "image": "https://furniro.s3.us-east-1.amazonaws.com/products/brown-armchair.png",
+            "image": "https://res.cloudinary.com/ducw84byb/image/upload/v1739628917/photo-1589135003135-2a30f21cd08c_kjvxkb.avif",
             "tags": ["home", "room", "mobile", "chair"]
         },
         {
@@ -368,7 +368,7 @@
             "isNew": false,
             "price": 200,
             "Category": "chair",
-            "image": "https://furniro.s3.us-east-1.amazonaws.com/products/chair-wood.png",
+            "image": "https://res.cloudinary.com/ducw84byb/image/upload/v1739629157/photo-1622880355742-af182a61b362_cgxg9n.avif",
             "tags": ["home", "room", "mobile", "chair"]
         },
         {
@@ -380,7 +380,7 @@
             "isNew": true,
             "price": 1200,
             "Category": "bed",
-            "image": "https://furniro.s3.us-east-1.amazonaws.com/products/comfortable-bed.avif",
+            "image": "https://res.cloudinary.com/ducw84byb/image/upload/v1739629257/photo-1588046130717-0eb0c9a3ba15_phpwg8.avif",
             "tags": ["home", "room", "mobile", "bed"]
         },
         {
@@ -392,7 +392,7 @@
             "isNew": false,
             "price": 1000,
             "Category": "table",
-            "image": "https://furniro.s3.us-east-1.amazonaws.com/products/dining-table.png",
+            "image": "https://res.cloudinary.com/ducw84byb/image/upload/v1739629388/photo-1604578762246-41134e37f9cc_xagav0.avif",
             "tags": ["home", "room", "mobile", "table"]
         },
         {
@@ -404,11 +404,11 @@
             "isNew": false,
             "price": 1500,
             "Category": "bed",
-            "image": "https://furniro.s3.us-east-1.amazonaws.com/products/double-bed.png",
+            "image": "https://res.cloudinary.com/ducw84byb/image/upload/v1739629466/photo-1618773928121-c32242e63f39_v8fes6.avif",
             "tags": ["home", "room", "mobile", "bed"]
         },
         {
-            "id": 36,
+            "id": 37,
             "name": "Porcelain vase",
             "description": "Porcelain vase",
             "discountPercentage": 0,
@@ -416,11 +416,11 @@
             "isNew": true,
             "price": 350,
             "Category": "vase",
-            "image": "https://furniro.s3.us-east-1.amazonaws.com/products/porcelain-vase.png",
+            "image": "https://res.cloudinary.com/ducw84byb/image/upload/v1739629538/photo-1723107624989-7890909df138_ophb9w.avif",
             "tags": ["home", "room", "mobile", "vase"]
         },
         {
-            "id": 37,
+            "id": 38,
             "name": "Velvet sofa",
             "description": "Velvet sofa",
             "discountPercentage": 10,
@@ -428,11 +428,11 @@
             "isNew": false,
             "price": 1600,
             "Category": "sofa",
-            "image": "https://furniro.s3.us-east-1.amazonaws.com/products/velvet-sofa.avif",
+            "image": "https://res.cloudinary.com/ducw84byb/image/upload/v1739629803/photo-1555041469-a586c61ea9bc_frdeou.avif",
             "tags": ["home", "room", "mobile", "sofa"]
         },
         {
-            "id": 38,
+            "id": 39,
             "name": "White lamp",
             "description": "White lamp",
             "discountPercentage": 0,
@@ -440,11 +440,11 @@
             "isNew": false,
             "price": 300,
             "Category": "lighting",
-            "image": "https://furniro.s3.us-east-1.amazonaws.com/products/white-lamp.avif",
+            "image": "https://res.cloudinary.com/ducw84byb/image/upload/v1739629962/photo-1502471735958-b502f65c9f2d_yujk86.avif",
             "tags": ["home", "room", "mobile", "lighting"]
         },
         {
-            "id": 39,
+            "id": 40,
             "name": "Yellow chair",
             "description": "Yellow chair",
             "discountPercentage": 50,
@@ -452,7 +452,7 @@
             "isNew": false,
             "price": 800,
             "Category": "chair",
-            "image": "https://furniro.s3.us-east-1.amazonaws.com/products/yellow-chair.avif",
+            "image": "https://res.cloudinary.com/ducw84byb/image/upload/v1739630034/photo-1563418536419-3a3ad6ef5efd_jzs7zl.avif",
             "tags": ["home", "room", "mobile", "chair"]
         }
     ]

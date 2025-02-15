@@ -11,24 +11,24 @@ export const BrowseRange = () => {
     <div className="flex">
       <div className="mx-5">
         <img
-          src="https://furniro.s3.us-east-1.amazonaws.com/home-imgs/image-106.png"
-          alt="image-106"
+          src="https://res.cloudinary.com/ducw84byb/image/upload/v1739625171/category-dining_br88x3.png"
+          alt="Category dining"
           className="img-rd-cover-center"
         />
         <h3 className="text-gray-smb-24">Dining</h3>
       </div>
       <div className="mx-5">
         <img
-          src="https://furniro.s3.us-east-1.amazonaws.com/home-imgs/image-100.png"
-          alt="image-100"
+          src="https://res.cloudinary.com/ducw84byb/image/upload/v1739625304/category-living_bntlkq.png"
+          alt="Category living"
           className="img-rd-cover-center"
         />
         <h3 className="text-gray-smb-24">Living</h3>
       </div>
       <div className="mx-5">
         <img
-          src="https://furniro.s3.us-east-1.amazonaws.com/home-imgs/image-101.png"
-          alt="image-101"
+          src="https://res.cloudinary.com/ducw84byb/image/upload/v1739625171/category-dining_br88x3.png"
+          alt="Category dining"
           className="img-rd-cover-center"
         />
         <h3 className="text-gray-smb-24">Bedroom</h3>
