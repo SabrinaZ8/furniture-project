@@ -112,7 +112,7 @@ export const Filter: React.FC<FilterProps> = ({
         <input
           type="number"
           className="h-14 w-14 bg-white flex items-center justify-center text-center text-gray-350 ml-3 mr-6"
-          min={1}
+          min={4}
           placeholder={`${itemsPerPage}`}
           onBlur={(e) => setItemsPerPage(Number(e.target.value))}
         />
