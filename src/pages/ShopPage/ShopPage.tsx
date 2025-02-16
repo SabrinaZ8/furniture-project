@@ -22,6 +22,7 @@ export const ShopPage = () => {
   const [option, setOption] = useState("Default");
   const [loading, setLoading] = useState(false);
   const [totalPages, setTotalPages] = useState(0)
+  const [totalItems, setTotalItems] = useState(0)
   const itemsPerPage = 16;
 
   useEffect(() => {
@@ -34,12 +35,16 @@ export const ShopPage = () => {
           const response = await axios.get(`${baseUrl}/products?_page=${page}&_per_page=${itemsPerPage}`);
           setAllProducts(response.data.data);
           setTotalPages(response.data.pages)
+          
+          setTotalItems(response.data.items)
         } else {
           const response = await axios.get(
             `${baseUrl}/products?Category=${option}&_page=${page}&_per_page=${itemsPerPage}`
           );
           setTotalPages(response.data.pages)
           setAllProducts(response.data.data);
+          setTotalItems(response.data.items)
+
         }
       } catch (error) {
         console.log("Erro search products:", error);
@@ -80,6 +85,8 @@ export const ShopPage = () => {
           allProducts={allProducts}
           setAllProducts={setAllProducts}
           itemsPerPage={itemsPerPage}
+          totalItems={totalItems}
+          page={page}
         />
         <div className="grid grid-cols-4 gap-8 mx-24 max-w-[1250px]">
           {allProducts?.map((product) => (

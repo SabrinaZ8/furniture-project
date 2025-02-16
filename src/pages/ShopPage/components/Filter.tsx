@@ -8,7 +8,9 @@ export const Filter: React.FC<FilterProps> = ({
   setOption,
   allProducts,
   setAllProducts,
-  itemsPerPage
+  itemsPerPage,
+  totalItems,
+  page
 }) => {
   const [optionSort, setOptionSort] = useState("Default");
   const [initialProducts] = useState([...allProducts]);
@@ -74,14 +76,14 @@ export const Filter: React.FC<FilterProps> = ({
           <BsViewList className="w-6 h-6 mx-8" />
         </div>
         <div className="flex items-center p-1">
-          <p className="ml-8 text-base">Showing 10 - 20 of {allProducts.length} results</p>
+          <p className="ml-8 text-base">Showing {(page - 1) * itemsPerPage + 1} - {Math.min(page * itemsPerPage, totalItems)} of {totalItems} results</p>
         </div>
       </div>
       <div className="flex items-center">
         <p>Show</p>
-        <span className="h-14 w-14 bg-white flex items-center justify-center text-gray-350 ml-3 mr-6">
-          {itemsPerPage}
-        </span>
+        <input type="text" className="h-14 w-14 bg-white flex items-center justify-center text-gray-350 ml-3 mr-6"
+          placeholder={`${itemsPerPage}`}
+        />
         <p>Sort By</p>
         <select
           onChange={(e) => setOptionSort(e.target.value)}
