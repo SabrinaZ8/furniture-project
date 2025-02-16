@@ -26,7 +26,8 @@ export interface ProductType {
     setAllProducts: React.Dispatch<React.SetStateAction<ProductType[]>>;
     itemsPerPage: number;
     totalItems: number;
-    page: number
+    page: number;
+    setItemsPerPage: React.Dispatch<React.SetStateAction<number>>
   }
 
   export interface AddressType {

@@ -23,7 +23,7 @@ export const ShopPage = () => {
   const [loading, setLoading] = useState(false);
   const [totalPages, setTotalPages] = useState(0)
   const [totalItems, setTotalItems] = useState(0)
-  const itemsPerPage = 16;
+  const [itemsPerPage, setItemasPerPage] = useState(16);
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -54,7 +54,7 @@ export const ShopPage = () => {
     };
 
     fetchProducts();
-  }, [option, page]);
+  }, [option, page, itemsPerPage]);
 
   const handlePageClick = (pageNumber: number): void => {
     setPage(pageNumber);
@@ -87,6 +87,7 @@ export const ShopPage = () => {
           itemsPerPage={itemsPerPage}
           totalItems={totalItems}
           page={page}
+          setItemsPerPage={setItemasPerPage}
         />
         <div className="grid grid-cols-4 gap-8 mx-24 max-w-[1250px]">
           {allProducts?.map((product) => (

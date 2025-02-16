@@ -10,13 +10,21 @@ export const Filter: React.FC<FilterProps> = ({
   setAllProducts,
   itemsPerPage,
   totalItems,
-  page
+  page,
+  setItemsPerPage,
 }) => {
   const [optionSort, setOptionSort] = useState("Default");
   const [initialProducts] = useState([...allProducts]);
-  const [showFilter, setShowFilter] = useState(false)
+  const [showFilter, setShowFilter] = useState(false);
 
-  const optionsCategory = ["Default", "table", "chair", "sofa", "lighting", "bed"];
+  const optionsCategory = [
+    "Default",
+    "table",
+    "chair",
+    "sofa",
+    "lighting",
+    "bed",
+  ];
   const optionsSort = [
     "Default",
     "Sort by Name A-Z",
@@ -25,11 +33,15 @@ export const Filter: React.FC<FilterProps> = ({
     "Lowest price",
   ];
 
-  const sortProducts = (products: ProductType[], option: string): ProductType[] => {
+  const sortProducts = (
+    products: ProductType[],
+    option: string
+  ): ProductType[] => {
     if (option === "Default") {
-      return [...initialProducts]; 
+      return [...initialProducts];
     }
-    return [...products].sort((a, b) => { // First place the order by the discounted value
+    return [...products].sort((a, b) => {
+      // First place the order by the discounted value
       const priceA = a.discountedPrice || a.price;
       const priceB = b.discountedPrice || b.price;
 
@@ -49,40 +61,60 @@ export const Filter: React.FC<FilterProps> = ({
   };
 
   const handleShowFilter = () => {
-    setShowFilter(!showFilter)
-  }
+    setShowFilter(!showFilter);
+  };
 
   useEffect(() => {
     const sortedProducts = sortProducts(allProducts, optionSort);
     setAllProducts(sortedProducts);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [optionSort, initialProducts]); 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [optionSort, initialProducts]);
 
   return (
     <div className="flex bg-yellow-70 w-full h-[100px] items-center justify-between text-xl  px-24 mb-[60px]">
       <div className="flex">
         <div className="flex items-center border-r-2 border-gray-350 p-1 relative">
-          <HiAdjustmentsHorizontal className="w-6 h-6" onClick={handleShowFilter} />
-          {showFilter ? <select size={optionsCategory.length} onChange={(e) => setOption(e.target.value)} className="show-filter">
-            {optionsCategory.map((category) => (
-              <option value={category} key={category} className="hover:bg-gray-200">
-                {category}
-              </option>
-            ))}
-          </select> : null }
-          
+          <HiAdjustmentsHorizontal
+            className="w-6 h-6"
+            onClick={handleShowFilter}
+          />
+          {showFilter ? (
+            <select
+              size={optionsCategory.length}
+              onChange={(e) => setOption(e.target.value)}
+              className="show-filter"
+            >
+              {optionsCategory.map((category) => (
+                <option
+                  value={category}
+                  key={category}
+                  className="hover:bg-gray-200"
+                >
+                  {category}
+                </option>
+              ))}
+            </select>
+          ) : null}
+
           <p className="ml-5 mr-8">Filter</p>
           <HiMiniSquares2X2 className="w-6 h-6" />
           <BsViewList className="w-6 h-6 mx-8" />
         </div>
         <div className="flex items-center p-1">
-          <p className="ml-8 text-base">Showing {(page - 1) * itemsPerPage + 1} - {Math.min(page * itemsPerPage, totalItems)} of {totalItems} results</p>
+          <p className="ml-8 text-base">
+            Showing {(page - 1) * itemsPerPage + 1} -{" "}
+            {Math.min(page * itemsPerPage, totalItems)} of {totalItems} results
+          </p>
         </div>
       </div>
       <div className="flex items-center">
         <p>Show</p>
-        <input type="text" className="h-14 w-14 bg-white flex items-center justify-center text-gray-350 ml-3 mr-6"
+        <input
+          type="number"
+          className="h-14 w-14 bg-white flex items-center justify-center text-center text-gray-350 ml-3 mr-6"
+          min={1}
           placeholder={`${itemsPerPage}`}
+          onBlur={(e) => setItemsPerPage(Number(e.target.value))}
         />
         <p>Sort By</p>
         <select
