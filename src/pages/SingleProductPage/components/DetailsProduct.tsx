@@ -37,11 +37,11 @@ export const DetailsProduct: React.FC<DetailsProductProps> = ({
             className="imgs-side-left"
           />
         </div>
-        <div>
+        <div className="mx-8 min-w-[423px] h-[500px]">
           <img
             src={product.image}
             alt={product.description}
-            className="min-w-[423px] h-[500px] rounded-md object-cover"
+            className="w-full h-full rounded-md object-cover"
           />
         </div>
       </div>
