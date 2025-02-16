@@ -28,8 +28,8 @@ export const Filter: React.FC<FilterProps> = ({
       return [...initialProducts]; 
     }
     return [...products].sort((a, b) => { // First place the order by the discounted value
-      const priceA = a.discountedPrice ?? a.price;
-      const priceB = b.discountedPrice ?? b.price;
+      const priceA = a.discountedPrice || a.price;
+      const priceB = b.discountedPrice || b.price;
 
       switch (option) {
         case "Highest price":
