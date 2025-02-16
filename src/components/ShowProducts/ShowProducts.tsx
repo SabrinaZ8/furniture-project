@@ -21,6 +21,7 @@ export const ShowProducts: React.FC<ShowProductsProps> = ({
   const [allProducts, setAllProducts] = useState<ProductType[]>([]);
   const maxItems = 16;
   useEffect(() => {
+    
     const fetchProducts = async () => {
       setLoading(true);
 
@@ -58,8 +59,8 @@ export const ShowProducts: React.FC<ShowProductsProps> = ({
     <div>
       <div className="grid grid-cols-4 gap-8 mx-24 my-9 max-w-[1250px]">
         {allProducts.map((product) => (
-          <Link to={`/product/${product.id}`} key={product.id}>
-            <Product product={product} />
+          <Link to={`/product/${product.id}`} >
+            <Product key={product.id} product={product} />
           </Link>
         ))}
       </div>
