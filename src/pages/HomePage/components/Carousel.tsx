@@ -29,28 +29,28 @@ export const Carousel = () => {
         <ul className="splide__list relative">
           <li className="splide__slide">
             <img
-              src="https://furniro.s3.us-east-1.amazonaws.com/images-carousel/image-carousel-1.png"
+              src="https://res.cloudinary.com/ducw84byb/image/upload/v1739731631/4961c3801f4c07439f27b13468e5e545_txicoy.png"
               alt="Room 1"
               className="w-[372px] h-[486px] object-cover"
             />
           </li>
           <li className="splide__slide">
             <img
-              src="https://furniro.s3.us-east-1.amazonaws.com/images-carousel/images-carousel-2.png"
+              src="https://res.cloudinary.com/ducw84byb/image/upload/v1739731647/d1b18b523420e79dda1e92951ecde49b_sz3knh.png"
               alt="Room 2"
               className="h-[486px] object-cover"
             />
           </li>
           <li className="splide__slide">
             <img
-              src="https://furniro.s3.us-east-1.amazonaws.com/images-carousel/images-carousel-3.png"
+              src="https://res.cloudinary.com/ducw84byb/image/upload/v1739731676/25a06a33769af9bf5fe8f8ed81ce75d8_j5gxld.png"
               alt="Room 3"
               className="h-[486px] object-cover"
             />
           </li>
           <li className="splide__slide">
             <img
-              src="https://furniro.s3.us-east-1.amazonaws.com/images-carousel/images-carousel-4.png"
+              src="https://res.cloudinary.com/ducw84byb/image/upload/v1739731725/40560e3b59b4fd3c2538107c6fa70736_naqxfk.png"
               alt="Room 4"
               className="h-[486px] object-cover"
             />
