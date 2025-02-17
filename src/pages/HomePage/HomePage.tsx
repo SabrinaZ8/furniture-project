@@ -10,11 +10,11 @@ export const HomePage = () => {
     <div>
       <NavBar />
       <section className="flex justify-end items-center bg-bg-intro bg-bottom bg-fixed h-[calc(100vh-100px)] bg-no-repeat bg-cover">
-        <div className="bg-yellow-40 h-[443px] w-[643px] p-10 rounded-md mx-[60px]">
+        <div className="bg-yellow-40 min-h-[443px] w-[643px] p-10 rounded-md mx-5 lg:mx-[60px]">
           <span className="text-gray-333 font-semibold tracking-[3px] ">
             New Arrival
           </span>
-          <h1 className="font-bold text-[52px] leading-[65px] text-yellow-550">
+          <h1 className="font-bold text-[44px] leading-[65px] text-yellow-550 lg:text-[52px]">
             Discover Our
             <br />
             New Collection
