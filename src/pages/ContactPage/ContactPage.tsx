@@ -36,6 +36,12 @@ export const ContactPage = () => {
 
     if (isValid) {
       localStorage.setItem("contactFormData", JSON.stringify(formContact));
+      setFormContact({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+      })
       toast.success("Sent successfully")
 
     } else {

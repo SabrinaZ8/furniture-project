@@ -14,6 +14,7 @@ const handleSubmit = (e: React.FormEvent) => {
       }
 
       localStorage.setItem("userEmailSubscribe", email);
+      setEmail("")
       toast.success("Email successfully registered")
 };
 

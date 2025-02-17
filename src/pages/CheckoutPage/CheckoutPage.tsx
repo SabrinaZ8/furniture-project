@@ -94,6 +94,27 @@ export const CheckoutPage = () => {
         totalAmount: totalAmount
       }
       localStorage.setItem("placeOrder", JSON.stringify(placeOrder))
+      setAddress({
+        firstName: "",
+        lastName: "",
+        company: "",
+        email: "",
+        pais: "Brasil",
+        cep: "",
+        logradouro: "",
+        complemento: "",
+        bairro: "",
+        localidade: "",
+        uf: "",
+        ibge: "",
+        gia: "",
+        ddd: "",
+        siafi: "",
+        infoAdd: ""
+      })
+      setCepUser("")
+      setCepSearch(null)
+
       toast.success("Request sent successfully")
       
     } else {
