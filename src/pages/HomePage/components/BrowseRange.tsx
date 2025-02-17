@@ -27,8 +27,8 @@ export const BrowseRange = () => {
       </div>
       <div className="mx-5">
         <img
-          src="https://res.cloudinary.com/ducw84byb/image/upload/v1739625171/category-dining_br88x3.png"
-          alt="Category dining"
+          src="https://res.cloudinary.com/ducw84byb/image/upload/v1739625304/category-bedroom_voz0jz.png"
+          alt="Category Bedroom"
           className="img-rd-cover-center"
         />
         <h3 className="text-gray-smb-24">Bedroom</h3>
