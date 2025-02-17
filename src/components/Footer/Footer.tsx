@@ -12,7 +12,7 @@ export const Footer = () => {
       <hr />
       <div className="my-12 flex justify-between h-9/12 px-24">
         <div className="flex flex-col gap-y-14">
-          <span className="font-poppins text-2xl font-bold">Funiro.</span>
+          <span className="font-poppins text-2xl font-bold">Furniro.</span>
           <address className="not-italic text-gray-350">
             400 University Drive Suite 200 Coral
             <br />
@@ -90,7 +90,7 @@ export const Footer = () => {
       </div>
       <div className="px-24">
         <hr />
-        <p  className="my-9">2023 furino. All rights reverved</p>
+        <p  className="my-9">2023 furniro. All rights reverved</p>
       </div>
     </footer>
   );
