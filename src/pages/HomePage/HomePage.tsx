@@ -33,7 +33,7 @@ export const HomePage = () => {
       </section>
       <BrowseRange />
       <div className="my-[60px] flex justify-center flex-col items-center">
-        <h2 className="font-bold text-gray-750 text-[40px] text-center">Our Products</h2>
+        <h2 className="font-bold text-gray-750 text-center text-3xl md:text-[40px]">Our Products</h2>
         <ShowProducts limit={8} category={""} />
       </div>
       <section className="flex justify-center items-center bg-yellow-30 py-10">
@@ -54,7 +54,7 @@ export const HomePage = () => {
       </section>
       <section className="py-10 flex justify-cente flex-col text-center">
         <span className="font-semibold text-xl text-gray-250">Share your setup with</span>
-        <h2 className="font-bold text-[40px] text-gray-750">#FuniroFurniture</h2>
+        <h2 className="font-bold text-3xl text-gray-750 md:text-[40px]">#FuniroFurniture</h2>
         <img src="https://res.cloudinary.com/ducw84byb/image/upload/v1739719469/Images-groups_po5kax.png" alt="group images" className="w-full object-contain" />
       </section>
       <Footer />
