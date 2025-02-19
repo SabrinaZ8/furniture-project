@@ -36,15 +36,15 @@ export const HomePage = () => {
         <h2 className="font-bold text-gray-750 text-center text-3xl md:text-[40px]">Our Products</h2>
         <ShowProducts limit={8} category={""} />
       </div>
-      <section className="flex justify-center items-center bg-yellow-30 py-10">
-        <div className="w-[40%] h-full flex flex-col  ml-[100px]">
-          <h2 className="text-[40px] text-gray-750 font-bold">50+ Beautiful rooms<br/> inspiration</h2>
-          <p className="text-gray-250 w-9/12 mt-4 mb-6 font-[600]">
+      <section className="flex flex-col justify-center items-center bg-yellow-30 py-10 lg:flex-row">
+        <div className="w-4/5 mb-10 h-full text-center flex flex-col items-center lg:ml-[100px] lg:w-[40%] lg:items-start lg:text-start lg:mb-0">
+          <h2 className="text-3xl text-gray-750 font-bold md:text-[40px]">50+ Beautiful rooms<br/> inspiration</h2>
+          <p className="text-gray-250 w-full mt-4 mb-6 font-[600] lg:w-9/12">
             Our designer already made a lot of beautiful<br /> prototipe of rooms that
             inspire you
           </p>
           <Link
-            to="#"
+            to="/shop"
             className="flex justify-center items-center bg-yellow-550 text-white w-44 h-12 btn-transparent"
           >
             Explore More

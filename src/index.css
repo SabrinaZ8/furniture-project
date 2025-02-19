@@ -108,3 +108,26 @@
 .message-error {
     @apply text-red-500
 }
+
+/* HOME - carousel*/
+
+.imgs-carousel-li {
+    @apply  max-w-[372px] max-h-[486px] object-cover
+} 
+
+.splide__slide--larger {
+    @apply lg:max-h-[582px] !important;
+}
+
+.splide__pagination__page {
+    @apply bg-yellow-550 top-7 !important;
+}
+.splide__arrow--next {
+    @apply bg-white shadow-2xl opacity-100 !important 
+}
+.splide__arrow--next svg{
+    @apply fill-yellow-550 !important
+}
+.splide__arrow--prev {
+    @apply hidden !important
+}
