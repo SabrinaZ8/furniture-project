@@ -57,9 +57,9 @@ export const ShowProducts: React.FC<ShowProductsProps> = ({
 
   return (
     <div>
-      <div className="grid grid-cols-4 gap-8 mx-24 my-9 max-w-[1250px]">
+      <div className="grid gap-8 mx-3 lg:mx-12 2xl:mx-24 my-9 max-w-[1250px] grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
         {allProducts.map((product) => (
-          <Link to={`/product/${product.id}`} >
+          <Link to={`/product/${product.id}`} className="max-w-[175px] min-w-[175px] max-h-[351px]  md:max-w-[285px] md:min-w-[285px] md:min-h-[446px] md:max-h-[446px]">
             <Product key={product.id} product={product} />
           </Link>
         ))}

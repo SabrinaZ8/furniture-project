@@ -26,10 +26,10 @@ export const Product: React.FC<ProductProps> = ({ product }) => {
   };
 
   return (
-    <div className="max-w-[285px] max-h-[446px]">
-      <div className="relative group">
+    <div className="h-full w-full">
+      <div className="relative group w-full">
         {/*overlay*/}
-        <div className="flex flex-col justify-center items-center overlay-shop font-semibold">
+        <div className="flex flex-col-reverse justify-center items-center overlay-shop font-semibold md:flex-col">
           <div className="my-6">
             <button
               onClick={(e) => {
@@ -37,12 +37,12 @@ export const Product: React.FC<ProductProps> = ({ product }) => {
                 e.stopPropagation();
                 e.preventDefault();
               }}
-              className="w-[202px] h-12 bg-white text-yellow-550"
+              className="w-[150px] h-12 bg-white text-yellow-550 md:w-[202px]"
             >
               Add to cart
             </button>
           </div>
-          <div className="flex text-white">
+          <div className="flex flex-col text-white md:flex-row">
             <div className="overlay-shop-icons-div">
               <IoShareSocial className="overlay-shop-icons" />
               <p>Share</p>
@@ -60,7 +60,7 @@ export const Product: React.FC<ProductProps> = ({ product }) => {
         <img
           src={product.image}
           alt={product.description}
-          className="max-w-[285px] max-h-[300px] object-cover w-[285px] h-[300px]"
+          className="min-w-full max-h-[190px] h-[190px] md:max-h-[300px] md:h-[300px] object-cover "
         />
         {product.isNew ? (
           <span className="absolute top-5 right-5 bg-green-450 text-white w-12 h-12 rounded-full flex justify-center items-center">
@@ -75,11 +75,11 @@ export const Product: React.FC<ProductProps> = ({ product }) => {
           </span>
         )}
       </div>
-      <div className="bg-gray-100 p-4">
-        <h2 className="text-gray-750 font-semibold text-2xl">{product.name}</h2>
+      <div className="bg-gray-100 p-4 w-full min-h-[161px] max-h-[161px] md:min-h-[146px] ">
+        <h2 className="text-gray-750 font-semibold text-xl md:text-2xl">{product.name}</h2>
         <p className="text-gray-898 my-2">{product.description}</p>
-        <div className="flex justify-between">
-          <h3 className="text-xl font-semibold text-gray-750">
+        <div className="flex flex-col justify-between md:flex-row">
+          <h3 className="text-lg md:text-xl font-semibold text-gray-750">
             {formatMoney(
               product.discountedPrice === 0
                 ? product.price

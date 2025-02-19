@@ -42,10 +42,10 @@
 /*Shop*/
 
 .overlay-shop {
-    @apply max-w-[285px] max-h-[446px] w-[285px] h-[446px]  hover:flex hidden bg-gray-750 bg-opacity-70 absolute z-10 group-hover:flex
+    @apply w-full max-h-[351px] min-h-[351px] md:max-h-[446px] md:min-h-[446px] hover:flex hidden bg-gray-750 bg-opacity-70 absolute z-10 group-hover:flex
 }
 .overlay-shop-icons-div {
-    @apply flex items-center mx-2
+    @apply flex items-center m-2
 }
 .overlay-shop-icons {
     @apply mr-1.5 w-4 h-4
