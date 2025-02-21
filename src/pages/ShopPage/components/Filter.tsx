@@ -71,9 +71,9 @@ export const Filter: React.FC<FilterProps> = ({
   }, [optionSort, initialProducts]);
 
   return (
-    <div className="flex bg-yellow-70 w-full h-[100px] items-center justify-between text-xl  px-24 mb-[60px]">
-      <div className="flex">
-        <div className="flex items-center border-r-2 border-gray-350 p-1 relative">
+    <div className="flex flex-col md:flex-row items-center justify-between w-full min-h-[100px] bg-yellow-70  text-xl py-10 px-4 mb-[60px] sm:px-10 md:py-1 lg:px-24">
+      <div className="flex flex-col sm:flex-row">
+        <div className="flex items-center border-gray-350 p-1 relative sm:border-r-2">
           <HiAdjustmentsHorizontal
             className="w-6 h-6"
             onClick={handleShowFilter}
@@ -96,18 +96,18 @@ export const Filter: React.FC<FilterProps> = ({
             </select>
           ) : null}
 
-          <p className="ml-5 mr-8">Filter</p>
+          <p className="ml-5 mr-8 text-base lg:text-xl">Filter</p>
           <HiMiniSquares2X2 className="w-6 h-6" />
           <BsViewList className="w-6 h-6 mx-8" />
         </div>
         <div className="flex items-center p-1">
-          <p className="ml-8 text-base">
+          <p className="my-5 text-base sm:ml-8 sm:my-0">
             Showing {(page - 1) * itemsPerPage + 1} -{" "}
             {Math.min(page * itemsPerPage, totalItems)} of {totalItems} results
           </p>
         </div>
       </div>
-      <div className="flex items-center">
+      <div className="flex my-5 items-center text-base lg:text-xl md:my-0">
         <p>Show</p>
         <input
           type="number"
