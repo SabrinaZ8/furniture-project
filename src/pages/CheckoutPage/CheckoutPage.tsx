@@ -127,10 +127,10 @@ export const CheckoutPage = () => {
       <NavBar />
       <Banner path="Checkout" />
       <form
-        className="flex ml-[174px] mr-[125px] mt-[125px] mb-28 justify-center"
+        className="flex flex-col mt-[125px] mb-28 ml-5 mr-5 justify-center lg:flex-row 2xl:ml-[174px] 2xl:mr-[125px]"
         onSubmit={handleSubmit}
       >
-        <div className="w-1/2 flex flex-col items-center">
+        <div className="flex flex-col items-center lg:w-1/2">
           <InputsAddress
             errors={errors}
             handleInputChange={handleInputChange}
@@ -140,7 +140,7 @@ export const CheckoutPage = () => {
             cepSearch={cepSearch}
           />
         </div>
-        <div className="w-1/2">
+        <div className="lg:w-1/2 mt-28">
           <div className="">
             <div className="flex justify-between mb-8">
               <h3 className="font-semibold text-2xl text-start mr-8">
