@@ -22,7 +22,7 @@ export const CartAside: React.FC<SetCartSideProps> = ({ setCartSide }) => {
 
   return (
     <div className="fixed w-full h-full bg-black bg-opacity-50 top-0 left-0 z-10">
-    <div className="w-[417px] h-[746px] absolute z-50 top-0 right-0 p-7 bg-white flex flex-col justify-between ">
+    <div className=" w-full sm:w-[417px] h-[746px] absolute z-50 top-0 right-0 p-7 bg-white flex flex-col justify-between ">
       <div className="overflow-y-auto">
         <div>
           <div className="flex justify-between items-center mb-7">
