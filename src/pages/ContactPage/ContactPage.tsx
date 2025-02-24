@@ -57,15 +57,15 @@ export const ContactPage = () => {
 
       <section className="mt-[90px] mb-16">
         <div className="flex flex-col text-center items-center">
-          <h2 className="text-4xl font-semibold">Get In Touch With Us</h2>
-          <p className="text-gray-350 w-4/12 mt-5">
+          <h2 className="font-semibold text-3xl xl:text-4xl ">Get In Touch With Us</h2>
+          <p className="text-gray-350 w-5/6 lg:w-4/12 mt-5">
             For More Information About Our Product & Services. Please Feel Free
             To Drop Us An Email. Our Staff Always Be There To Help You Out. Do
             Not Hesitate!
           </p>
         </div>
-        <div className="flex mx-[237px]">
-          <div className="w-1/2 mt-9">
+        <div className="flex flex-col items-center xl:items-start mx-4 sm:mx-10 xl:mx-[237px] xl:flex-row">
+          <div className="flex flex-col mt-9 w-4/5 xl:items-start xl:w-1/2 xl:mx-4 ">
             <div className="infos-address-phone">
               <div className="mr-6">
                 <FaMapMarkerAlt className="infos-address-phone-icons" />

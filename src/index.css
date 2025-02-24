@@ -73,19 +73,19 @@
     @apply flex mb-8
 }
 .infos-address-phone-h3 {
-    @apply font-medium text-2xl
+    @apply font-medium text-xl md:text-2xl
 }
 .infos-address-phone-icons {
-    @apply w-8 h-8 
+    @apply w-6 h-6 md:w-8 md:h-8 
 }
 .infos-address-phone-label {
     @apply font-medium mb-4 mt-7 inline-flex
 }
 .infos-address-phone-input-div {
-    @apply flex flex-col
+    @apply flex flex-col w-full
 }
 .infos-address-phone-input {
-    @apply w-[528px] h-[75px] p-5 border-[1px] border-gray-350 rounded-[10px]
+    @apply p-5 border-[1px] border-gray-350 rounded-[10px] w-full md:w-[528px] md:h-[75px]
 }
 
 /*btn show more - home and singleproduct page*/

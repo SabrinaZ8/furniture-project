@@ -8,7 +8,7 @@ export const FormContact:React.FC<FormContactComponent> = ({
 }) => {
     return (
         <form
-        className="w-1/2 flex flex-col items-start"
+        className="flex flex-col items-center w-full sm:w-4/5 xl:w-1/2 xl:items-start"
         onSubmit={(e) => handleSubmit(e)}
       >
         <div className="infos-address-phone-input-div">
