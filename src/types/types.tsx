@@ -76,4 +76,9 @@ export interface FormContact {
   subject: string;
   message: string;
 }
-  
+export interface FormContactComponent {
+  handleSubmit:  (event: React.FormEvent<HTMLFormElement>) => void;
+  formContact: FormContact;
+  errors: Partial<Record<keyof FormContact, string>>
+  handleChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+}
