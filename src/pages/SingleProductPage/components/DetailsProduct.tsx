@@ -13,9 +13,9 @@ export const DetailsProduct: React.FC<DetailsProductProps> = ({
   handleAddToCart,
 }) => {
   return (
-    <div key={product.id} className="flex  mt-9 mb-14 mx-28">
-      <div className="flex w-1/2">
-        <div>
+    <div key={product.id} className="flex flex-col xl:flex-row mt-9 mb-14 mx-5 md:mx-10 2xl:mx-28">
+      <div className="flex flex-col-reverse sm:flex-row justify-center w-full xl:w-1/2">
+        <div className="flex items-center overflow-x-auto flex-row sm:flex-col mt-5 sm:mt-0">
           <img
             src={product.image}
             alt={product.description}
@@ -37,7 +37,7 @@ export const DetailsProduct: React.FC<DetailsProductProps> = ({
             className="imgs-side-left"
           />
         </div>
-        <div className="mx-8 min-w-[423px] h-[500px]">
+        <div className="min-w-[300px] h-[380px] sm:min-w-[423px] sm:h-[500px] sm:mx-8 ">
           <img
             src={product.image}
             alt={product.description}
@@ -45,12 +45,11 @@ export const DetailsProduct: React.FC<DetailsProductProps> = ({
           />
         </div>
       </div>
-      <div className="w-1/2">
-        <div className="mb-[30px]">
-          {" "}
+      <div className="flex flex-col items-center xl:items-start w-full xl:w-1/2">
+        <div className="mt-7 mb-[30px] xl:mt-0">
           {/*Ajustar*/}
-          <h2 className="text-[42px]">{product.name}</h2>
-          <p className="text-2xl text-gray-350">{formatMoney(product.price)}</p>
+          <h2 className="text-3xl lg:text-[42px]">{product.name}</h2>
+          <p className="text-xl lg:text-2xl text-gray-350">{formatMoney(product.price)}</p>
           <div className="flex py-4">
             <img
               src="../../../src/assets/images/icons/group-star.png"
@@ -58,7 +57,7 @@ export const DetailsProduct: React.FC<DetailsProductProps> = ({
             />
             <p className="text-sm ml-7 text-gray-350">5 Customer Review</p>
           </div>
-          <p className="w-4/5 mb-4">
+          <p className="mb-4 w-full md:w-4/5 ">
             Setting the bar as one of the loudest speakers in its class, the
             Kilburn is a compact, stout-hearted hero with a well-balanced audio
             which boasts a clear midrange and extended highs for a sound.
@@ -140,8 +139,8 @@ export const DetailsProduct: React.FC<DetailsProductProps> = ({
               />
             </div>
           </div>
-          <div className="flex items-center my-8">
-            <div className="border-2 border-gray-350 w-[123px] h-16 p-3 rounded-[10px] flex items-center justify-center mr-5">
+          <div className="flex items-center justify-center xl:justify-start my-8">
+            <div className="border-2 border-gray-350 w-[108px] sm:w-[123px] h-16 p-3 rounded-[10px] flex items-center justify-center mr-5">
               <button
                 onClick={() => setQuantity(quantity === 1 ? 1 : quantity - 1)}
               >
@@ -153,7 +152,7 @@ export const DetailsProduct: React.FC<DetailsProductProps> = ({
             <div>
               <button
                 onClick={handleAddToCart}
-                className="h-16 w-[215px] border-2 border-black rounded-[15px] text-xl btn-gray"
+                className="h-16 w-[200px] sm:w-[215px] border-2 border-black rounded-[15px] text-xl btn-gray"
               >
                 Add to cart
               </button>
