@@ -90,9 +90,9 @@ export const CartAside: React.FC<SetCartSideProps> = ({ setCartSide }) => {
             </div>
           </div>
           <hr />
-          <div className="text-xs mt-6">
+          <div className="flex flex-wrap text-xs mt-6 max-sm:justify-center ">
             <div className="btns-shop-side btn-gray">
-              <Link to="/cart">Cart</Link>
+              <Link to="/cart" className="text-center">Cart</Link>
             </div>
             <div className="btns-shop-side btn-gray">
               <Link to="/checkout">Checkout</Link>
