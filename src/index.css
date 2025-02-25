@@ -149,5 +149,5 @@
     @apply text-gray-898 text-base md:text-xl
  }
  .img-moreinfos {
-    @apply h-10 w-10 md:h-[60px] md:w-[60px] 
+    @apply min-h-10 min-w-10 h-10 w-10 md:h-[60px] md:w-[60px] 
  }

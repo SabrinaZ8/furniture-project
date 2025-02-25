@@ -1,6 +1,6 @@
 export const MoreInfos = () => {
   return (
-    <section className="flex justify-between items-center px-12 bg-yellow-70 min-h-[265px] flex-wrap">
+    <section className="flex justify-between items-center px-5 sm:px-12 bg-yellow-70 min-h-[265px] flex-wrap">
       <div className="div-flex">
         <div>
             <img src="../../../src/assets/images/icons/high-quality.png" alt="High Quality" className="img-moreinfos" />
