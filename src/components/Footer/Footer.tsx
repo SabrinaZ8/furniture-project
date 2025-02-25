@@ -8,7 +8,7 @@ import { FormSubscribe } from "./components/FormSubscribe";
 
 export const Footer = () => {
   return (
-    <footer className="min-h-[505px]">
+    <footer className="md:min-h-[505px]">
       <hr />
       <div className="my-12 justify-between h-9/12 px-4 flex flex-col md:px-24 lg:flex-row ">
         <div className="flex flex-col gap-y-14">
@@ -51,7 +51,7 @@ export const Footer = () => {
             </a>
           </div>
         </div>
-        <div className="flex justify-center my-10 lg:my-0 lg:justify-start">
+        <div className="flex justify-center text-center my-10 lg:my-0 lg:justify-start">
         <div className="flex flex-col items-center gap-y-12 font-medium mr-20 lg:mr-40 lg:my-0 lg:items-start">
           <h3 className="text-gray-350">Links</h3>
           <ul className="flex flex-col items-center gap-y-10 lg:items-start">

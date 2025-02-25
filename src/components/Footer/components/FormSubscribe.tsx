@@ -23,11 +23,11 @@ const handleSubmit = (e: React.FormEvent) => {
       <input
         type="text"
         placeholder="Enter Your Email Address"
-        className="font-normal border-b border-black pr-5 focus:outline-none"
+        className="font-normal border-b border-black pr-5 mr-2.5 focus:outline-none"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
-      <button type="submit" className="uppercase border-b border-black ml-2.5 hover-text">
+      <button type="submit" className="uppercase border-b border-black hover-text">
         Subscribe
       </button>
     </form>
