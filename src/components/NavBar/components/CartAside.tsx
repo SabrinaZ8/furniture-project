@@ -41,7 +41,7 @@ export const CartAside: React.FC<SetCartSideProps> = ({ setCartSide }) => {
                   <img
                     src={item.image}
                     alt={item.description}
-                    className="w-[105px] [h-105] rounded-md object-cover"
+                    className="w-[105px] h-[105px] rounded-md object-cover"
                   />
                 </div>
                 <div className="flex items-center justify-between w-1/2">
