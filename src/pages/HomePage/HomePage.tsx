@@ -57,11 +57,11 @@ export const HomePage = () => {
         </div>
         <Carousel />
       </section>
-      <section className="py-10 flex justify-cente flex-col text-center">
+      <section className="my-40 md:my-10 flex justify-cente flex-col text-center">
         <span className="font-semibold text-xl text-gray-250">
           Share your setup with
         </span>
-        <h2 className="font-bold text-3xl text-gray-750 md:text-[40px]">
+        <h2 className="font-bold text-2xl md:text-3xl text-gray-750 md:text-[40px]">
           #FuniroFurniture
         </h2>
         <img
