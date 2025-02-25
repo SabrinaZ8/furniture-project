@@ -64,9 +64,9 @@ export const Carousel = () => {
             />
           </li>
         </ul>
-        <div className="absolute bottom-10 left-5  bg-white p-4 rounded-lg shadow-md lg:bottom-32">
-          <h3 className="text-xl font-semibold">01 — Bed Room</h3>
-          <p className="text-lg font-light">Inner Peace</p>
+        <div className="absolute bottom-3 md:bottom-10 left-5  bg-white p-4 rounded-lg shadow-md lg:bottom-32">
+          <h3 className="text-base md:text-xl font-semibold">01 — Bed Room</h3>
+          <p className="text-sm md:text-lg font-light">Inner Peace</p>
         </div>
       </div>
       
