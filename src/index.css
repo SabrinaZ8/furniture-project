@@ -132,4 +132,22 @@
     @apply hidden !important
 }
 
-/* components*/
+/***** components*******/
+
+ /* moreinfos*/
+
+ .div-flex {
+    @apply flex p-4
+ }
+ .div-flex div {
+    @apply mr-5
+ }
+ .h3-moreinfos {
+    @apply text-xl md:text-2xl font-semibold
+ }
+ .p-moreinfos {
+    @apply text-gray-898 text-base md:text-xl
+ }
+ .img-moreinfos {
+    @apply h-10 w-10 md:h-[60px] md:w-[60px] 
+ }
