@@ -158,7 +158,7 @@ export const CheckoutPage = () => {
 
                   <p className="font-light">
                     {formatMoney(
-                      item.discountedPrice ? item.discountedPrice : item.price
+                      item.discountedPrice ? item.discountedPrice * item.quantity: item.price * item.quantity
                     )}
                   </p>
                 </div>
