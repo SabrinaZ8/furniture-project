@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .img-rd-cover-center {
-    @apply w-[381px] h-[480px] object-cover rounded-md bg-center;
+    @apply w-[306px] h-[405px] max-w-[306px] max-h-[405px] md:w-[381px] md:h-[480px] md:max-w-[381px] md:max-h-[480px] object-cover rounded-md bg-center;
 }
 .text-gray-smb-24 {
     @apply font-semibold my-8 text-2xl

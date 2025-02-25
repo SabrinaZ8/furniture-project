@@ -13,7 +13,7 @@ export const BrowseRange = () => {
         <img
           src="https://res.cloudinary.com/ducw84byb/image/upload/v1739625171/category-dining_br88x3.png"
           alt="Category dining"
-          className="img-rd-cover-center max-w-[381px] max-h-[480px]"
+          className="img-rd-cover-center"
         />
         <h3 className="text-gray-smb-24">Dining</h3>
       </div>
@@ -21,7 +21,7 @@ export const BrowseRange = () => {
         <img
           src="https://res.cloudinary.com/ducw84byb/image/upload/v1739625304/category-living_bntlkq.png"
           alt="Category living"
-          className="img-rd-cover-center max-w-[381px] max-h-[480px]"
+          className="img-rd-cover-center"
         />
         <h3 className="text-gray-smb-24">Living</h3>
       </div>
@@ -29,7 +29,7 @@ export const BrowseRange = () => {
         <img
           src="https://res.cloudinary.com/ducw84byb/image/upload/v1739625304/category-bedroom_voz0jz.png"
           alt="Category Bedroom"
-          className="img-rd-cover-center max-w-[381px] max-h-[480px]"
+          className="img-rd-cover-center"
         />
         <h3 className="text-gray-smb-24">Bedroom</h3>
       </div>
