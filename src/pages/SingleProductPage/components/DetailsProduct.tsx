@@ -52,7 +52,7 @@ export const DetailsProduct: React.FC<DetailsProductProps> = ({
           <p className="text-xl lg:text-2xl text-gray-350">{formatMoney(product.price)}</p>
           <div className="flex py-4">
             <img
-              src="../../../src/assets/images/icons/group-star.png"
+              src="/icons/group-star.png"
               className="border-r-2 border-gray-350 pr-7"
             />
             <p className="text-sm ml-7 text-gray-350">5 Customer Review</p>

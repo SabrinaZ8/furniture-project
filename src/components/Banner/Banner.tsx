@@ -13,7 +13,7 @@ export const Banner = ({ path }: Path) => {
       />
       <div className="flex items-center flex-col absolute">
         <img
-          src="../../../src/assets/images/LogoFurniro/furniroLogo.png"
+          src="/logo/furniroLogo.png"
           alt="Logo Furniro"
         />
         <h2 className="text-5xl mt-5 mb-4">{path}</h2>

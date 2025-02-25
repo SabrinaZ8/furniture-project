@@ -25,7 +25,7 @@ export const NavBar = () => {
     <nav className="flex justify-between items-center min-h-[100px] px-4 md:px-14 relative">
       <Link to="/" className="flex">
         <img
-          src="../../../src/assets/images/LogoFurniro/furniroLogo.png"
+          src="/logo/furniroLogo.png"
           alt="Logo Furniro"
           className="max-sm:w-10 max-sm:h-7 mr-2"
         />
@@ -63,7 +63,7 @@ export const NavBar = () => {
           <IoMenu className="w-[30px] h-[30px]" />
         </button>
         {isOpen ? (
-          <ul className="flex items-center bg-yellow-40 absolute py-5 px-8 flex-col font-medium justify-evenly w-screen h-screen left-0 top-0 overflow-hidden">
+          <ul className="flex items-center z-10 bg-yellow-40 absolute py-5 px-8 flex-col font-medium justify-evenly w-screen h-screen left-0 top-0 overflow-hidden">
             <li>
               <button onClick={() => setIsOpen(!isOpen)} className="">
                 <IoMdClose className="w-[30px] h-[30px]" />
