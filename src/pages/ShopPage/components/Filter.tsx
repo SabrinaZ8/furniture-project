@@ -107,26 +107,30 @@ export const Filter: React.FC<FilterProps> = ({
           </p>
         </div>
       </div>
-      <div className="flex my-5 items-center text-base lg:text-xl md:my-0">
-        <p>Show</p>
-        <input
-          type="number"
-          className="h-14 w-14 bg-white flex items-center justify-center text-center text-gray-350 ml-3 mr-6"
-          min={4}
-          placeholder={`${itemsPerPage}`}
-          onBlur={(e) => setItemsPerPage(Number(e.target.value))}
-        />
-        <p>Sort By</p>
-        <select
-          onChange={(e) => setOptionSort(e.target.value)}
-          className="ml-3 text-gray-350 h-14 px-1"
-        >
-          {optionsSort.map((sort) => (
-            <option value={sort} key={sort}>
-              {sort}
-            </option>
-          ))}
-        </select>
+      <div className="flex flex-wrap sm:my-5 items-center text-base lg:text-xl md:my-0">
+        <div className="flex items-center max-sm:flex-col">
+          <p className="max-sm:my-2">Show</p>
+          <input
+            type="number"
+            className="h-14 w-14 bg-white flex items-center justify-center text-center text-gray-350 ml-3 mr-6"
+            min={4}
+            placeholder={`${itemsPerPage}`}
+            onBlur={(e) => setItemsPerPage(Number(e.target.value))}
+          />
+        </div>
+        <div className="flex items-center max-sm:flex-col">
+          <p className="max-sm:my-2">Sort By</p>
+          <select
+            onChange={(e) => setOptionSort(e.target.value)}
+            className="ml-3 text-gray-350 h-14 px-1"
+          >
+            {optionsSort.map((sort) => (
+              <option value={sort} key={sort}>
+                {sort}
+              </option>
+            ))}
+          </select>
+        </div>
       </div>
     </div>
   );
