@@ -58,7 +58,7 @@ export const NavBar = () => {
         </ul>
       </div>
       {/*Menu mobile */}
-      <div className="flex flex-col mt-5 h-full md:hidden">
+      <div className="flex flex-col h-full md:hidden">
         <button onClick={() => setIsOpen(!isOpen)} className="">
           <IoMenu className="w-[30px] h-[30px]" />
         </button>
