@@ -94,7 +94,7 @@ export const NavBar = () => {
       </div>
       <div className="flex items-center">
         <div className=" mr-3.5 flex items-center justify-center">
-          <div onClick={handleLogout}>
+          <div onClick={handleLogout} className="flex items-center">
             {/* If the user is online, he can log out*/}
             <SignedIn>
               <UserButton />
