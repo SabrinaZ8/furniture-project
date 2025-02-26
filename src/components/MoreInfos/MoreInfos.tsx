@@ -30,7 +30,7 @@ export const MoreInfos = () => {
       </div>
       <div className="div-flex">
         <div>
-            <img src="/icons/support.pngg" alt="24 / 7 Support" className="img-moreinfos" />
+            <img src="/icons/support.png" alt="24 / 7 Support" className="img-moreinfos" />
         </div>
         <div>
             <h3 className="h3-moreinfos">24 / 7 Support</h3>
