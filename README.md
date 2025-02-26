@@ -15,10 +15,6 @@ This is a furniture ecommerce project where users can browse, filter, and sort p
   - [Styling with Tailwind CSS](#3-styling-with-tailwind-css)
   - [JSON Server as Simulated Back-End](#4-json-server-as-simulated-back-end)
   - [User Authentication with Clerk](#5-user-authentication-with-clerk)
-  - [AWS S3 Integration](#6-aws-s3-integration)
-- [EC2 Instance](#ec2-instance)
-  - [Technologies Used](#technologies-used)
-  - [Links](#links)
 - [Author](#author)
 
 ## Technologies
@@ -93,26 +89,6 @@ For development purposes, JSON Server is used as a simulated API to manage produ
 User authentication is handled with Clerk, providing an easy-to-implement login and registration solution. Clerk manages the authentication lifecycle, including account creation, login, and logout, simplifying the user flow.
 - **Session Persistence**:
 Clerk automatically manages user sessions, ensuring authentication persists across browser sessions. This provides a seamless and uninterrupted user experience.
-
-### 6. AWS S3 Integration
-
-- **Image Storage**:
-Product images are stored using AWS S3, offering a scalable and secure storage solution. S3 allows images to be easily accessed and displayed in the ecommerce interface, improving site performance by loading images directly from the cloud.
-
-## EC2 Instance
-
-To host the React application for this E-commerce, an AWS EC2 instance was used. The application was successfully configured and deployed on the server, accessible via public IP.
-
-### Technologies Used:
-
-- **AWS EC2**: To host and run the application.
-- **PuTTY**: To access the EC2 instance terminal via SSH.
-- **Linux**: Operating system of the EC2 instance.
-- **Nginx**: Used as a web server to manage traffic and route requests.
-
-### Links
-
-- [Google Drive Link - Video](https://drive.google.com/file/d/1HaURkHu1SRDFZgHQK_IrjQAW-mRVvVy_/view?usp=sharing) - Deployment demonstration video on EC2.
 
 ## Author
 
