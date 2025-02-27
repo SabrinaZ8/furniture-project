@@ -75,18 +75,18 @@ export const Product: React.FC<ProductProps> = ({ product }) => {
           </span>
         )}
       </div>
-      <div className="bg-gray-100 p-4 w-full min-h-[161px] max-h-[161px] md:min-h-[146px] ">
-        <h2 className="text-gray-750 font-semibold text-xl md:text-2xl">{product.name}</h2>
-        <p className="text-gray-898 my-2">{product.description}</p>
+      <div className="bg-gray-100 p-2 sm:p-4 w-full min-h-[161px] max-h-[161px] md:min-h-[146px] ">
+        <h2 className="text-gray-750 font-semibold text-lg md:text-2xl">{product.name}</h2>
+        <p className="text-gray-898 max-sm:text-sm my-1 sm:my-2">{product.description}</p>
         <div className="flex flex-col justify-between md:flex-row">
-          <h3 className="text-lg md:text-xl font-semibold text-gray-750">
+          <h3 className="text-base md:text-xl font-semibold text-gray-750">
             {formatMoney(
               product.discountedPrice === 0
                 ? product.price
                 : product.discountedPrice
             )}
           </h3>
-          <span className="text-gray-110 line-through">
+          <span className="text-gray-110 line-through max-sm:text-sm">
             {product.discountedPrice === 0
               ? null
               : formatMoney(product.price)}
