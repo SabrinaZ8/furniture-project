@@ -36,7 +36,7 @@ export const HomePage = () => {
         <h2 className="font-bold text-gray-750 text-center text-3xl md:text-[40px]">
           Our Products
         </h2>
-        <ShowProducts limit={8} category={""} />
+        <ShowProducts limit={8} />
       </div>
       <section className="flex flex-col justify-center items-center bg-yellow-30 py-10 lg:flex-row">
         <div className="w-4/5 mb-10 h-full text-center flex flex-col items-center lg:ml-[100px] lg:w-[40%] lg:items-start lg:text-start lg:mb-0">

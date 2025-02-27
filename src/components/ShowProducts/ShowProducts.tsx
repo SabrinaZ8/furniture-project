@@ -8,7 +8,7 @@ import { BtnShowMore } from "./BtnShowMore/BtnShowMore";
 import { baseUrl } from "../../constants/baseUrl";
 
 type ShowProductsProps = {
-  limit: number; 
+  limit: number;
   category?: string;
 };
 
@@ -20,23 +20,19 @@ export const ShowProducts: React.FC<ShowProductsProps> = ({
   const [itemsMore, setItemsMore] = useState(limit);
   const [allProducts, setAllProducts] = useState<ProductType[]>([]);
   const maxItems = 16;
+  
   useEffect(() => {
-    
     const fetchProducts = async () => {
       setLoading(true);
 
       try {
         const response = await axios.get(
-          `${baseUrl}/products?Category=${category}`,
-          {
-            params: {
-              _page: 1,
-              _limit: itemsMore > maxItems ? maxItems : itemsMore, //if you don't reach the limit, load more items
-            },
-          }
+          `${baseUrl}/products?&_page=1&_limit=${
+          itemsMore > maxItems ? maxItems : itemsMore}` //if you don't reach the limit, load more items
         );
 
         setAllProducts(response.data);
+        console.log(response.data);
       } catch (error) {
         console.log("Erro search products:", error);
       } finally {
@@ -59,7 +55,10 @@ export const ShowProducts: React.FC<ShowProductsProps> = ({
     <div>
       <div className="grid gap-8 mx-3 lg:mx-12 2xl:mx-24 my-9 max-w-[1250px] grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
         {allProducts.map((product) => (
-          <Link to={`/product/${product.id}`} className="max-w-[175px] min-w-[175px] max-h-[351px]  md:max-w-[285px] md:min-w-[285px] md:min-h-[446px] md:max-h-[446px]">
+          <Link
+            to={`/product/${product.id}`}
+            className="max-w-[175px] min-w-[175px] max-h-[351px]  md:max-w-[285px] md:min-w-[285px] md:min-h-[446px] md:max-h-[446px]"
+          >
             <Product key={product.id} product={product} />
           </Link>
         ))}
