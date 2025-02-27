@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import axios from "axios";
+import { useEffect, useState, useCallback } from "react";
+import axios, { AxiosResponse } from "axios";
 
 import { Footer } from "../../components/Footer/Footer";
 import { NavBar } from "../../components/NavBar/NavBar";
@@ -25,6 +25,13 @@ export const ShopPage = () => {
   const [totalItems, setTotalItems] = useState(0)
   const [itemsPerPage, setItemasPerPage] = useState(16);
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const updatePages = useCallback((response: AxiosResponse<any>) => {
+    setAllProducts(response.data);
+    setTotalPages(Math.ceil(response.headers["x-total-count"] / itemsPerPage));
+    setTotalItems(response.headers["x-total-count"]);
+  }, [itemsPerPage]); 
+
   useEffect(() => {
     const fetchProducts = async () => {
       setLoading(true);
@@ -32,19 +39,14 @@ export const ShopPage = () => {
       try {
         //if for category or no category filtering
         if (option === "Default") {
-          const response = await axios.get(`${baseUrl}/products?_page=${page}&_per_page=${itemsPerPage}`);
-          setAllProducts(response.data.data);
-          setTotalPages(response.data.pages)
+          const response = await axios.get(`${baseUrl}/products?_page=${page}&_limit=${itemsPerPage}`);
           
-          setTotalItems(response.data.items)
+          updatePages(response)
         } else {
           const response = await axios.get(
-            `${baseUrl}/products?Category=${option}&_page=${page}&_per_page=${itemsPerPage}`
+            `${baseUrl}/products?Category=${option}&_page=${page}&_limit=${itemsPerPage}`
           );
-          setTotalPages(response.data.pages)
-          setAllProducts(response.data.data);
-          setTotalItems(response.data.items)
-
+          updatePages(response)
         }
       } catch (error) {
         console.log("Erro search products:", error);
@@ -54,7 +56,7 @@ export const ShopPage = () => {
     };
 
     fetchProducts();
-  }, [option, page, itemsPerPage]);
+  }, [option, page, itemsPerPage, updatePages]);
 
   const handlePageClick = (pageNumber: number): void => {
     setPage(pageNumber);
