@@ -27,7 +27,7 @@ export const ShowProducts: React.FC<ShowProductsProps> = ({
 
       try {
         const response = await axios.get(
-          `${baseUrl}/products?&_page=1&_limit=${
+          `${baseUrl}/products?Category=${category}&_page=1&_limit=${
           itemsMore > maxItems ? maxItems : itemsMore}` //if you don't reach the limit, load more items
         );
 
