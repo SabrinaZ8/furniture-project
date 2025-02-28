@@ -6,13 +6,14 @@ import { Banner } from "../../components/Banner/Banner";
 import { Footer } from "../../components/Footer/Footer";
 import { MoreInfos } from "../../components/MoreInfos/MoreInfos";
 import { useValidation } from "../../hooks/useCepValidation";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../../store";
 import { formatMoney } from "../../utils/formatMoney";
 import { PaymentInput } from "./components/PaymentInput/PaymentInput";
 import { InputsAddress } from "./components/PaymentInput/InputsAddress";
 import { formatCep } from "../../utils/formatCepUser";
 import { toast } from "react-toastify";
+import { clearCart } from "../../redux/cart/cartSlice";
 
 export const CheckoutPage = () => {
   const [selectedOption, setSelectedOption] = useState("payment-1");
@@ -36,7 +37,7 @@ export const CheckoutPage = () => {
     siafi: "",
     infoAdd: ""
   });
-
+  const dispatch = useDispatch();
   const items = useSelector((state: RootState) => state.cart.items);
   const totalAmount = useSelector((state: RootState) => state.cart.totalAmount);
 
@@ -114,6 +115,7 @@ export const CheckoutPage = () => {
       })
       setCepUser("")
       setCepSearch(null)
+      dispatch(clearCart());
 
       toast.success("Request sent successfully")
       
