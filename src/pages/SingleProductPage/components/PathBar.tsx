@@ -6,7 +6,7 @@ type PathBarProps = {
 };
 export const PathBar: React.FC<PathBarProps> = ({ nameProduct }) => {
   return (
-    <div className="h-[100px] bg-yellow-70 flex items-center pl-24">
+    <div className="h-[100px] bg-yellow-70 flex items-center max-sm:px-4 sm:pl-24">
       <div className="flex items-center border-r-[2px]  border-gray-350">
         <Link to={"/"}>
           <p className="text-gray-350">Home</p>
