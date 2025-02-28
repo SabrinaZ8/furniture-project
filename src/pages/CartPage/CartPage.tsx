@@ -143,7 +143,7 @@ export const CartPage = () => {
             </div>
           </div>
           <div className="flex flex-col  bg-yellow-70 p-4 items-center w-full lg:max-w-[393px] h-[390px]">
-            <h2 className=" font-semibold mb-16 text-3xl md:text-[42px]">
+            <h2 className=" font-semibold mb-16 text-center text-3xl md:text-[42px]">
               Cart Totals
             </h2>
             <div className="flex justify-between w-4/5">
