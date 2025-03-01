@@ -57,7 +57,7 @@
 /*Shop side*/
 
 .btns-shop-side {
-    @apply h-[27px] sm:h-[30px] rounded-[50px] border-[1px] border-black px-5 sm:px-6 py-1 mx-2 inline-flex items-center my-1
+    @apply h-[27px] sm:h-[30px] rounded-[50px] border-[1px] border-black px-3 sm:px-6 py-1 mx-2 inline-flex items-center my-1
 }
 .empty-cart {
     @apply text-center text-xl text-gray-350 font-semibold
