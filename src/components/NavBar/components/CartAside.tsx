@@ -36,7 +36,7 @@ export const CartAside: React.FC<SetCartSideProps> = ({ setCartSide }) => {
           </div>
           <div className="flex flex-col">
             {itemsCart.map((item) => (
-              <div className="flex items-center ">
+              <div className="flex items-center " key={item.id}>
                 <div className="my-4 mr-7">
                   <img
                     src={item.image}

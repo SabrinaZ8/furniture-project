@@ -152,7 +152,7 @@ export const CheckoutPage = () => {
             </div>
             <div className="flex flex-col justify-between mb-8">
               {items.map((item) => (
-                <div className="flex justify-between">
+                <div className="flex justify-between" key={item.id}>
                   <p className="text-gray-350 my-3">
                     {item.name}{" "}
                     <span className="text-black">x {item.quantity}</span>

@@ -51,7 +51,7 @@ export const CartPage = () => {
 
             <div className="flex flex-col my-14 md:grid md:grid-cols-2 lg:flex lg:flex-col">
               {items.map((item) => (
-                <div className="flex w-full my-4 lg:my-8 items-center justify-center ">
+                <div className="flex w-full my-4 lg:my-8 items-center justify-center " key={item.id}>
                   <img
                     src={item.image}
                     alt={item.description}
