@@ -12,6 +12,7 @@ export const BtnNumbers: React.FC<BtnNumbersProps> = ({
     <>
       {Array.from({ length: totalPages }, (_, index) => (
         <button
+          aria-label="page number"
           key={index + 1}
           onClick={() => handlePageClick(index + 1)}
           className={` rounded-lg h-[60px] w-[60px] text-xl mx-5 ${

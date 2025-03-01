@@ -13,7 +13,10 @@ export const DetailsProduct: React.FC<DetailsProductProps> = ({
   handleAddToCart,
 }) => {
   return (
-    <div key={product.id} className="flex flex-col xl:flex-row mt-9 mb-14 mx-5 md:mx-10 2xl:mx-28">
+    <div
+      key={product.id}
+      className="flex flex-col xl:flex-row mt-9 mb-14 mx-5 md:mx-10 2xl:mx-28"
+    >
       <div className="flex flex-col-reverse sm:flex-row justify-center w-full xl:w-1/2">
         <div className="flex items-center overflow-x-auto flex-row sm:flex-col mt-5 sm:mt-0">
           <img
@@ -49,7 +52,9 @@ export const DetailsProduct: React.FC<DetailsProductProps> = ({
         <div className="mt-7 mb-[30px] xl:mt-0">
           {/*Ajustar*/}
           <h2 className="text-3xl lg:text-[42px]">{product.name}</h2>
-          <p className="text-xl lg:text-2xl text-gray-350">{formatMoney(product.price)}</p>
+          <p className="text-xl lg:text-2xl text-gray-350">
+            {formatMoney(product.price)}
+          </p>
           <div className="flex py-4">
             <img
               src="/icons/group-star.png"
@@ -142,12 +147,15 @@ export const DetailsProduct: React.FC<DetailsProductProps> = ({
           <div className="flex items-center justify-center xl:justify-start my-8">
             <div className="border-2 border-gray-350 w-[108px] sm:w-[123px] h-16 p-3 rounded-[10px] flex items-center justify-center mr-5">
               <button
+                aria-label="Decrease quantity of items"
                 onClick={() => setQuantity(quantity === 1 ? 1 : quantity - 1)}
               >
                 -
               </button>
               <span className="mx-8 font-medium">{quantity}</span>
-              <button onClick={() => setQuantity(quantity + 1)}>+</button>
+              <button
+              aria-label="increase quantity of items"
+              onClick={() => setQuantity(quantity + 1)}>+</button>
             </div>
             <div>
               <button

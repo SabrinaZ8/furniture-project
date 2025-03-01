@@ -59,7 +59,7 @@ export const NavBar = () => {
       </div>
       {/*Menu mobile */}
       <div className="flex flex-col h-full md:hidden">
-        <button onClick={() => setIsOpen(!isOpen)} className="">
+        <button onClick={() => setIsOpen(!isOpen)} className="" aria-label="Menu">
           <IoMenu className="w-[30px] h-[30px]" />
         </button>
         {isOpen ? (
@@ -76,7 +76,7 @@ export const NavBar = () => {
                     Furniro
                   </span>
                 </Link>
-                <button onClick={() => setIsOpen(!isOpen)} className="">
+                <button onClick={() => setIsOpen(!isOpen)} className="" aria-label="Close menu">
                   <IoMdClose className="w-[30px] h-[30px]" />
                 </button>
               </div>

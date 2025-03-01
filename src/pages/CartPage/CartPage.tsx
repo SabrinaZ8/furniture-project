@@ -51,7 +51,10 @@ export const CartPage = () => {
 
             <div className="flex flex-col my-14 md:grid md:grid-cols-2 lg:flex lg:flex-col">
               {items.map((item) => (
-                <div className="flex w-full my-4 lg:my-8 items-center justify-center " key={item.id}>
+                <div
+                  className="flex w-full my-4 lg:my-8 items-center justify-center "
+                  key={item.id}
+                >
                   <img
                     src={item.image}
                     alt={item.description}
@@ -72,6 +75,7 @@ export const CartPage = () => {
                     <div>
                       <div className="border-2 border-gray-350 w-[107px] h-12 p-3 rounded-[10px] flex items-center justify-center mr-5">
                         <button
+                          aria-label="Decrease quantity of items"
                           onClick={() =>
                             handleUpdateQuantity(item.id, item.quantity - 1)
                           }
@@ -82,6 +86,7 @@ export const CartPage = () => {
                           {item.quantity}
                         </span>
                         <button
+                          aria-label="Increase quantity of items"
                           onClick={() =>
                             handleUpdateQuantity(item.id, item.quantity + 1)
                           }
@@ -89,14 +94,15 @@ export const CartPage = () => {
                           +
                         </button>
                       </div>
-                      {item.quantity <= 1 ? null : <p>
-                        {formatMoney(
-                          item.discountedPrice
-                            ? item.discountedPrice * item.quantity
-                            : item.price * item.quantity
-                        )}
-                      </p>}
-                      
+                      {item.quantity <= 1 ? null : (
+                        <p>
+                          {formatMoney(
+                            item.discountedPrice
+                              ? item.discountedPrice * item.quantity
+                              : item.price * item.quantity
+                          )}
+                        </p>
+                      )}
                     </div>
                   </div>
                   {/* end */}
@@ -109,6 +115,7 @@ export const CartPage = () => {
                     </p>
                     <div className="border-2 border-gray-350 w-[107px] h-12 p-3 rounded-[10px] flex items-center justify-center mr-5">
                       <button
+                        aria-label="Decrease quantity of items"
                         onClick={() =>
                           handleUpdateQuantity(item.id, item.quantity - 1)
                         }
@@ -117,6 +124,7 @@ export const CartPage = () => {
                       </button>
                       <span className="mx-8 font-medium">{item.quantity}</span>
                       <button
+                        aria-label="Increase quantity of items"
                         onClick={() =>
                           handleUpdateQuantity(item.id, item.quantity + 1)
                         }
@@ -134,6 +142,7 @@ export const CartPage = () => {
                     </p>
                   </div>
                   <button
+                    aria-label="Remove item"
                     onClick={() => handleRemoveFromCart(item.id, item.name)}
                   >
                     <RiDeleteBin7Fill className="text-yellow-550 w-6 h-6" />
