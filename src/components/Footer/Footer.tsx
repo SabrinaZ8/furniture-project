@@ -26,28 +26,28 @@ export const Footer = () => {
               target="_blank"
               className=" flex w-9 h-9 rounded-full shadow-lg items-center justify-center mx-2 hover-text"
             >
-              <TiSocialFacebook className="w-4 h-4" />
+              <TiSocialFacebook className="w-4 h-4" aria-label="Facebook" />
             </a>
             <a
               href="https://www.instagram.com/"
               target="_blank"
               className="flex w-9 h-9 rounded-full shadow-lg items-center justify-center mx-2 hover-text"
             >
-              <SlSocialInstagram className="w-4 h-4" />
+              <SlSocialInstagram className="w-4 h-4" aria-label="Instagram" />
             </a>
             <a
               href="https://x.com/i/flow/login"
               target="_blank"
               className="flex w-9 h-9 rounded-full shadow-lg items-center justify-center mx-2 hover-text"
             >
-              <TiSocialTwitter className="w-4 h-4" />
+              <TiSocialTwitter className="w-4 h-4" aria-label="Twitter X" />
             </a>
             <a
               href="https://www.linkedin.com/in/sabrina-souza-dev/"
               target="_blank"
               className="flex w-9 h-9 rounded-full shadow-lg items-center justify-center mx-2  hover-text"
             >
-              <TiSocialLinkedin className="w-4 h-4" />
+              <TiSocialLinkedin className="w-4 h-4" aria-label="Linkedin" />
             </a>
           </div>
         </div>
