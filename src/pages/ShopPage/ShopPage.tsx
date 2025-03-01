@@ -89,6 +89,7 @@ export const ShopPage = () => {
           itemsPerPage={itemsPerPage}
           totalItems={totalItems}
           page={page}
+          setPage={setPage}
           setItemsPerPage={setItemasPerPage}
         />
         <div className="grid gap-8 mx-3 lg:mx-12 2xl:mx-24 my-9 max-w-[1250px] grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">

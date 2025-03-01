@@ -27,6 +27,7 @@ export interface ProductType {
     itemsPerPage: number;
     totalItems: number;
     page: number;
+    setPage: React.Dispatch<React.SetStateAction<number>>;
     setItemsPerPage: React.Dispatch<React.SetStateAction<number>>
   }
 

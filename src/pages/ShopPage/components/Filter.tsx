@@ -11,6 +11,7 @@ export const Filter: React.FC<FilterProps> = ({
   itemsPerPage,
   totalItems,
   page,
+  setPage,
   setItemsPerPage,
 }) => {
   const [optionSort, setOptionSort] = useState("Default");
@@ -81,7 +82,7 @@ export const Filter: React.FC<FilterProps> = ({
           {showFilter ? (
             <select
               size={optionsCategory.length}
-              onChange={(e) => setOption(e.target.value)}
+              onChange={(e) => {setOption(e.target.value); setPage(1)}}
               className="show-filter"
             >
               {optionsCategory.map((category) => (
