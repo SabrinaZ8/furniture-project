@@ -22,7 +22,7 @@ export const CartAside: React.FC<SetCartSideProps> = ({ setCartSide }) => {
 
   return (
     <div className="fixed w-full h-screen bg-black bg-opacity-50 top-0 left-0 z-10">
-      <div className=" w-full h-screen sm:w-[417px] sm:h-[746px] absolute z-50 top-0 right-0 p-7 bg-white flex flex-col justify-between ">
+      <div className=" w-full h-screen sm:w-[417px] sm:h-[746px] absolute z-50 top-0 right-0 p-4 sm:p-7 bg-white flex flex-col justify-between ">
         <div className="overflow-y-auto">
           <div>
             <div className="flex justify-between items-center mb-7">
@@ -80,7 +80,7 @@ export const CartAside: React.FC<SetCartSideProps> = ({ setCartSide }) => {
           ""
         )}
 
-        <div>
+        <div className="flex flex-col max-sm:flex-col-reverse">
           <div>
             <div className="flex justify-between my-6">
               <p>Subtotal</p>
@@ -90,7 +90,7 @@ export const CartAside: React.FC<SetCartSideProps> = ({ setCartSide }) => {
             </div>
           </div>
           <hr />
-          <div className="flex flex-wrap text-xs mt-6 max-sm:justify-center ">
+          <div className="flex flex-wrap text-xs my-3 sm:mt-6 max-sm:justify-center ">
             <div className="btns-shop-side btn-gray">
               <Link to="/cart" className="text-center">Cart</Link>
             </div>
