@@ -27,7 +27,7 @@ export const NavBar = () => {
         <img
           src="/logo/furniroLogo.png"
           alt="Logo Furniro"
-          className="max-sm:w-10 max-sm:h-7 mr-2"
+          className="max-sm:w-10 max-sm:h-7 mr-2 object-contain"
         />
         <span className="font-montserrat flex items-center font-bold text-xl sm:text-3xl">
           Furniro
