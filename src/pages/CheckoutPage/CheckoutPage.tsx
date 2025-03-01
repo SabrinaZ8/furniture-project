@@ -120,7 +120,7 @@ export const CheckoutPage = () => {
       toast.success("Request sent successfully")
       
     } else {
-      console.log(errors);
+      toast.error("Something went wrong review the information")
     }
   };
 
