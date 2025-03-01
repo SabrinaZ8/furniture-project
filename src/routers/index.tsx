@@ -9,7 +9,7 @@ import { ProtectedRoute } from './ProtectedRoute';
 
 const Routers = () => {
     return (
-      <BrowserRouter>
+      <BrowserRouter basename='/'>
         <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/cart" element={<CartPage />} />
