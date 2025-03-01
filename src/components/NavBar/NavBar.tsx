@@ -64,10 +64,22 @@ export const NavBar = () => {
         </button>
         {isOpen ? (
           <ul className="flex items-center z-10 bg-yellow-40 absolute py-5 px-8 flex-col font-medium justify-evenly w-screen h-screen left-0 top-0 overflow-hidden">
-            <li>
-              <button onClick={() => setIsOpen(!isOpen)} className="">
-                <IoMdClose className="w-[30px] h-[30px]" />
-              </button>
+            <li className="w-full">
+              <div className="flex justify-between w-full">
+                <Link to="/" className="flex">
+                  <img
+                    src="/logo/furniroLogo.png"
+                    alt="Logo Furniro"
+                    className="max-sm:w-10 max-sm:h-7 mr-2 object-contain"
+                  />
+                  <span className="font-montserrat flex items-center font-bold text-xl sm:text-3xl">
+                    Furniro
+                  </span>
+                </Link>
+                <button onClick={() => setIsOpen(!isOpen)} className="">
+                  <IoMdClose className="w-[30px] h-[30px]" />
+                </button>
+              </div>
             </li>
             <li>
               <Link to="/" className="hover-text">
