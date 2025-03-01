@@ -16,7 +16,7 @@ export const Banner = ({ path }: Path) => {
           src="/logo/furniroLogo.png"
           alt="Logo Furniro"
         />
-        <h2 className="text-5xl mt-5 mb-4">{path}</h2>
+        <h2 className="text-3xl md:text-5xl mt-5 mb-4">{path}</h2>
         <div className="flex items-center">
           <Link to={"/"}>
             <p className="font-semibold">Home</p>
