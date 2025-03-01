@@ -115,7 +115,7 @@ export const Filter: React.FC<FilterProps> = ({
             className="h-14 w-14 bg-white flex items-center justify-center text-center text-gray-350 ml-3 mr-6"
             min={4}
             placeholder={`${itemsPerPage}`}
-            onBlur={(e) => setItemsPerPage(Number(e.target.value))}
+            onChange={(e) => setItemsPerPage(Number(e.target.value))}
           />
         </div>
         <div className="flex items-center max-sm:flex-col">
