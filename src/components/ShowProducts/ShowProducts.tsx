@@ -55,7 +55,6 @@ export const ShowProducts: React.FC<ShowProductsProps> = ({
         {allProducts.map((product) => (
           <Link
             to={`/product/${product.id}`}
-            className="max-w-[175px] min-w-[175px] max-h-[351px]  md:max-w-[285px] md:min-w-[285px] md:min-h-[446px] md:max-h-[446px]"
             key={product.id}
           >
             <Product key={product.id} product={product} />
