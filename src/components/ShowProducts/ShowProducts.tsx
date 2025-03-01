@@ -26,13 +26,11 @@ export const ShowProducts: React.FC<ShowProductsProps> = ({
       setLoading(true);
 
       try {
-        const response = await axios.get(
-          `${baseUrl}/products?Category=${category}&_page=1&_limit=${
-          itemsMore > maxItems ? maxItems : itemsMore}` //if you don't reach the limit, load more items
-        );
+        const url = category ? `${baseUrl}/products?Category=${category}&_page=1&_limit=${itemsMore > maxItems ? maxItems : itemsMore}`
+        : `${baseUrl}/products?_page=1&_limit=${itemsMore > maxItems ? maxItems : itemsMore}`;
+        const response = await axios.get(url);
 
         setAllProducts(response.data);
-        console.log(response.data);
       } catch (error) {
         console.log("Erro search products:", error);
       } finally {
