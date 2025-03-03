@@ -6,11 +6,15 @@ type CartState = {
   totalAmount: number;
 };
 
-const initialState: CartState = {
-  items: [],
-  totalAmount: 0,
+const loadCartFromLocalStorage = (): CartState => {
+  const cartData = localStorage.getItem("cartProductsLocal");
+  return cartData ? JSON.parse(cartData) : { items: [], totalAmount: 0 };
 };
 
+const initialState: CartState = loadCartFromLocalStorage();
+const saveCartToLocalStorage = (cart: CartState) => {
+  localStorage.setItem("cartProductsLocal", JSON.stringify(cart));
+};
 const cartSlice = createSlice({
   name: "cart",
   initialState,
@@ -29,6 +33,8 @@ const cartSlice = createSlice({
       state.totalAmount += action.payload.discountedPrice
         ? action.payload.discountedPrice * action.payload.quantity
         : action.payload.price * action.payload.quantity;
+
+        saveCartToLocalStorage(state);
     },
 
     removeFromCart(state, action: PayloadAction<number>) {
@@ -41,12 +47,14 @@ const cartSlice = createSlice({
           ? itemToRemove.discountedPrice * itemToRemove.quantity
           : itemToRemove.price * itemToRemove.quantity;
         state.items = state.items.filter((item) => item.id !== action.payload);
+        saveCartToLocalStorage(state);
       }
     },
 
     clearCart(state) {
       state.items = [];
       state.totalAmount = 0;
+      saveCartToLocalStorage(state);
     },
     updateQuantity(
       state,
@@ -71,7 +79,8 @@ const cartSlice = createSlice({
           ? existingItem.discountedPrice * existingItem.quantity
           : existingItem.price * existingItem.quantity;
 
-        state.items = state.items.filter((item) => item.id !== id);
+        state.items = state.items.filter((item) => item.id !== id); 
+        saveCartToLocalStorage(state);
       }
     },
   },
