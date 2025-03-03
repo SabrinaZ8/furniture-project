@@ -6,6 +6,7 @@ import { ProductType, FilterProps } from "../../../types/types";
 
 export const Filter: React.FC<FilterProps> = ({
   setOption,
+  option,
   allProducts,
   setAllProducts,
   itemsPerPage,
@@ -76,14 +77,16 @@ export const Filter: React.FC<FilterProps> = ({
       <div className="flex flex-col sm:flex-row">
         <div className="flex items-center border-gray-350 p-1 relative sm:border-r-2">
           <HiAdjustmentsHorizontal
-            className="w-6 h-6"
+            className="w-6 h-6 max-sm:hidden"
             onClick={handleShowFilter}
           />
           {showFilter ? (
             <select
-              size={optionsCategory.length}
-              onChange={(e) => {setOption(e.target.value); setPage(1)}}
-              className="show-filter"
+              onChange={(e) => {
+                setOption(e.target.value);
+                setPage(1);
+              }}
+              className="show-filter max-sm:hidden"
             >
               {optionsCategory.map((category) => (
                 <option
@@ -96,7 +99,26 @@ export const Filter: React.FC<FilterProps> = ({
               ))}
             </select>
           ) : null}
-
+          {/* select mobile */}
+          <select
+            value={option}
+            onChange={(e) => {
+              setOption(e.target.value);
+              setPage(1);
+            }}
+            className=" sm:hidden focus:outline-none text-sm p-1 rounded-md border-[1px] border-yellow-550 text-yellow-550"
+          >
+            {optionsCategory.map((category) => (
+              <option
+                value={category}
+                key={category}
+                className="hover:bg-gray-200"
+              >
+                {category}
+              </option>
+            ))}
+          </select>
+          {/* end select mobile */}
           <p className="ml-5 mr-8 text-base lg:text-xl">Filter</p>
           <HiMiniSquares2X2 className="w-6 h-6" />
           <BsViewList className="w-6 h-6 mx-8" />

@@ -22,6 +22,7 @@ export interface ProductType {
 
   export interface FilterProps {
     setOption: React.Dispatch<React.SetStateAction<string>>;
+    option: string;
     allProducts: ProductType[];
     setAllProducts: React.Dispatch<React.SetStateAction<ProductType[]>>;
     itemsPerPage: number;

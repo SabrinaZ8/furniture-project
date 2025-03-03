@@ -84,6 +84,7 @@ export const ShopPage = () => {
       <section className="flex flex-col items-center">
         <Filter
           setOption={setOption}
+          option={option}
           allProducts={allProducts}
           setAllProducts={setAllProducts}
           itemsPerPage={itemsPerPage}
