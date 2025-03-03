@@ -80,8 +80,8 @@ const cartSlice = createSlice({
           : existingItem.price * existingItem.quantity;
 
         state.items = state.items.filter((item) => item.id !== id); 
-        saveCartToLocalStorage(state);
       }
+      saveCartToLocalStorage(state);
     },
   },
 });
