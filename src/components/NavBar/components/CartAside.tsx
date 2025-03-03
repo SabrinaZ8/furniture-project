@@ -38,15 +38,19 @@ export const CartAside: React.FC<SetCartSideProps> = ({ setCartSide }) => {
             {itemsCart.map((item) => (
               <div className="flex items-center " key={item.id}>
                 <div className="my-4 mr-7">
-                  <img
-                    src={item.image}
-                    alt={item.description}
-                    className="w-[105px] h-[105px] rounded-md object-cover"
-                  />
+                  <Link to={`/product/${item.id}`}>
+                    <img
+                      src={item.image}
+                      alt={item.description}
+                      className="w-[105px] h-[105px] rounded-md object-cover"
+                    />
+                  </Link>
                 </div>
                 <div className="flex items-center justify-between w-1/2">
                   <div>
-                    <div>{item.name}</div>
+                    <Link to={`/product/${item.id}`}>
+                      <div>{item.name}</div>
+                    </Link>
                     <div>
                       <p>
                         {item.quantity}
@@ -92,7 +96,9 @@ export const CartAside: React.FC<SetCartSideProps> = ({ setCartSide }) => {
           <hr />
           <div className="flex flex-wrap text-xs my-3 sm:mt-6 max-sm:justify-center ">
             <div className="btns-shop-side btn-gray">
-              <Link to="/cart" className="text-center">Cart</Link>
+              <Link to="/cart" className="text-center">
+                Cart
+              </Link>
             </div>
             <div className="btns-shop-side btn-gray">
               <Link to="/checkout">Checkout</Link>

@@ -55,15 +55,19 @@ export const CartPage = () => {
                   className="flex w-full my-4 lg:my-8 items-center justify-center "
                   key={item.id}
                 >
-                  <img
-                    src={item.image}
-                    alt={item.description}
-                    className="h-[105px] min-w-[105px] max-w-[105px] rounded-md"
-                  />
+                  <Link to={`/product/${item.id}`}>
+                    <img
+                      src={item.image}
+                      alt={item.description}
+                      className="h-[105px] min-w-[105px] max-w-[105px] rounded-md"
+                    />
+                  </Link>
                   {/* start - mobile devices */}
                   <div className="lg:hidden ml-5 mr-16">
                     <div className="">
-                      <p className="text-gray-350">{item.name}</p>
+                      <Link to={`/product/${item.id}`}>
+                        <p className="text-gray-350">{item.name}</p>
+                      </Link>
                       <p className="text-gray-350">
                         {formatMoney(
                           item.discountedPrice
@@ -107,7 +111,9 @@ export const CartPage = () => {
                   </div>
                   {/* end */}
                   <div className="hidden lg:flex items-center justify-between w-full mx-4">
-                    <p className="text-gray-350  mx-2">{item.name}</p>
+                    <Link to={`/product/${item.id}`}>
+                      <p className="text-gray-350 mx-2">{item.name}</p>
+                    </Link>
                     <p className="text-gray-350">
                       {formatMoney(
                         item.discountedPrice ? item.discountedPrice : item.price
