@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { HiAdjustmentsHorizontal, HiMiniSquares2X2 } from "react-icons/hi2";
 import { BsViewList } from "react-icons/bs";
-
 import { ProductType, FilterProps } from "../../../types/types";
+import { useTranslation } from "react-i18next"
 
 export const Filter: React.FC<FilterProps> = ({
   setOption,
@@ -18,6 +18,8 @@ export const Filter: React.FC<FilterProps> = ({
   const [optionSort, setOptionSort] = useState("Default");
   const [initialProducts] = useState([...allProducts]);
   const [showFilter, setShowFilter] = useState(false);
+
+  const { t } = useTranslation();
 
   const optionsCategory = [
     "Default",
@@ -119,20 +121,20 @@ export const Filter: React.FC<FilterProps> = ({
             ))}
           </select>
           {/* end select mobile */}
-          <p className="ml-5 mr-8 text-base lg:text-xl">Filter</p>
+          <p className="ml-5 mr-8 text-base lg:text-xl">{t("filter")}</p>
           <HiMiniSquares2X2 className="w-6 h-6" />
           <BsViewList className="w-6 h-6 mx-8" />
         </div>
         <div className="flex items-center p-1">
           <p className="my-5 text-base sm:ml-8 sm:my-0">
-            Showing {(page - 1) * itemsPerPage + 1} -{" "}
-            {Math.min(page * itemsPerPage, totalItems)} of {totalItems} results
+          {t("showing")} {(page - 1) * itemsPerPage + 1} -{" "}
+            {Math.min(page * itemsPerPage, totalItems)} {t("of")} {totalItems} {t("results")}
           </p>
         </div>
       </div>
       <div className="flex flex-wrap sm:my-5 items-center text-base lg:text-xl md:my-0">
         <div className="flex items-center max-sm:flex-col">
-          <p className="max-sm:my-2">Show</p>
+          <p className="max-sm:my-2">{t("show")}</p>
           <input
             type="number"
             className="h-14 w-14 bg-white flex items-center justify-center text-center text-gray-350 ml-3 mr-6"
@@ -142,7 +144,7 @@ export const Filter: React.FC<FilterProps> = ({
           />
         </div>
         <div className="flex items-center max-sm:flex-col">
-          <p className="max-sm:my-2">Sort By</p>
+          <p className="max-sm:my-2">{t("sortBy")}</p>
           <select
             onChange={(e) => setOptionSort(e.target.value)}
             className="ml-3 text-gray-350 h-14 px-1"

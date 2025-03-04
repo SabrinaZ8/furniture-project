@@ -80,6 +80,13 @@
   "personalDataNotice": "Seus dados pessoais serão usados para apoiar sua experiência neste site, gerenciar o acesso à sua conta e para outros fins descritos em nossa ",
 
   "relatedProducts": "Produtos Relacionados",
-  "description": "Descrição"
-
+  "description": "Descrição",
+  "filter": "Filtrar",
+  "showing": "Mostrando",
+  "of": "de",
+  "results": "resultados",
+  "show": "Mostrar",
+  "sortBy": "Ordenar Por",
+  "back": "Voltar",
+  "next": "Próximo"
 }

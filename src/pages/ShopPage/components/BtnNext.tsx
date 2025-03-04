@@ -1,3 +1,5 @@
+import { useTranslation } from "react-i18next"
+
 interface BtnNextProps {
     goToNextPage: () => void;
     page: number;
@@ -5,13 +7,15 @@ interface BtnNextProps {
   }
 
 export const BtnNext:React.FC<BtnNextProps> = ({goToNextPage, page, totalPages}) => {
+  const { t } = useTranslation();
+
   return (
     <button
       onClick={goToNextPage}
       disabled={page === totalPages}
       className={`${totalPages === page ? "invisible" : "visible"} ml-5 btn-back-next`}
     >
-      Next
+      {t("next")}
     </button>
   );
 };

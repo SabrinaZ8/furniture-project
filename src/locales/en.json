@@ -80,6 +80,14 @@
   "personalDataNotice": "Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our ",
 
   "relatedProducts": "Related Products",
-  "description": "Description"
+  "description": "Description",
 
+  "filter": "Filter",
+  "showing": "Showing",
+  "of": "of",
+  "results": "results",
+  "show": "Show",
+  "sortBy": "Sort By",
+  "back": "Back",
+  "next": "Next"
 }
