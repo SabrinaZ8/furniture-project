@@ -133,8 +133,8 @@ export const NavBar = () => {
           onClick={() => setCartSide(false)}
         />
         {cartSide ? null : <CartAside setCartSide={setCartSide} />}
+        <SettingsLang />
       </div>
-      <SettingsLang />
     </nav>
   );
 };

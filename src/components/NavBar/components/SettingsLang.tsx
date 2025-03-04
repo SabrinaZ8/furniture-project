@@ -14,7 +14,7 @@ function SettingsLang() {
 
 
   return (
-    <div className="flex font-semibold text-xs p-1 bg-gray-200 rounded-full">
+    <div className="flex font-semibold text-xs mx-2 p-1 bg-gray-200 rounded-full">
 
       <button
         className={`${lang == "en" ?  "bg-blue-300" : "bg-gray-200" } btn-lang`}
