@@ -77,6 +77,9 @@
   "directBankTransfer": "Transferência Bancária Direta",
   "cashOnDelivery": "Pagamento na Entrega",
   "paymentInstructions": "Faça seu pagamento diretamente em nossa conta bancária. Por favor, use seu ID de pedido como referência de pagamento. Seu pedido não será enviado até que os fundos sejam compensados em nossa conta.",
-  "personalDataNotice": "Seus dados pessoais serão usados para apoiar sua experiência neste site, gerenciar o acesso à sua conta e para outros fins descritos em nossa "
+  "personalDataNotice": "Seus dados pessoais serão usados para apoiar sua experiência neste site, gerenciar o acesso à sua conta e para outros fins descritos em nossa ",
+
+  "relatedProducts": "Produtos Relacionados",
+  "description": "Descrição"
 
 }

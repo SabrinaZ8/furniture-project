@@ -1,9 +1,14 @@
+import { useTranslation } from "react-i18next"
+
 export const AdditionalInformation = () => {
+
+  const { t } = useTranslation();
+
   return (
     <div className="flex flex-col justify-center items-center text-gray-350 p-5 sm:p-[50px]">
       <div className="flex justify-evenly mb-14 w-full lg:w-1/2">
-        <h3 className="text-xl sm:text-2xl text-black mr-5">Description</h3>
-        <h3 className="text-xl sm:text-2xl">Additional Information</h3>
+        <h3 className="text-xl sm:text-2xl text-black mr-5">{t("description")}</h3>
+        <h3 className="text-xl sm:text-2xl">{t("additionalInformation")}</h3>
       </div>
       <div className="flex flex-col justify-center items-center">
         <p className="xl:w-3/5">

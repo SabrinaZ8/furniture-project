@@ -12,11 +12,14 @@ import { AdditionalInformation } from "./components/AdditionalInformation";
 import { ShowProducts } from "../../components/ShowProducts/ShowProducts";
 import { toast } from 'react-toastify'
 import { baseUrl } from "../../constants/baseUrl";
+import { useTranslation } from "react-i18next"
 
 export const SingleProductPage = () => {
   const { id } = useParams<{ id: string }>();
   const [product, setProduct] = useState<ProductType | null>(null);
   const [selectedOption, setSelectedOption] = useState("l");
+
+  const { t } = useTranslation();
 
   const dispatch = useDispatch();
   const [quantity, setQuantity] = useState(1);
@@ -67,7 +70,7 @@ export const SingleProductPage = () => {
           <hr />
           <AdditionalInformation />
           <div className="my-[60px] flex justify-center flex-col items-center">
-            <h2 className="font-medium text-4xl text-center">Related Products</h2>
+            <h2 className="font-medium text-4xl text-center">{t("relatedProducts")}</h2>
             <ShowProducts limit={4} category={product.Category} />
           </div>
           <Footer />
