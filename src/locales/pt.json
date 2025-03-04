@@ -40,6 +40,8 @@
   "subtotal": "Subtotal",
   "emptyCart": "Carrinho Vazio",
   "cartTotals": "Totais do Carrinho",
-  "checkOut": "Finalizar Compra",
-  "total": "Total"
+  "checkOut": "Finalizar",
+  "total": "Total",
+
+   "shoppingCart": "Carrinho de Compras"
 }

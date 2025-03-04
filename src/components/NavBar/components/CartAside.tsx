@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../../store";
 import { removeFromCart } from "../../../redux/cart/cartSlice";
 import { toast } from "react-toastify";
+import { useTranslation } from "react-i18next"
 
 type SetCartSideProps = {
   setCartSide: React.Dispatch<React.SetStateAction<boolean>>;
@@ -20,13 +21,15 @@ export const CartAside: React.FC<SetCartSideProps> = ({ setCartSide }) => {
     toast.warning(`${itemName} removed`);
   };
 
+  const { t } = useTranslation();
+
   return (
     <div className="fixed w-full h-screen bg-black bg-opacity-50 top-0 left-0 z-10">
       <div className=" w-full h-screen sm:w-[417px] sm:h-[746px] absolute z-50 top-0 right-0 py-7 px-2 sm:px-7 bg-white flex flex-col justify-between ">
         <div className="overflow-y-auto">
           <div>
             <div className="flex justify-between items-center mb-7">
-              <p className="text-2xl font-semibold">Shopping Cart</p>
+              <p className="text-2xl font-semibold">{t("shoppingCart")}</p>
               <BsBagX
                 className="text-gray-350 w-5 h-5 cursor-pointer hover-text"
                 onClick={() => setCartSide(true)}
@@ -79,7 +82,7 @@ export const CartAside: React.FC<SetCartSideProps> = ({ setCartSide }) => {
 
         {/*EMPTY CART */}
         {itemsCart.length === 0 ? (
-          <div className="empty-cart">Empty cart</div>
+          <div className="empty-cart">{t("emptyCart")}</div>
         ) : (
           ""
         )}
@@ -87,7 +90,7 @@ export const CartAside: React.FC<SetCartSideProps> = ({ setCartSide }) => {
         <div className="flex flex-col max-sm:flex-col-reverse">
           <div>
             <div className="flex justify-between my-6">
-              <p>Subtotal</p>
+              <p>{t("subtotal")}</p>
               <p className="text-yellow-550 font-semibold">
                 {formatMoney(totalAmount)}
               </p>

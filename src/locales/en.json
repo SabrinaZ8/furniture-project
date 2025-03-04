@@ -41,5 +41,7 @@
   "emptyCart": "Empty Cart",
   "cartTotals": "Cart Totals",
   "checkOut": "Check Out",
-  "total": "Total"
+  "total": "Total",
+
+  "shoppingCart": "Shopping Cart"
 }
