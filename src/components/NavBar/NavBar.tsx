@@ -7,10 +7,14 @@ import { CartAside } from "./components/CartAside";
 import { IoMenu } from "react-icons/io5";
 import { IoMdClose } from "react-icons/io";
 import SettingsLang from "./components/SettingsLang";
+import { useTranslation } from "react-i18next"
 
 export const NavBar = () => {
   const [cartSide, setCartSide] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
+
+  
+  const { t } = useTranslation();
 
   const { redirectToSignIn } = useClerk();
   const { signOut } = useClerk();
@@ -38,22 +42,22 @@ export const NavBar = () => {
         <ul className="flex font-medium justify-between">
           <li>
             <Link to="/" className="hover-text">
-              Home
+              {t("home")}
             </Link>
           </li>
           <li>
             <Link to="/shop" className="hover-text">
-              Shop
+              {t("shop")}
             </Link>
           </li>
           <li>
             <Link to="#" className="hover-text">
-              About
+              {t("about")}
             </Link>
           </li>
           <li>
             <Link to="/contact" className="hover-text">
-              Contact
+              {t("contact")}
             </Link>
           </li>
         </ul>
@@ -84,22 +88,22 @@ export const NavBar = () => {
             </li>
             <li>
               <Link to="/" className="hover-text">
-                Home
+              {t("home")}
               </Link>
             </li>
             <li>
               <Link to="/shop" className="hover-text">
-                Shop
+              {t("shop")}
               </Link>
             </li>
             <li>
               <Link to="#" className="hover-text">
-                About
+              {t("about")}
               </Link>
             </li>
             <li>
               <Link to="/contact" className="hover-text">
-                Contact
+              {t("contact")}
               </Link>
             </li>
           </ul>
