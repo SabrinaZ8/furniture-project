@@ -9,10 +9,13 @@ import { Banner } from "../../components/Banner/Banner";
 import { RiDeleteBin7Fill } from "react-icons/ri";
 import { formatMoney } from "../../utils/formatMoney";
 import { toast } from "react-toastify";
+import { useTranslation } from "react-i18next"
 
 export const CartPage = () => {
   const items = useSelector((state: RootState) => state.cart.items);
   const totalAmount = useSelector((state: RootState) => state.cart.totalAmount);
+
+  const { t } = useTranslation();
 
   const dispatch = useDispatch();
 
@@ -34,10 +37,10 @@ export const CartPage = () => {
         <div className="flex flex-col lg:flex-row">
           <div className="mr-8 w-full lg:w-3/4">
             <div className="flex bg-yellow-70 justify-evenly items-center h-14 font-semibold ">
-              <p className="max-lg:hidden">Product</p>
-              <p className="max-lg:hidden">Price</p>
-              <p className="max-lg:hidden">Quantity</p>
-              <p className="max-lg:hidden">Subtotal</p>
+              <p className="max-lg:hidden">{t("product")}</p>
+              <p className="max-lg:hidden">{t("price")}</p>
+              <p className="max-lg:hidden">{t("quantity")}</p>
+              <p className="max-lg:hidden">{t("subtotal")}</p>
             </div>
 
             {/*Empty cart */}
@@ -159,21 +162,21 @@ export const CartPage = () => {
           </div>
           <div className="flex flex-col  bg-yellow-70 p-4 items-center w-full lg:max-w-[393px] h-[390px]">
             <h2 className=" font-semibold mb-16 text-center text-3xl md:text-[42px]">
-              Cart Totals
+            {t("cartTotals")}
             </h2>
             <div className="flex justify-between w-4/5">
-              <p className="font-semibold">Subtotal</p>
+              <p className="font-semibold">{t("subtotal")}</p>
               <p className="text-gray-350">{formatMoney(totalAmount)}</p>
             </div>
             <div className="flex justify-between mt-8 mb-10  w-4/5">
-              <p className="font-semibold">Total</p>
+              <p className="font-semibold">{t("total")}</p>
               <p className="text-yellow-550 ">{formatMoney(totalAmount)}</p>
             </div>
             <Link
               to="/checkout"
               className="flex items-center justify-center border border-1 border-black h-[60px] w-56 rounded-[15px] btn-yellow "
             >
-              <p className="text-xl">Check Out</p>
+              <p className="text-xl">{t("checkOut")}</p>
             </Link>
           </div>
         </div>

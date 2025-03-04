@@ -32,7 +32,14 @@
   "freeShipping": "Free Shipping",
   "orderOver": "Order over 150 $",
   "24/7Support": "24 / 7 Support",
-  "dedicatedSupport": "Dedicated support"
+  "dedicatedSupport": "Dedicated support",
 
-  
+  "product": "Product",
+  "price": "Price",
+  "quantity": "Quantity",
+  "subtotal": "Subtotal",
+  "emptyCart": "Empty Cart",
+  "cartTotals": "Cart Totals",
+  "checkOut": "Check Out",
+  "total": "Total"
 }
