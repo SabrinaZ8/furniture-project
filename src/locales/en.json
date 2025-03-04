@@ -15,5 +15,12 @@
   "home": "Home",
   "shop": "Shop",
   "about": "About",
-  "contact": "Contact"
+  "contact": "Contact",
+  "help": "Help",
+  "paymentOptions": "Payment Options",
+  "returns": "Returns",
+  "privacyPolicies": "Privacy Policies",
+  "newsletter": "Newsletter",
+  "enterEmail": "Enter Your Email Address",
+  "subscribe": "Subscribe"
 }

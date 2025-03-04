@@ -2,11 +2,14 @@ import { TiSocialFacebook } from "react-icons/ti";
 import { SlSocialInstagram } from "react-icons/sl";
 import { TiSocialTwitter } from "react-icons/ti";
 import { TiSocialLinkedin } from "react-icons/ti";
-
 import { Link } from "react-router-dom";
 import { FormSubscribe } from "./components/FormSubscribe";
+import { useTranslation } from "react-i18next"
+
 
 export const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <footer className="md:min-h-[505px]">
       <hr />
@@ -56,37 +59,37 @@ export const Footer = () => {
           <h3 className="text-gray-350">Links</h3>
           <ul className="flex flex-col items-center gap-y-10 lg:items-start">
             <li >
-              <Link to="/" className="hover-text">Home</Link>
+              <Link to="/" className="hover-text">{t("home")}</Link>
             </li>
             <li>
-              <Link to="/shop" className="hover-text">Shop</Link>
+              <Link to="/shop" className="hover-text">{t("shop")}</Link>
             </li>
             <li>
-              <Link to="#" className="hover-text">About</Link>
+              <Link to="#" className="hover-text">{t("about")}</Link>
             </li>
             <li>
-              <Link to="/contact" className="hover-text">Contact</Link>
+              <Link to="/contact" className="hover-text">{t("contact")}</Link>
             </li>
           </ul>
         </div>
         <div className="flex flex-col items-center gap-y-12 font-medium lg:my-0 lg:items-start">
-          <h3 className="text-gray-350">Help</h3>
+          <h3 className="text-gray-350">{t("help")}</h3>
           <ul className="flex flex-col items-center gap-y-10 lg:items-start">
             <li>
-              <Link to='#' className="hover-text">Payment Options</Link>
+              <Link to='#' className="hover-text">{t("paymentOptions")}</Link>
             </li>
             <li>
-              <Link to='#' className="hover-text">Returns</Link>
+              <Link to='#' className="hover-text">{t("returns")}</Link>
             </li>
             <li>
-              <Link to='#' className="hover-text">Privacy Policies</Link>
+              <Link to='#' className="hover-text">{t("privacyPolicies")}</Link>
             </li>
           </ul>
         </div>
         </div>
         
         <div className="flex flex-col items-center lg:items-start gap-y-12 font-medium">
-          <h3 className="text-gray-350">Newsletter</h3>
+          <h3 className="text-gray-350">{t("newsletter")}</h3>
           
           <FormSubscribe />
         </div>

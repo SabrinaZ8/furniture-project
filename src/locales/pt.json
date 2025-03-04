@@ -15,5 +15,12 @@
   "home": "início",
   "shop": "Loja",
   "about": "Sobre",
-  "contact": "Contato"
+  "contact": "Contato",
+  "help": "Ajuda",
+  "paymentOptions": "Opções de Pagamento",
+  "returns": "Devoluções",
+  "privacyPolicies": "Políticas de Privacidade",
+  "newsletter": "Boletim informativo",
+  "enterEmail": "Endereço de E-mail",
+  "subscribe": "Inscrever-se"
 }
