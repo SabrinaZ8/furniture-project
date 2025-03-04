@@ -1,5 +1,15 @@
 {
-    "welcome": "Welcome!",
-    "settings": "Settings",
-    "changeLanguage": "Change Language"
-  }
+  "newArrival": "New Arrival",
+  "discover": "Discover Our New Collection",
+  "buyNow": "Buy Now",
+  "browse": "Browse The Range",
+  "dining": "Dining",
+  "living": "Living",
+  "bedroom": "Bedroom",
+  "ourProducts": "Our Products",
+  "showMore": "Show More",
+  "50+": "50+ Beautiful rooms inspiration",
+  "ourDesigner": "Our designer already made a lot of beautiful prototipe of rooms that inspire you",
+  "exploreMore": "Explore More",
+  "shareSetup": "Share your setup with"
+}

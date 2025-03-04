@@ -1,5 +1,15 @@
 {
-    "welcome": "Bem-vindo!",
-    "settings": "Configurações",
-    "changeLanguage": "Mudar Idioma"
-  }
+  "newArrival": "Nova chegada",
+  "discover": "Descubra nossa Nova coleção",
+  "buyNow": "Comprar agora",
+  "browse": "Navegue pela gama",
+  "dining": "Jantar",
+  "living": "Vivendo",
+  "bedroom": "Quarto",
+  "ourProducts": "Nossos Produtos",
+  "showMore": "Mostrar Mais",
+  "50+": "Mais de 50 inspirações para lindos cômodos",
+  "ourDesigner": "Nosso designer já fez muitos protótipos lindos de cômodos que te inspiram",
+  "exploreMore": "Explore Mais",
+  "shareSetup": "Compartilhe sua configuração com"
+}

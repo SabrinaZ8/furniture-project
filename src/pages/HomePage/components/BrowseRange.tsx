@@ -1,9 +1,12 @@
+import { useTranslation } from "react-i18next"
+
 export const BrowseRange = () => {
+  const { t } = useTranslation();
   return (
     
     <section className="flex flex-col justify-center items-center text-center text-gray-333 ">
     <div className="my-14">
-      <h2 className=" text-3xl font-bold my-2">Browse The Range</h2>
+      <h2 className=" text-3xl font-bold my-2">{t("browse")}</h2>
       <p className="text-gray-666 text-xl">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       </p>
@@ -15,7 +18,7 @@ export const BrowseRange = () => {
           alt="Category dining"
           className="img-rd-cover-center"
         />
-        <h3 className="text-gray-smb-24">Dining</h3>
+        <h3 className="text-gray-smb-24">{t("dining")}</h3>
       </div>
       <div className="mx-5">
         <img
@@ -23,7 +26,7 @@ export const BrowseRange = () => {
           alt="Category living"
           className="img-rd-cover-center"
         />
-        <h3 className="text-gray-smb-24">Living</h3>
+        <h3 className="text-gray-smb-24">{t("living")}</h3>
       </div>
       <div className="mx-5">
         <img
@@ -31,7 +34,7 @@ export const BrowseRange = () => {
           alt="Category Bedroom"
           className="img-rd-cover-center"
         />
-        <h3 className="text-gray-smb-24">Bedroom</h3>
+        <h3 className="text-gray-smb-24">{t("bedroom")}</h3>
       </div>
     </div>
   </section>
