@@ -58,5 +58,25 @@
   "subject": "Assunto",
   "message": "Mensagem",
   "thisIsOptional": "Isso é opcional",
-  "hiIdLikeToAsk": "Oi! Gostaria de perguntar sobre"
+  "hiIdLikeToAsk": "Oi! Gostaria de perguntar sobre",
+
+  "billingDetails": "Detalhes de cobrança",
+  "firstName": "Nome",
+  "lastName": "Sobrenome",
+  "companyNameOptional": "Nome da Empresa (Opcional)",
+  "zipCode": "CEP",
+  "countryRegion": "País / Região",
+  "brazil": "Brasil",
+  "streetAddress": "Endereço",
+  "townCity": "Cidade",
+  "province": "Estado",
+  "addOnAddress": "Endereço adicional",
+  "emailAddress": "Endereço de E-mail",
+  "placeOrder": "Realizar Pedido",
+  "additionalInformation": "Informações Adicionais",
+  "directBankTransfer": "Transferência Bancária Direta",
+  "cashOnDelivery": "Pagamento na Entrega",
+  "paymentInstructions": "Faça seu pagamento diretamente em nossa conta bancária. Por favor, use seu ID de pedido como referência de pagamento. Seu pedido não será enviado até que os fundos sejam compensados em nossa conta.",
+  "personalDataNotice": "Seus dados pessoais serão usados para apoiar sua experiência neste site, gerenciar o acesso à sua conta e para outros fins descritos em nossa "
+
 }

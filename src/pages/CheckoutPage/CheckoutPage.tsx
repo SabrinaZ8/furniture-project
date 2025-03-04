@@ -14,6 +14,7 @@ import { InputsAddress } from "./components/PaymentInput/InputsAddress";
 import { formatCep } from "../../utils/formatCepUser";
 import { toast } from "react-toastify";
 import { clearCart } from "../../redux/cart/cartSlice";
+import { useTranslation } from "react-i18next"
 
 export const CheckoutPage = () => {
   const [selectedOption, setSelectedOption] = useState("payment-1");
@@ -35,8 +36,11 @@ export const CheckoutPage = () => {
     gia: "",
     ddd: "",
     siafi: "",
-    infoAdd: ""
+    infoAdd: "",
   });
+
+  const { t } = useTranslation();
+
   const dispatch = useDispatch();
   const items = useSelector((state: RootState) => state.cart.items);
   const totalAmount = useSelector((state: RootState) => state.cart.totalAmount);
@@ -55,8 +59,8 @@ export const CheckoutPage = () => {
 
   useEffect(() => {
     const searchCep = async () => {
-      const cepFormatUser = formatCep(cepUser)
-      
+      const cepFormatUser = formatCep(cepUser);
+
       if (cepFormatUser.length === 8 && /^\d+$/.test(cepUser)) {
         try {
           const response = await axios.get(
@@ -85,16 +89,16 @@ export const CheckoutPage = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const cepFormatUser = formatCep(cepUser)
+    const cepFormatUser = formatCep(cepUser);
 
     if (validateForm(address, cepFormatUser)) {
       const placeOrder = {
         ...address,
         cep: cepFormatUser,
         payment: selectedOption,
-        totalAmount: totalAmount
-      }
-      localStorage.setItem("placeOrder", JSON.stringify(placeOrder))
+        totalAmount: totalAmount,
+      };
+      localStorage.setItem("placeOrder", JSON.stringify(placeOrder));
       setAddress({
         firstName: "",
         lastName: "",
@@ -111,16 +115,15 @@ export const CheckoutPage = () => {
         gia: "",
         ddd: "",
         siafi: "",
-        infoAdd: ""
-      })
-      setCepUser("")
-      setCepSearch(null)
+        infoAdd: "",
+      });
+      setCepUser("");
+      setCepSearch(null);
       dispatch(clearCart());
 
-      toast.success("Request sent successfully")
-      
+      toast.success("Request sent successfully");
     } else {
-      toast.error("Something went wrong review the information")
+      toast.error("Something went wrong review the information");
     }
   };
 
@@ -146,9 +149,9 @@ export const CheckoutPage = () => {
           <div className="">
             <div className="flex justify-between mb-8">
               <h3 className="font-semibold text-2xl text-start mr-8">
-                Product
+                {t("product")}
               </h3>
-              <h3 className="font-semibold text-2xl text-end">Subtotal</h3>
+              <h3 className="font-semibold text-2xl text-end">{t("subtotal")}</h3>
             </div>
             <div className="flex flex-col justify-between mb-8">
               {items.map((item) => (
@@ -160,18 +163,20 @@ export const CheckoutPage = () => {
 
                   <p className="font-light">
                     {formatMoney(
-                      item.discountedPrice ? item.discountedPrice * item.quantity: item.price * item.quantity
+                      item.discountedPrice
+                        ? item.discountedPrice * item.quantity
+                        : item.price * item.quantity
                     )}
                   </p>
                 </div>
               ))}
             </div>
             <div className="flex justify-between mb-6">
-              <p>Subtotal</p>
+              <p>{t("subtotal")}</p>
               <p className="font-light">{formatMoney(totalAmount)}</p>
             </div>
             <div className="flex justify-between mb-6">
-              <p>Total</p>
+              <p>{t("total")}</p>
               <p className="text-2xl text-yellow-550 font-bold">
                 {formatMoney(totalAmount)}
               </p>
@@ -189,7 +194,7 @@ export const CheckoutPage = () => {
                 type="submit"
                 className="w-80 h-16 rounded-[15px] text-xl border-[1px] border-black btn-gray"
               >
-                Place order
+                {t("placeOrder")}
               </button>
             </div>
           </div>

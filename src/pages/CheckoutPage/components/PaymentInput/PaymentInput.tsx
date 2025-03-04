@@ -1,3 +1,5 @@
+import { useTranslation } from "react-i18next";
+
 type PaymentInputProp = {
   setSelectedOption: React.Dispatch<React.SetStateAction<string>>;
   selectedOption: string;
@@ -6,6 +8,8 @@ export const PaymentInput: React.FC<PaymentInputProp> = ({
   setSelectedOption,
   selectedOption,
 }) => {
+  const { t } = useTranslation();
+
   return (
     <div className="text-gray-350 my-5">
       <div>
@@ -25,16 +29,12 @@ export const PaymentInput: React.FC<PaymentInputProp> = ({
               selectedOption === "payment-1" ? "text-black" : "text-gray-350"
             }`}
           >
-            Direct Bank Transfer
+            {t("directBankTransfer")}
           </label>
         </div>
 
         {selectedOption === "payment-1" ? (
-          <p>
-            Make your payment directly into our bank account. Please use your
-            Order ID as the payment reference. Your order will not be shipped
-            until the funds have cleared in our account.
-          </p>
+          <p>{t("paymentInstructions")}</p>
         ) : (
           ""
         )}
@@ -56,15 +56,11 @@ export const PaymentInput: React.FC<PaymentInputProp> = ({
               selectedOption === "payment-2" ? "text-black" : "text-gray-350"
             }`}
           >
-            Direct Bank Transfer
+            {t("directBankTransfer")}
           </label>
         </div>
         {selectedOption === "payment-2" ? (
-          <p>
-            Make your payment directly into our bank account. Please use your
-            Order ID as the payment reference. Your order will not be shipped
-            until the funds have cleared in our account.
-          </p>
+          <p>{t("paymentInstructions")}</p>
         ) : (
           ""
         )}
@@ -86,23 +82,18 @@ export const PaymentInput: React.FC<PaymentInputProp> = ({
               selectedOption === "payment-3" ? "text-black" : "text-gray-350"
             }`}
           >
-            Cash On Delivery
+            {t("cashOnDelivery")}
           </label>
         </div>
         {selectedOption === "payment-3" ? (
-          <p>
-            Make your payment directly into our bank account. Please use your
-            Order ID as the payment reference. Your order will not be shipped
-            until the funds have cleared in our account.
-          </p>
+          <p>{t("paymentInstructions")}</p>
         ) : (
           ""
         )}
       </div>
       <p className="text-black font-light mt-6 mb-10">
-        Your personal data will be used to support your experience throughout
-        this website, to manage access to your account, and for other purposes
-        described in our <span className="font-semibold">privacy policy</span>.
+        {t("personalDataNotice")}
+        <span className="font-semibold">{t("privacyPolicies")}</span>.
       </p>
     </div>
   );

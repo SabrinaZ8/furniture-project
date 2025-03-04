@@ -58,5 +58,25 @@
   "subject": "Subject",
   "message": "Message",
   "thisIsOptional": "This is optional",
-  "hiIdLikeToAsk": "Hi! I'd like to ask about"
+  "hiIdLikeToAsk": "Hi! I'd like to ask about",
+
+  "billingDetails": "Billing details",
+  "firstName": "First Name",
+  "lastName": "Last Name",
+  "companyNameOptional": "Company Name (Optional)",
+  "zipCode": "ZIP code",
+  "countryRegion": "Country / Region",
+  "brazil": "Brasil",
+  "streetAddress": "Street address",
+  "townCity": "Town / City",
+  "province": "Province",
+  "addOnAddress": "Add-on address",
+  "emailAddress": "Email address",
+  "placeOrder": "Place Order",
+  "additionalInformation": "Additional Information",
+  "directBankTransfer": "Direct Bank Transfer",
+  "cashOnDelivery": "Cash On Delivery",
+  "paymentInstructions": "Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order will not be shipped until the funds have cleared in our account.",
+  "personalDataNotice": "Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our "
+
 }

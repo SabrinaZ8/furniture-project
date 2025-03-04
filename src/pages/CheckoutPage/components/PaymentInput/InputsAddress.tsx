@@ -1,5 +1,6 @@
 import React from "react";
 import { InputsAddressProps } from "../../../../types/types";
+import { useTranslation } from "react-i18next";
 
 export const InputsAddress: React.FC<InputsAddressProps> = ({
   errors,
@@ -9,9 +10,13 @@ export const InputsAddress: React.FC<InputsAddressProps> = ({
   setCepUser,
   cepSearch,
 }) => {
+  const { t } = useTranslation();
+
   return (
     <div className="w-full md:w-auto">
-      <h2 className="font-semibold text-4xl text-center lg:text-start">Billing details</h2>
+      <h2 className="font-semibold text-4xl text-center lg:text-start">
+        {t("billingDetails")}
+      </h2>
       <div className="my-7">
         <p className="message-error">
           {errors.firstName ? errors.firstName : ""}
@@ -22,7 +27,7 @@ export const InputsAddress: React.FC<InputsAddressProps> = ({
         <div className="flex ">
           <div className="flex flex-col mr-6">
             <label htmlFor="name" className=" font-medium">
-              First Name
+              {t("firstName")}
             </label>
 
             <input
@@ -35,7 +40,7 @@ export const InputsAddress: React.FC<InputsAddressProps> = ({
           </div>
           <div className="flex flex-col">
             <label htmlFor="last-name" className=" font-medium">
-              Last Name
+              {t("lastName")}
             </label>
             <input
               type="text"
@@ -49,7 +54,7 @@ export const InputsAddress: React.FC<InputsAddressProps> = ({
       </div>
       <div className="flex flex-col  my-7">
         <label htmlFor="company-name" className="font-medium">
-          Company Name (Optional)
+          {t("companyNameOptional")}
         </label>
         <input
           type="text"
@@ -61,7 +66,7 @@ export const InputsAddress: React.FC<InputsAddressProps> = ({
       </div>
       <div className="flex flex-col my-7">
         <label htmlFor="zip-code" className=" font-medium">
-          ZIP code
+          {t("zipCode")}
         </label>
         <p className="message-error">{errors.cep ? errors.cep : ""}</p>
         <input
@@ -74,7 +79,7 @@ export const InputsAddress: React.FC<InputsAddressProps> = ({
       </div>
       <div className="flex flex-col my-7">
         <label htmlFor="country" className="font-medium">
-          Country / Region
+          {t("countryRegion")}
         </label>
         <p className="message-error">{errors.pais ? errors.pais : ""}</p>
         <input
@@ -88,7 +93,7 @@ export const InputsAddress: React.FC<InputsAddressProps> = ({
       </div>
       <div className="flex flex-col  my-7">
         <label htmlFor="street-address" className="font-medium">
-          Street address
+          {t("streetAddress")}
         </label>
         <p className="message-error">
           {errors.logradouro ? errors.logradouro : ""}
@@ -103,7 +108,7 @@ export const InputsAddress: React.FC<InputsAddressProps> = ({
       </div>
       <div className="flex flex-col my-7">
         <label htmlFor="city" className="font-medium">
-          Town / City
+          {t("townCity")}
         </label>
         <p className="message-error">
           {errors.localidade ? errors.localidade : ""}
@@ -122,7 +127,7 @@ export const InputsAddress: React.FC<InputsAddressProps> = ({
       </div>
       <div className="flex flex-col my-7">
         <label htmlFor="province" className="font-medium">
-          Province
+          {t("province")}
         </label>
         <p className="message-error">{errors.uf ? errors.uf : ""}</p>
         <input
@@ -135,7 +140,7 @@ export const InputsAddress: React.FC<InputsAddressProps> = ({
       </div>
       <div className="flex flex-col my-7">
         <label htmlFor="add-on-address" className="font-medium">
-          Add-on address
+          <p>{t("addOnAddress")}</p>
         </label>
         <input
           type="text"
@@ -147,7 +152,7 @@ export const InputsAddress: React.FC<InputsAddressProps> = ({
       </div>
       <div className="flex flex-col my-7">
         <label htmlFor="email-address" className="font-medium">
-          Email address
+          {t("enterEmail")}
         </label>
         <p className="message-error">{errors.email ? errors.email : ""}</p>
         <input
@@ -163,7 +168,7 @@ export const InputsAddress: React.FC<InputsAddressProps> = ({
           type="text"
           id="company-name"
           className="input-address-checkout input-address-checkout-hw"
-          placeholder="Additional information"
+          placeholder={t("additionalInformation")}
           onChange={(e) => handleInputChange("infoAdd", e.target.value)}
         />
       </div>
