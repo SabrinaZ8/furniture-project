@@ -132,6 +132,12 @@
     @apply hidden !important
 }
 
+/* NavBAR */
+.btn-lang {
+    @apply w-7 h-7 rounded-full flex items-center justify-center
+}
+
+
 /***** components*******/
 
  /* moreinfos*/

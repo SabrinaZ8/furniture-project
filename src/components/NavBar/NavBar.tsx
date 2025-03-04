@@ -6,6 +6,7 @@ import { useState } from "react";
 import { CartAside } from "./components/CartAside";
 import { IoMenu } from "react-icons/io5";
 import { IoMdClose } from "react-icons/io";
+import SettingsLang from "./components/SettingsLang";
 
 export const NavBar = () => {
   const [cartSide, setCartSide] = useState(true);
@@ -129,6 +130,7 @@ export const NavBar = () => {
         />
         {cartSide ? null : <CartAside setCartSide={setCartSide} />}
       </div>
+      <SettingsLang />
     </nav>
   );
 };
