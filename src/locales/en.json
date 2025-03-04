@@ -12,6 +12,7 @@
   "ourDesigner": "Our designer already made a lot of beautiful prototipe of rooms that inspire you",
   "exploreMore": "Explore More",
   "shareSetup": "Share your setup with",
+
   "home": "Home",
   "shop": "Shop",
   "about": "About",
@@ -22,5 +23,16 @@
   "privacyPolicies": "Privacy Policies",
   "newsletter": "Newsletter",
   "enterEmail": "Enter Your Email Address",
-  "subscribe": "Subscribe"
+  "subscribe": "Subscribe",
+
+  "highQuality": "High Quality",
+  "craftedFrom": "Crafted from top materials",
+  "warrantyProtection": "Warranty Protection",
+  "over2Years": "Over 2 years",
+  "freeShipping": "Free Shipping",
+  "orderOver": "Order over 150 $",
+  "24/7Support": "24 / 7 Support",
+  "dedicatedSupport": "Dedicated support"
+
+  
 }

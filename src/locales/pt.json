@@ -12,6 +12,7 @@
   "ourDesigner": "Nosso designer já fez muitos protótipos lindos de cômodos que te inspiram",
   "exploreMore": "Explore Mais",
   "shareSetup": "Compartilhe sua configuração com",
+
   "home": "início",
   "shop": "Loja",
   "about": "Sobre",
@@ -22,5 +23,16 @@
   "privacyPolicies": "Políticas de Privacidade",
   "newsletter": "Boletim informativo",
   "enterEmail": "Endereço de E-mail",
-  "subscribe": "Inscrever-se"
+  "subscribe": "Inscrever-se",
+
+  "highQuality": "Alta Qualidade",
+  "craftedFrom": "Feito com materiais de primeira qualidade",
+  "warrantyProtection": "Proteção de Garantia",
+  "over2Years": "Mais de 2 anos",
+  "freeShipping": "Frete Grátis",
+  "orderOver": "Encomende mais de 150 $",
+  "24/7Support": "Suporte 24 / 7",
+  "dedicatedSupport": "Suporte dedicado"
+
+  
 }
