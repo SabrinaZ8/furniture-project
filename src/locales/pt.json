@@ -43,5 +43,20 @@
   "checkOut": "Finalizar",
   "total": "Total",
 
-   "shoppingCart": "Carrinho de Compras"
+  "shoppingCart": "Carrinho de Compras",
+
+  "getInTouch": "Entre em Contato Conosco",
+  "contactText": "Para mais informações sobre nossos produtos e serviços, fique à vontade para nos enviar um e-mail. Nossa equipe estará sempre pronta para te ajudar. Não hesite!",
+  "address": "Endereço",
+  "phone": "Telefone",
+  "workingTime": "Horário de Funcionamento",
+  "monday": "Segunda",
+  "friday": "Sexta",
+  "saturday": "Sábado",
+  "sunday": "Domingo",
+  "yourName": "Seu Nome",
+  "subject": "Assunto",
+  "message": "Mensagem",
+  "thisIsOptional": "Isso é opcional",
+  "hiIdLikeToAsk": "Oi! Gostaria de perguntar sobre"
 }
