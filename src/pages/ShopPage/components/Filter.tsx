@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { HiAdjustmentsHorizontal, HiMiniSquares2X2 } from "react-icons/hi2";
 import { BsViewList } from "react-icons/bs";
 import { ProductType, FilterProps } from "../../../types/types";
-import { useTranslation } from "react-i18next"
+import { useTranslation } from "react-i18next";
 
 export const Filter: React.FC<FilterProps> = ({
   setOption,
@@ -84,6 +84,7 @@ export const Filter: React.FC<FilterProps> = ({
           />
           {showFilter ? (
             <select
+              size={optionsCategory.length}
               onChange={(e) => {
                 setOption(e.target.value);
                 setPage(1);
@@ -127,8 +128,9 @@ export const Filter: React.FC<FilterProps> = ({
         </div>
         <div className="flex items-center p-1">
           <p className="my-5 text-base sm:ml-8 sm:my-0">
-          {t("showing")} {(page - 1) * itemsPerPage + 1} -{" "}
-            {Math.min(page * itemsPerPage, totalItems)} {t("of")} {totalItems} {t("results")}
+            {t("showing")} {(page - 1) * itemsPerPage + 1} -{" "}
+            {Math.min(page * itemsPerPage, totalItems)} {t("of")} {totalItems}{" "}
+            {t("results")}
           </p>
         </div>
       </div>
