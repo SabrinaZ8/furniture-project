@@ -30,10 +30,10 @@ Para rodar o projeto localmente, siga os passos abaixo:
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/SabrinaZ8/e-commerce-challenger3.git
+   git clone https://github.com/SabrinaZ8/furniture-project.git
 2. Navegue até o diretório do projeto:
    ```bash
-   cd e-commerce-challenger3
+   cd furniture-project/
 3. Instale as dependências:
    ```bash
    npm install
