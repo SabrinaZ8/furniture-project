@@ -46,7 +46,7 @@ export const CartPage = () => {
             {/*Empty cart */}
             {items.length === 0 ? (
               <div className="empty-cart min-h-96 flex items-center justify-center lg:h-full">
-                Empty cart
+               {t("emptyCart")}
               </div>
             ) : (
               ""
