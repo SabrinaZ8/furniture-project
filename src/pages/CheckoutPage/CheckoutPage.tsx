@@ -121,9 +121,9 @@ export const CheckoutPage = () => {
       setCepSearch(null);
       dispatch(clearCart());
 
-      toast.success("Request sent successfully");
+      toast.success(t("requestSent"));
     } else {
-      toast.error("Something went wrong review the information");
+      toast.error(t("somethingWentWrongReview"));
     }
   };
 

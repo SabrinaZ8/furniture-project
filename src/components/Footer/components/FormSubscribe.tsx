@@ -12,13 +12,13 @@ export const FormSubscribe = () => {
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zAZ0-9.-]+\.[a-zA-Z]{2,}$/;
 
     if (!emailRegex.test(email)) {
-      toast.error("Please enter a valid email address");
+      toast.error(t("validEmail"));
       return;
     }
 
     localStorage.setItem("userEmailSubscribe", email);
     setEmail("");
-    toast.success("Email successfully registered");
+    toast.success(t("emailRegistered"));
   };
 
   return (

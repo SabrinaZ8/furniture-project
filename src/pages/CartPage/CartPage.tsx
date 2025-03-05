@@ -21,7 +21,7 @@ export const CartPage = () => {
 
   const handleRemoveFromCart = (id: number, itemName: string) => {
     dispatch(removeFromCart(id));
-    toast.warning(`${itemName} removed from cart`);
+    toast.warning(`${itemName + " " + t("removedFromCart")}`);
   };
 
   const handleUpdateQuantity = (id: number, quantity: number) => {

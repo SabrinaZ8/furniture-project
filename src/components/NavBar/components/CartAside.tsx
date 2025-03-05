@@ -18,7 +18,7 @@ export const CartAside: React.FC<SetCartSideProps> = ({ setCartSide }) => {
   const dispatch = useDispatch();
   const handleRemoveFromCart = (id: number, itemName: string) => {
     dispatch(removeFromCart(id));
-    toast.warning(`${itemName} removed`);
+    toast.warning(`${itemName} ${t("removedFromCart")}`);
   };
 
   const { t } = useTranslation();

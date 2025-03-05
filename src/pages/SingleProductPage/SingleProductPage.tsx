@@ -31,7 +31,7 @@ export const SingleProductPage = () => {
         quantity: quantity,
       };
       dispatch(addToCart(productWithQuantity));
-      toast.success("Product added to cart successfully!")
+      toast.success(t("productAdded"))
     }
   };
 

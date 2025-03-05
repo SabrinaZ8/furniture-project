@@ -89,5 +89,14 @@
   "show": "Show",
   "sortBy": "Sort By",
   "back": "Back",
-  "next": "Next"
+  "next": "Next",
+
+  "productAdded": "Product added to cart successfully!",
+  "sentSuccessfully": "Sent successfully",
+  "somethingWentWrong": "Something went wrong!",
+  "requestSent": "Request sent successfully",
+  "somethingWentWrongReview": "Something went wrong, review the information",
+  "removedFromCart": "Removed from cart",
+  "validEmail": "Please enter a valid email address",
+  "emailRegistered": "Email successfully registered"
 }

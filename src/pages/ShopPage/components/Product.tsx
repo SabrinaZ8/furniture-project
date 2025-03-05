@@ -6,12 +6,15 @@ import { useDispatch } from "react-redux";
 import { addToCart } from "../../../redux/cart/cartSlice";
 import { formatMoney } from "../../../utils/formatMoney";
 import { toast } from 'react-toastify'
+import { useTranslation } from "react-i18next"
 
 type ProductProps = {
   product: ProductType;
 };
 
 export const Product: React.FC<ProductProps> = ({ product }) => {
+  const { t } = useTranslation();
+
   const dispatch = useDispatch();
   const handleAddToCart = (product: ProductType) => {
     if (product) {
@@ -20,7 +23,7 @@ export const Product: React.FC<ProductProps> = ({ product }) => {
         quantity: 1,
       };
       dispatch(addToCart(productWithQuantity));
-      toast.success("Product added to cart successfully!")
+      toast.success(t("productAdded"))
 
     }
   };

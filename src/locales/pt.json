@@ -88,5 +88,14 @@
   "show": "Mostrar",
   "sortBy": "Ordenar Por",
   "back": "Voltar",
-  "next": "Próximo"
+  "next": "Próximo",
+
+  "productAdded": "Produto adicionado ao carrinho com sucesso!",
+  "sentSuccessfully": "Enviado com sucesso!",
+  "somethingWentWrong": "Algo deu errado!",
+  "requestSent": "Solicitação enviada com sucesso",
+  "somethingWentWrongReview": "Algo deu errado, revise as informações",
+  "removedFromCart": "Removido do carrinho",
+  "validEmail": "Por favor, insira um endereço de e-mail válido",
+  "emailRegistered": "E-mail registrado com sucesso"
 }

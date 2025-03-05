@@ -45,10 +45,9 @@ export const ContactPage = () => {
         subject: "",
         message: "",
       });
-      toast.success("Sent successfully");
+      toast.success(t("sentSuccessfully"));
     } else {
-      console.log("Erro in validation:", errors);
-      toast.error("Something went wrong!");
+      toast.error(t("somethingWentWrong"));
     }
   };
 
