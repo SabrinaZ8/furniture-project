@@ -33,7 +33,7 @@ Para rodar o projeto localmente, siga os passos abaixo:
    git clone https://github.com/SabrinaZ8/furniture-project.git
 2. Navegue até o diretório do projeto:
    ```bash
-   cd furniture-project/
+   cd furniture-project
 3. Instale as dependências:
    ```bash
    npm install
