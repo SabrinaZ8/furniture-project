@@ -8,5 +8,5 @@ export const ProtectedRoute = () => {
     return <div>...</div>; 
   }
 
-  return isSignedIn ? <Outlet /> : <Navigate to="/" replace />;
+  return isSignedIn ? <Outlet /> : <Navigate to="/" replace /> ;
 };
