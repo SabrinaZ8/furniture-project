@@ -101,14 +101,16 @@ export const ShopPage = () => {
           ))}
         </div>
 
-        <div className=" flex gap-2 my-20">
+        <div className="w-screen flex justify-center items-center p-4 gap-2 my-20">
           <BtnBack goToPreviousPage={goToPreviousPage} page={page} />
-
-          <BtnNumbers
+          <div className="flex overflow-x-auto">
+            <BtnNumbers
             totalPages={totalPages}
             handlePageClick={handlePageClick}
             page={page}
-          />
+            />
+          </div>
+          
           <BtnNext
             goToNextPage={goToNextPage}
             page={page}

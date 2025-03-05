@@ -27,7 +27,7 @@
 /*SingleProduct*/
 
 .btn-back-next {
-    @apply h-[60px] w-24 bg-yellow-70 rounded-lg text-xl
+    @apply flex items-center justify-center h-[60px] min-w-24 w-24 bg-yellow-70 rounded-lg text-xl
 }
 .btn-size-cart {
     @apply flex justify-center items-center text-sm cursor-pointer w-[30px] h-[30px] rounded-md mr-4
