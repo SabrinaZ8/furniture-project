@@ -7,13 +7,12 @@ import { CartAside } from "./components/CartAside";
 import { IoMenu } from "react-icons/io5";
 import { IoMdClose } from "react-icons/io";
 import SettingsLang from "./components/SettingsLang";
-import { useTranslation } from "react-i18next"
+import { useTranslation } from "react-i18next";
 
 export const NavBar = () => {
   const [cartSide, setCartSide] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
 
-  
   const { t } = useTranslation();
 
   const { redirectToSignIn } = useClerk();
@@ -27,14 +26,14 @@ export const NavBar = () => {
   };
 
   return (
-    <nav className="flex justify-between items-center min-h-[100px] px-4 md:px-14 relative">
+    <nav className="flex justify-between items-center min-h-[100px] px-4 lg:px-14 relative">
       <Link to="/" className="flex">
         <img
           src="/logo/furniroLogo.png"
           alt="Logo Furniro"
           className="max-sm:w-10 max-sm:h-7 mr-2 object-contain"
         />
-        <span className="font-montserrat flex items-center font-bold text-xl sm:text-3xl">
+        <span className="font-montserrat flex items-center font-bold text-xl lg:text-3xl">
           Furniro
         </span>
       </Link>
@@ -64,46 +63,59 @@ export const NavBar = () => {
       </div>
       {/*Menu mobile */}
       <div className="flex flex-col h-full md:hidden">
-        <button onClick={() => setIsOpen(!isOpen)} className="" aria-label="Menu">
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className=""
+          aria-label="Menu"
+        >
           <IoMenu className="w-[30px] h-[30px]" />
         </button>
         {isOpen ? (
           <ul className="flex items-center z-10 bg-yellow-40 absolute py-5 px-8 flex-col font-medium justify-evenly w-screen h-screen left-0 top-0 overflow-hidden">
             <li className="w-full">
               <div className="flex justify-between w-full">
-                <Link to="/" className="flex">
+                <Link to="/" className="flex items-center">
                   <img
                     src="/logo/furniroLogo.png"
                     alt="Logo Furniro"
-                    className="max-sm:w-10 max-sm:h-7 mr-2 object-contain"
+                    className="max-md:w-10 max-md:h-7 mr-2 object-contain"
                   />
                   <span className="font-montserrat flex items-center font-bold text-xl sm:text-3xl">
                     Furniro
                   </span>
                 </Link>
-                <button onClick={() => setIsOpen(!isOpen)} className="" aria-label="Close menu">
-                  <IoMdClose className="w-[30px] h-[30px]" />
-                </button>
+                <div>
+                  <button
+                    onClick={() => setIsOpen(!isOpen)}
+                    className="mx-2"
+                    aria-label="Close menu"
+                  >
+                    <IoMdClose className="w-[30px] h-[30px]" />
+                  </button>
+                  <div className="md:hidden">
+                    <SettingsLang />
+                  </div>
+                </div>
               </div>
             </li>
             <li>
               <Link to="/" className="hover-text">
-              {t("home")}
+                {t("home")}
               </Link>
             </li>
             <li>
               <Link to="/shop" className="hover-text">
-              {t("shop")}
+                {t("shop")}
               </Link>
             </li>
             <li>
               <Link to="#" className="hover-text">
-              {t("about")}
+                {t("about")}
               </Link>
             </li>
             <li>
               <Link to="/contact" className="hover-text">
-              {t("contact")}
+                {t("contact")}
               </Link>
             </li>
           </ul>
@@ -133,7 +145,9 @@ export const NavBar = () => {
           onClick={() => setCartSide(false)}
         />
         {cartSide ? null : <CartAside setCartSide={setCartSide} />}
-        <SettingsLang />
+        <div className="max-md:hidden">
+          <SettingsLang />
+        </div>
       </div>
     </nav>
   );
