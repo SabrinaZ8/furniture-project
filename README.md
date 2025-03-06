@@ -73,9 +73,10 @@ O TypeScript também facilita a padronização do código, permitindo o entendim
 - **Produtividade:**
 Uso do Tailwind CSS permitindo a estilização dos componentes diretamente no JSX, sem a necessidade de criar classes CSS personalizadas.
 
-### 4. Servidor JSON como Back-End Simulado
-- **Simulação para Desenvolvimento Local:**
-Para fins de desenvolvimento, o JSON Server foi utilizado como uma API simulada para o uso de dados dos produtos.
+### 4. API-Express como Back-End
+- **Para Exibição de Produtos:**
+API utilizando Express.js e JSON Server para fornecer os dados dos produtos ao projeto.
+- **Link:** https://github.com/SabrinaZ8/api-express
 
 ### 5. Autenticação do Usuário com Clerk
 - **Fluxo de Autenticação Simples:**
